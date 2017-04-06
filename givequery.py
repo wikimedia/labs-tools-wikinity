@@ -60,7 +60,7 @@ else:
 	typ = "item"
 	subtype = "nenafoceno"
 
-f = "../" + f
+f = "../queries/" + f
 header = """
 <!DOCTYPE html>
 <html lang="cs-cz">
