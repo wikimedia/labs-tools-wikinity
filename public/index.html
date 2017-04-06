@@ -42,7 +42,9 @@
     <form>
       <div class="row">
           <div class="col">
-            <label for="cislo" data-toggle="collapse" data-target="#item">Číslo položky na Wikidatech, kolem které budou objekty hledány <i class="fa fa-bars" aria-hidden="true"></i> </label>
+            <div class="checkbox">
+                <label><input type="checkbox" data-toggle="collapse" data-target="#item">Číslo položky na Wikidatech, kolem které budou objekty hledány</label>
+            </div>
           </div>
         <div class="col collapse" id="item">
           <div id="error4" class="alert alert-danger fade in hidden">
@@ -53,7 +55,9 @@
               <input type="text" class="form-control" name="cislo" id="cislo" placeholder="Číslo položky na Wikidatech">
           </div>
         </div>
-        <label data-toggle="collapse" data-target="#souradnice">Vyhledejte objekty pomoci Souradnic <i class="fa fa-bars" aria-hidden="true"></i> </label>
+        <div class="checkbox">
+            <label><input type="checkbox" data-toggle="collapse" data-target="#souradnice">Vyhledejte objekty pomoci Souradnic</label>
+        </div>
         <div class="col collapse" id="souradnice">
           <div id="error2" class="alert alert-danger fade in hidden">
               <a href="#" class="close" data-dismiss="alert">&times;</a>
