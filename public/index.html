@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wiki</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <!-- MyScript -->
+  <script>
+      $( document ).ready(function() {
+            $( "#hledej" ).click(function() {
+          });
+      });
+
+  </script>
+</head>
+<body>
+
+  <!-- navbar -->
+  <nav class="navbar navbar-inverse bg-faded" style="background-color:coral">
+      <a class="navbar-brand" href="#" style="color: black"> 
+          Hledej Objekty na WD
+      </a>
+  </nav>
+  
+<!-- Forms -->
+  <div class="container">
+    <form>
+      <div class="row">
+        <div class="col">
+          <div class="form-group">
+              <label for="formGroupExampleInput">Cislo na polozky kolem niz budou objekty hledany</label>
+              <input type="text" class="form-control" name="type" id="formGroupExampleInput" placeholder="Cislo na polozky kolem niz budou objekty hledany">
+          </div>
+        </div>
+        <div class="col">
+          <input type="checkbox" name="check" value="nafoceno">
+          <label for="ch1">nafocene</label>
+        </div>
+        <div class="col">
+          <input type="checkbox" name="check" value="nenafoceno">
+          <label for="ch2">nenafocene</label>
+        </div>
+        <div class="col">
+          <div class="form-group">
+              <label for="formGroupExampleInput">Souradnice lat</label>
+              <input type="text" name="lat" class="form-control" id="formGroupExampleInput" placeholder="Souradnice lat">
+          </div>
+          <div class="form-group">
+              <label for="formGroupExampleInput2">Souradnice lon</label>
+              <input type="text" name="lon" class="form-control" id="formGroupExampleInput2" placeholder="Souradnice lon">
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+              <label for="formGroupExampleInput">zadejte okruh ve kterem se bude hledat (km)</label>
+              <input type="text" name="radius" class="form-control" id="formGroupExampleInput" placeholder="okruh">
+          </div>
+        </div>
+        <div class="col">
+              <button type="button" class="btn btn-primary" id="hledej">Hledej</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="container-fluid" style="padding-top: 1.5em">
+     <div class="embed-responsive embed-responsive-16by9">
+        <iframe id="map" class="embed-responsive-item" src="https://www.youtube.com/embed/XGSy3_Czz8k"></iframe>
+     </div>
+  </div>
+ 
+<p><tt id="results"></tt></p>
+ 
+<script>
+
+    
+    function showValues() {
+        var str = $( "form" ).serialize();
+        $( "#results" ).text( str );
+        document.getElementById('map').setAttribute('src', "http://www.example.com/");
+    }
+
+    $( "input[type='type'], input[type='checkbox'], input[type='lat'], input[type='lon'], input[type='radius']" ).on( "click", showValues );
+    $( "select" ).on( "change", showValues );
+
+    $( document ).ready(function() {
+        $( "#hledej" ).click(function() {
+            showValues();
+        });
+    });
+</script>
+ 
+</body>
+</html>
