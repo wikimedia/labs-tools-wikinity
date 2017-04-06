@@ -36,7 +36,7 @@
         <div class="col">
           <div class="form-group">
               <label for="formGroupExampleInput">Cislo na polozky kolem niz budou objekty hledany</label>
-              <input type="text" class="form-control" name="type" id="formGroupExampleInput" placeholder="Cislo na polozky kolem niz budou objekty hledany">
+              <input type="text" class="form-control" name="cislo" id="formGroupExampleInput" placeholder="Cislo na polozky kolem niz budou objekty hledany">
           </div>
         </div>
         <div class="col">
@@ -70,9 +70,9 @@
     </form>
   </div>
 
-  <div class="container-fluid" style="padding-top: 1.5em">
+  <div class="container" style="padding-top: 1.5em">
      <div class="embed-responsive embed-responsive-16by9">
-        <iframe id="map" class="embed-responsive-item" src="https://www.youtube.com/embed/XGSy3_Czz8k"></iframe>
+        <iframe id="map" class="embed-responsive-item" src="https://tools.wmflabs.org/urbanecmbot/nenafoceneSearch/givequery.py"></iframe>
      </div>
   </div>
  
@@ -84,10 +84,10 @@
     function showValues() {
         var str = $( "form" ).serialize();
         $( "#results" ).text( str );
-        document.getElementById('map').setAttribute('src', "http://www.example.com/");
+        document.getElementById('map').setAttribute('src', "https://tools.wmflabs.org/urbanecmbot/nenafoceneSearch/givequery.py" + str);
     }
 
-    $( "input[type='type'], input[type='checkbox'], input[type='lat'], input[type='lon'], input[type='radius']" ).on( "click", showValues );
+    $( "input[type='cislo'], input[type='checkbox'], input[type='lat'], input[type='lon'], input[type='radius']" ).on( "click", showValues );
     $( "select" ).on( "change", showValues );
 
     $( document ).ready(function() {
