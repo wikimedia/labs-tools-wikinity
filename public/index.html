@@ -40,6 +40,10 @@
     <form>
       <div class="row">
         <div class="col">
+          <div id="error4" class="alert alert-danger fade in hidden">
+              <a href="#" class="close" data-dismiss="alert">&times;</a>
+              <strong>Error!</strong> pole Item je povinne.
+          </div>
           <div class="form-group">
               <label for="cislo">Číslo položky na Wikidatech, kolem které budou objekty hledány</label>
               <input type="text" class="form-control" name="cislo" id="cislo" placeholder="Číslo položky na Wikidatech">
@@ -103,6 +107,7 @@
         $("#error1").addClass("hidden");
         $("#error2").addClass("hidden");
         $("#error3").addClass("hidden");
+        $("#error4").addClass("hidden");
 
         var serialized;
         var error = false
@@ -116,6 +121,7 @@
             serialized = '?' + 'type=coor' + '&lat=' + $("#lat").val() + '&lon=' + $("#lon").val();
         }else {
             $("#error2").removeClass("hidden");
+            $("#error4").removeClass("hidden");
             error = true;
         }
         var nafoceno = $('#nafocene').is(':checked');
