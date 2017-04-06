@@ -93,7 +93,7 @@
             serialized = '?' + 'type=item' + '&item=' + $("#cislo").val();
         }else if(lat != "")
         { 
-            serialized = '?' + 'type=coor' + '&' + $("#lat").val() + '&' + $("#lon").val();
+            serialized = '?' + 'type=coor' + '&lat=' + $("#lat").val() + '&lon=' + $("#lon").val();
         }else {
             alert('error Souradnice jsou povinne');
             error = true;
