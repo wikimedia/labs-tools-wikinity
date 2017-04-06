@@ -31,7 +31,7 @@
   <!-- navbar -->
   <nav class="navbar navbar-inverse bg-faded" style="background-color:#337ab7;border-color: <2e6da4></2e6da4>">
       <a class="navbar-brand" href="#" style="color: #fff"> 
-          Hledej Objekty na WD
+        Hledač nenafocených objektů
       </a>
   </nav>
   
@@ -41,21 +41,22 @@
       <div class="row">
         <div class="col">
           <div class="form-group">
-              <label for="cislo">Cislo na polozky kolem niz budou objekty hledany</label>
-              <input type="text" class="form-control" name="cislo" id="cislo" placeholder="Cislo na polozky kolem niz budou objekty hledany">
+              <label for="cislo">Číslo položky na Wikidatech, kolem které budou objekty hledány</label>
+              <input type="text" class="form-control" name="cislo" id="cislo" placeholder="Číslo položky na Wikidatech">
           </div>
         </div>
+	<label>Které objekty mají být zobrazené na mapě</label>
         <div class="col">
             <div id="error1" class="alert alert-danger fade in hidden">
                 <a href="#" class="close" data-dismiss="alert">&times;</a>
                 <strong>Error!</strong> pole nafocene je povinne.
             </div>
           <input id="nafocene" type="checkbox" name="check" value="nafoceno">
-          <label for="ch1">nafocene</label>
+          <label for="ch1">Nafocené</label>
         </div>
         <div class="col">
           <input id="nenafocene" type="checkbox" name="check" value="nenafoceno" checked>
-          <label for="ch2">nenafocene</label>
+          <label for="ch2">Nenafocené</label>
         </div>
         <div class="col">
           <div id="error2" class="alert alert-danger fade in hidden">
@@ -63,12 +64,12 @@
               <strong>Error!</strong> pole Souradnice je povinne.
           </div>
           <div class="form-group">
-              <label for="formGroupExampleInput">Souradnice lat</label>
-              <input id="lat" type="text" name="lat" class="form-control" id="formGroupExampleInput" placeholder="Souradnice lat">
+              <label for="formGroupExampleInput">Souřadnice lat</label>
+              <input id="lat" type="text" name="lat" class="form-control" id="formGroupExampleInput" placeholder="Souřadnice lat">
           </div>
           <div class="form-group">
-              <label for="formGroupExampleInput2">Souradnice lon</label>
-              <input id="lon" type="text" name="lon" class="form-control" id="formGroupExampleInput2" placeholder="Souradnice lon">
+              <label for="formGroupExampleInput2">Souřadnice lon</label>
+              <input id="lon" type="text" name="lon" class="form-control" id="formGroupExampleInput2" placeholder="Souřadnice lon">
           </div>
         </div>
         <div class="col">
@@ -77,8 +78,8 @@
               <strong>Error!</strong> pole radius je povinne.
           </div>
           <div class="form-group">
-              <label for="formGroupExampleInput">zadejte okruh ve kterem se bude hledat (km)</label>
-              <input id="radius" type="text" name="radius" class="form-control" id="formGroupExampleInput" placeholder="okruh">
+              <label for="formGroupExampleInput">Zadejte okruh ve kterem se bude hledat (km)</label>
+              <input id="radius" type="text" name="radius" class="form-control" id="formGroupExampleInput" placeholder="Okruh">
           </div>
         </div>
         <div class="col">
@@ -114,7 +115,11 @@
         { 
             serialized = '?' + 'type=coor' + '&lat=' + $("#lat").val() + '&lon=' + $("#lon").val();
         }else {
+<<<<<<< HEAD
             $("#error2").removeClass("hidden");
+=======
+            alert('error Souřadnice jsou povinne');
+>>>>>>> 9e1d8d90b5e87525c46e39d5aa7f1c548ebd73d8
             error = true;
         }
         var nafoceno = $('#nafocene').is(':checked');
