@@ -90,7 +90,7 @@
         var lat = $("#lat").val();
         if(item != "")
         {
-            serialized = '?' + 'type=item' + '&' + $("#cislo").val();
+            serialized = '?' + 'type=item' + '&item=' + $("#cislo").val();
         }else if(lat != "")
         { 
             serialized = '?' + 'type=coor' + '&' + $("#lat").val() + '&' + $("#lon").val();
@@ -103,13 +103,13 @@
         //check if all checkbox are checked
         if(nafoceno == true && nenafoceno == true)
         {
-            serialized += '&' + 'all';
+            serialized += '&' + 'subtype=all';
         }else if(nafoceno == true)
         {
-            serialized += '&' + 'nafoceno';
-        }else if(nenafoceno == true)
+            serialized += '&' + 'subtype=nafoceno';
+        }else if(nenafoceno == true) 
         {
-            serialized += '&' + 'nenafoceno';
+            serialized += '&' + 'subtype=nenafoceno';
         }
         else {
             alert('error pole nafocene je povinne');
@@ -117,7 +117,7 @@
         }
 
         if($("#radius").val() != "") {
-            serialized += '&' + $("#radius").val();
+            serialized += '&' + 'radius=' + $("#radius").val();
         }
         else {
             alert("error pole radius je povinne");
