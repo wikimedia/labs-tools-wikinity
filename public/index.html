@@ -41,9 +41,13 @@
   <div class="container">
     <form>
       <div class="row">
+          <div id="error5" class="alert alert-danger fade in hidden">
+              <a href="#" class="close" data-dismiss="alert">&times;</a>
+              <strong>Error!</strong> pole Item nebo souradnice je povinne.
+          </div>
           <div class="col">
-            <div class="checkbox">
-                <label><input type="checkbox" data-toggle="collapse" data-target="#item">Číslo položky na Wikidatech, kolem které budou objekty hledány</label>
+            <div class="radio">
+                <label><input type="radio" name="optradio" data-toggle="collapse" data-target="#item">Číslo položky na Wikidatech, kolem které budou objekty hledány</label>
             </div>
           </div>
         <div class="col collapse" id="item">
@@ -55,8 +59,8 @@
               <input type="text" class="form-control" name="cislo" id="cislo" placeholder="Číslo položky na Wikidatech">
           </div>
         </div>
-        <div class="checkbox">
-            <label><input type="checkbox" data-toggle="collapse" data-target="#souradnice">Vyhledejte objekty pomoci Souradnic</label>
+        <div class="radio">
+            <label><input type="radio" name="optradio" data-toggle="collapse" data-target="#souradnice">Vyhledejte objekty pomoci Souradnic</label>
         </div>
         <div class="col collapse" id="souradnice">
           <div id="error2" class="alert alert-danger fade in hidden">
@@ -119,6 +123,7 @@
         $("#error2").addClass("hidden");
         $("#error3").addClass("hidden");
         $("#error4").addClass("hidden");
+        $("#error5").addClass("hidden");
 
         var serialized;
         var error = false
@@ -133,6 +138,7 @@
         }else {
             $("#error2").removeClass("hidden");
             $("#error4").removeClass("hidden");
+            $("#error5").removeClass("hidden");
             error = true;
         }
         var nafoceno = $('#nafocene').is(':checked');
@@ -175,6 +181,14 @@
             $("#map").removeClass("hidden");
             showValues();
         });
+
+        $('#item').on('show.bs.collapse', function () {
+            $('#souradnice').collapse('hide')
+        })
+
+        $('#souradnice').on('show.bs.collapse', function () {
+            $('#item').collapse('hide')
+        })
     });
 </script>
  
