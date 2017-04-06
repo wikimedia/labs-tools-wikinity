@@ -19,6 +19,12 @@
       });
 
   </script>
+  <style>
+    .hidden {
+        display: none !important;
+        visibility: hidden !important;
+    }
+  </style>
 </head>
 <body>
 
@@ -44,7 +50,7 @@
           <label for="ch1">nafocene</label>
         </div>
         <div class="col">
-          <input id="nenafocene" type="checkbox" name="check" value="nenafoceno">
+          <input id="nenafocene" type="checkbox" name="check" value="nenafoceno" checked>
           <label for="ch2">nenafocene</label>
         </div>
         <div class="col">
@@ -72,7 +78,7 @@
 
   <div class="container" style="padding-top: 1.5em">
      <div class="embed-responsive embed-responsive-16by9">
-        <iframe id="map" class="embed-responsive-item" src="https://tools.wmflabs.org/urbanecmbot/nenafoceneSearch/givequery.py"></iframe>
+        <iframe id="map" class="embed-responsive-item hidden" src=""></iframe>
      </div>
   </div>
  
@@ -135,6 +141,7 @@
 
     $( document ).ready(function() {
         $( "#hledej" ).click(function() {
+            $("#map").removeClass("hidden");
             showValues();
         });
     });
