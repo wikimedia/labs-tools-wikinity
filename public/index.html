@@ -5,6 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Wiki</title>
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -29,7 +31,7 @@
 <body>
 
   <!-- navbar -->
-  <nav class="navbar navbar-inverse bg-faded" style="background-color:#337ab7;border-color: <2e6da4></2e6da4>">
+  <nav class="navbar navbar-inverse bg-faded" style="background-color:#337ab7;border-color: 2e6da4">
       <a class="navbar-brand" href="#" style="color: #fff"> 
         Hledač nenafocených objektů
       </a>
@@ -39,30 +41,20 @@
   <div class="container">
     <form>
       <div class="row">
-        <div class="col">
+          <div class="col">
+            <label for="cislo" data-toggle="collapse" data-target="#item">Číslo položky na Wikidatech, kolem které budou objekty hledány <i class="fa fa-bars" aria-hidden="true"></i> </label>
+          </div>
+        <div class="col collapse" id="item">
           <div id="error4" class="alert alert-danger fade in hidden">
               <a href="#" class="close" data-dismiss="alert">&times;</a>
               <strong>Error!</strong> pole Item je povinne.
           </div>
           <div class="form-group">
-              <label for="cislo">Číslo položky na Wikidatech, kolem které budou objekty hledány</label>
               <input type="text" class="form-control" name="cislo" id="cislo" placeholder="Číslo položky na Wikidatech">
           </div>
         </div>
-	<label>Které objekty mají být zobrazené na mapě</label>
-        <div class="col">
-            <div id="error1" class="alert alert-danger fade in hidden">
-                <a href="#" class="close" data-dismiss="alert">&times;</a>
-                <strong>Error!</strong> pole nafocene je povinne.
-            </div>
-          <input id="nafocene" type="checkbox" name="check" value="nafoceno">
-          <label for="ch1">Nafocené</label>
-        </div>
-        <div class="col">
-          <input id="nenafocene" type="checkbox" name="check" value="nenafoceno" checked>
-          <label for="ch2">Nenafocené</label>
-        </div>
-        <div class="col">
+        <label data-toggle="collapse" data-target="#souradnice">Vyhledejte objekty pomoci Souradnic <i class="fa fa-bars" aria-hidden="true"></i> </label>
+        <div class="col collapse" id="souradnice">
           <div id="error2" class="alert alert-danger fade in hidden">
               <a href="#" class="close" data-dismiss="alert">&times;</a>
               <strong>Error!</strong> pole Souradnice je povinne.
@@ -75,6 +67,21 @@
               <label for="formGroupExampleInput2">Souřadnice lon</label>
               <input id="lon" type="text" name="lon" class="form-control" id="formGroupExampleInput2" placeholder="Souřadnice lon">
           </div>
+        </div>
+        <div class="col">
+            <label>Které objekty mají být zobrazené na mapě</label>
+        </div>
+        <div class="col">
+            <div id="error1" class="alert alert-danger fade in hidden">
+                <a href="#" class="close" data-dismiss="alert">&times;</a>
+                <strong>Error!</strong> pole nafocene je povinne.
+            </div>
+          <input id="nafocene" type="checkbox" name="check" value="nafoceno">
+          <label for="ch1">Nafocené</label>
+        </div>
+        <div class="col">
+          <input id="nenafocene" type="checkbox" name="check" value="nenafoceno" checked>
+          <label for="ch2">Nenafocené</label>
         </div>
         <div class="col">
           <div id="error3" class="alert alert-danger fade in hidden">
