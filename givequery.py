@@ -30,6 +30,8 @@ if 'QUERY_STRING' in os.environ:
 			radius = 1
 		if subtype == "nafoceno":
 			f = "searchByCoorNafoceno.txt"
+		elif subtype == "all":
+			f = "searchByCoorAll.txt"
 		else:
 			f = "searchByCoorNenafoceno.txt"
 	else:
@@ -43,10 +45,10 @@ if 'QUERY_STRING' in os.environ:
 			radius = 1
 		try:
 			subtype = qs['subtype'][0]
-			if subtype == "nenafoceno":
-				f = "searchByItemNenafoceno.txt"
-			elif subtype == "nafoceno":
+			if subtype == "nafoceno":
 				f = "searchByItemNafoceno.txt"
+			elif subtype == "all":
+				f = "searchByItemAll.txt"
 			else:
 				f = "searchByItemNenafoceno.txt"
 		except:
