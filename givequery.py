@@ -6,34 +6,59 @@ import sys
 import os
 import cgi
 
-### INIT VARS
 if 'QUERY_STRING' in os.environ:
 	QS = os.environ['QUERY_STRING']
 	qs = cgi.parse_qs(QS)
 	try:
-		item = qs['item'][0]
-	except:
-		item = "Q1742717"
-	try:
-		radius = int(qs['radius'][0])
-	except:
-		radius = 1
-	try:
 		typ = qs['type'][0]
-		if typ == "itemNenafoceno":
-			f = "searchByItemNenafoceno.txt"
-		elif typ == "itemNafoceno":
-			f = "searchByItemNafoceno.txt"
 	except:
-		f = "searchByItemNenafoceno.txt"
+		typ = "item"
+	if typ == "coor":
+		try:
+			lat = qs['lat'][0]
+			lon = qs['lon'][0]
+		except:
+			lat = "15.7802056"
+			lon = "50.0385383"
+		try:
+			subtype = qs['subtype'][0]
+		except:
+			subtype = "nenafoceno"
+		try:
+			radius = int(qs['radius'][0])
+		except:
+			radius = 1
+		if subtype == "nafoceno":
+			f = "searchByCoorNafoceno.txt"
+		else:
+			f = "searchByCoorNenafoceno.txt"
+	else:
+		try:
+			item = qs['item'][0]
+		except:
+			item = "Q1742717"
+		try:
+			radius = int(qs['radius'][0])
+		except:
+			radius = 1
+		try:
+			subtype = qs['subtype'][0]
+			if subtype == "nenafoceno":
+				f = "searchByItemNenafoceno.txt"
+			elif subtype == "nafoceno":
+				f = "searchByItemNafoceno.txt"
+			else:
+				f = "searchByItemNenafoceno.txt"
+		except:
+			f = "searchByItemNenafoceno.txt"
 else:
 	item = "Q1742717"
 	radius = 1
-	f = "aa"
+	f = "searchByItemNenafoceno.txt"
+	typ = "item"
+	subtype = "nenafoceno"
 
 f = "../" + f
-
-# HTML header
 header = """
 <!DOCTYPE html>
 <html lang="cs-cz">
@@ -41,19 +66,22 @@ header = """
                 <meta charset="utf-8" />
                 <title>Titulek</title>
 """
-# HTML tail
 tail = """
         </body>
 </html>
 """
 
-#Load query from the file, replace 
-query = open(f).read().replace('@@@ITEM@@@', item).replace('@@@RADIUS@@@', str(radius))
+if typ == "coor":
+	query = open(f).read().replace('@@@LAT@@@', lat).replace('@@@LON@@@', lon).replace('@@@RADIUS@@@', str(radius))
+else:
+	#Create query for item type
+	query = open(f).read().replace('@@@ITEM@@@', item).replace('@@@RADIUS@@@', str(radius))
 
+# Create URL
 url = "https://query.wikidata.org/embed.html#" + urllib.quote(query)
 
+#Create content and print it
 content = '<iframe style="width:80vw; height:50vh;" frameborder="0" src="' + url + '">'
-
 print header
 print content
 print tail
