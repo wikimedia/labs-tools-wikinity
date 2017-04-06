@@ -1,0 +1,40 @@
+#defaultView:Map
+SELECT distinct ?item ?itemLabel ?coord ?layer
+WHERE
+{
+  wd:Q36989 wdt:P625 ?loc . #or "Point(-121.872777777 37.304166666)"^^geo:wktLiteral
+  SERVICE wikibase:around { 
+      ?item wdt:P625 ?coord .
+      bd:serviceParam wikibase:center "Point(@@@LAT@@@ @@@LON@@@)"^^geo:wktLiteral .
+      bd:serviceParam wikibase:radius "@@@RADIUS@@@" . 
+  } 
+  
+  OPTIONAL {
+  {?item p:P31/ps:P31*/wdt:P279* wd:Q44539 . } UNION {?item p:P31/ps:P31/wdt:P279* wd:Q3947 . } 
+  BIND("další budovy" AS ?layer)}
+
+  OPTIONAL {
+  ?item wdt:P1435 wd:Q385405 .
+  BIND("kulturní památky" AS ?layer)}
+  
+  OPTIONAL {
+  ?item wdt:P677 ?kod .
+  MINUS {?item wdt:P31 wd:Q811534 .}
+  BIND("chráněná území" AS ?layer)}
+  
+  OPTIONAL {
+  ?item wdt:P677 ?kod .
+  ?item wdt:P31 wd:Q811534 .
+  BIND("památné stromy" AS ?layer)}
+  
+  OPTIONAL {
+  ?item p:P31/ps:P31/wdt:P279 wd:Q486972 .
+  BIND("sídla" AS ?layer)}
+ 
+  OPTIONAL {
+  ?item p:P31/ps:P31/wdt:P279* wd:Q15893266 .
+  BIND("zaniklé objekty" AS ?layer)}
+  
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "cs" . }  
+  
+}
