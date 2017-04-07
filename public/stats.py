@@ -9,4 +9,4 @@ for entry in log:
 	if 'map.py' in entry:
 		num += 1
 
-print "<p>Tento nástroj vygeneroval již " + str(num) + " map.</p>"
+print "<p id="stat">Tento nástroj vygeneroval již " + str(num) + " map.</p>"

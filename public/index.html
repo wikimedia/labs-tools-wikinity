@@ -100,10 +100,15 @@
   </div>
 
   <div class="container">
-     <div class="embed-responsive embed-responsive-16by9">
-        <iframe id="map" class="embed-responsive-item hidden" src=""></iframe>
-	<iframe id="stats" class="embed-responsive-item" src="https://tools.wmflabs.org/urbanecmbot/nenafoceneSearch/stats.py"></iframe>
-     </div>
+      <div class="row">
+          <div class="col" id="stat">
+          </div>
+          <div class="col">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe id="map" class="embed-responsive-item hidden" src=""></iframe>
+            </div>
+          </div>
+      </div>
   </div>
  
 <script>
@@ -155,6 +160,7 @@
     $( "select" ).on( "change", showValues );
 
     $( document ).ready(function() {
+        $( "#stat" ).load( "ajax/test.html p#stat" );
         $("#item").collapse('show');
         $( "#hledej" ).click(function() {
             $("#map").removeClass("hidden");
