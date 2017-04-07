@@ -1,8 +1,7 @@
 #!/usr/bin/env python
 #-*- coding: utf-8 -*-
 
-import os
-home = os.environ['HOME'] + '/'
+home = "/data/project/urbanecmbot/"
 log = open(home + 'access.log').readlines()
 
 num = 0
