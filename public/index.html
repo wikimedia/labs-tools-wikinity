@@ -47,7 +47,7 @@
           </div>
           <div class="col">
             <div class="radio">
-                <label><input type="radio" name="optradio" data-toggle="collapse" data-target="#item">Číslo položky na Wikidatech, kolem které budou objekty hledány</label>
+                <label><input type="radio" name="optradio" data-toggle="collapse" data-target="#item" checked>Číslo položky na Wikidatech, kolem které budou objekty hledány</label>
             </div>
           </div>
         <div class="col collapse" id="item">
@@ -177,9 +177,20 @@
     $( "select" ).on( "change", showValues );
 
     $( document ).ready(function() {
+        $("#cislo").val("Q1085");
+        $("#radius").val("5");
+        $("#item").collapse('show');
         $( "#hledej" ).click(function() {
             $("#map").removeClass("hidden");
             showValues();
+        });
+
+        $('#cislo').click(function() {
+            $('#cislo').val("");
+        });
+
+        $('#radius').click(function() {
+            $('#radius').val("");
         });
 
         $('#item').on('show.bs.collapse', function () {
