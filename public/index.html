@@ -41,20 +41,12 @@
   <div class="container">
     <form>
       <div class="row">
-          <div id="error5" class="alert alert-danger fade in hidden">
-              <a href="#" class="close" data-dismiss="alert">&times;</a>
-              <strong>Error!</strong> pole Item nebo souradnice je povinne.
-          </div>
           <div class="col">
             <div class="radio">
                 <label><input type="radio" name="optradio" data-toggle="collapse" data-target="#item" checked>Číslo položky na Wikidatech, kolem které budou objekty hledány</label>
             </div>
           </div>
         <div class="col collapse" id="item">
-          <div id="error4" class="alert alert-danger fade in hidden">
-              <a href="#" class="close" data-dismiss="alert">&times;</a>
-              <strong>Error!</strong> pole Item je povinne.
-          </div>
           <div class="form-group">
               <input type="text" class="form-control" name="cislo" id="cislo" placeholder="Číslo položky na Wikidatech">
           </div>
@@ -63,10 +55,6 @@
             <label><input type="radio" name="optradio" data-toggle="collapse" data-target="#souradnice">Vyhledejte objekty pomoci Souradnic</label>
         </div>
         <div class="col collapse" id="souradnice">
-          <div id="error2" class="alert alert-danger fade in hidden">
-              <a href="#" class="close" data-dismiss="alert">&times;</a>
-              <strong>Error!</strong> pole Souradnice je povinne.
-          </div>
           <div class="form-group">
               <label for="formGroupExampleInput">Souřadnice lat</label>
               <input id="lat" type="text" name="lat" class="form-control" id="formGroupExampleInput" placeholder="Souřadnice lat">
@@ -80,10 +68,6 @@
             <label>Které objekty mají být zobrazené na mapě</label>
         </div>
         <div class="col">
-            <div id="error1" class="alert alert-danger fade in hidden">
-                <a href="#" class="close" data-dismiss="alert">&times;</a>
-                <strong>Error!</strong> pole nafocene je povinne.
-            </div>
           <input id="nafocene" type="checkbox" name="check" value="nafoceno">
           <label for="ch1">Nafocené</label>
         </div>
@@ -92,10 +76,6 @@
           <label for="ch2">Nenafocené</label>
         </div>
         <div class="col">
-          <div id="error3" class="alert alert-danger fade in hidden">
-              <a href="#" class="close" data-dismiss="alert">&times;</a>
-              <strong>Error!</strong> pole radius je povinne.
-          </div>
           <div class="form-group">
               <label for="formGroupExampleInput">Zadejte okruh ve kterem se bude hledat (km)</label>
               <input id="radius" type="text" name="radius" class="form-control" id="formGroupExampleInput" placeholder="Okruh">
@@ -119,14 +99,7 @@
     
     function showValues() {
 
-        $("#error1").addClass("hidden");
-        $("#error2").addClass("hidden");
-        $("#error3").addClass("hidden");
-        $("#error4").addClass("hidden");
-        $("#error5").addClass("hidden");
-
         var serialized;
-        var error = false
         var item = $("#cislo").val();
         var lat = $("#lat").val();
         if(item != "")
@@ -136,10 +109,7 @@
         { 
             serialized = '?' + 'type=coor' + '&lat=' + $("#lat").val() + '&lon=' + $("#lon").val();
         }else {
-            $("#error2").removeClass("hidden");
-            $("#error4").removeClass("hidden");
-            $("#error5").removeClass("hidden");
-            error = true;
+            serialized = '?' + 'type=item' + '&item=' + "Q1085";
         }
         var nafoceno = $('#nafocene').is(':checked');
         var nenafoceno = $('#nenafocene').is(':checked');
@@ -155,42 +125,28 @@
             serialized += '&' + 'subtype=nenafoceno';
         }
         else {
-            $("#error1").removeClass("hidden");
-            error = true;
+            serialized += '&' + 'subtype=nenafoceno';
         }
 
         if($("#radius").val() != "") {
             serialized += '&' + 'radius=' + $("#radius").val();
         }
         else {
-            $("#error3").removeClass("hidden");
-            error = true;
+            serialized += '&' + 'radius=' + "5";
         }
 
         //debug
         console.log(serialized);
-        if(error != true)
-            document.getElementById('map').setAttribute('src', "https://tools.wmflabs.org/urbanecmbot/nenafoceneSearch/givequery.py" + serialized);
-        error = false;
+        document.getElementById('map').setAttribute('src', "https://tools.wmflabs.org/urbanecmbot/nenafoceneSearch/givequery.py" + serialized);
     }
 
     $( "select" ).on( "change", showValues );
 
     $( document ).ready(function() {
-        $("#cislo").val("Q1085");
-        $("#radius").val("5");
         $("#item").collapse('show');
         $( "#hledej" ).click(function() {
             $("#map").removeClass("hidden");
             showValues();
-        });
-
-        $('#cislo').click(function() {
-            $('#cislo').val("");
-        });
-
-        $('#radius').click(function() {
-            $('#radius').val("");
         });
 
         $('#item').on('show.bs.collapse', function () {
