@@ -1,1 +1,0 @@
-../givequery.py
