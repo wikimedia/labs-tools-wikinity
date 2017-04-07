@@ -3,5 +3,5 @@
 
 import os
 
-CMD = "../visitors -A -o html --grep 'map.py' ~/access.log 2>/dev/null "
+CMD = "./visitors -A -o html --grep 'map.py' ~/access.log 2>/dev/null "
 os.system(CMD)
