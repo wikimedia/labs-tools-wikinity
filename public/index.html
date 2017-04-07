@@ -51,20 +51,17 @@
           </div>
         <div class="col collapse" id="item">
           <div class="form-group">
-              <input type="text" class="form-control" name="cislo" id="cislo" placeholder="Číslo položky na Wikidatech">
+              <input type="text" class="form-control" name="cislo" id="cislo" placeholder="Q1085 (Praha, výchozí hodnota)">
           </div>
         </div>
         <div class="radio">
             <label><input type="radio" name="optradio" data-toggle="collapse" data-target="#souradnice">Vyhledejte objekty pomocí souřadnic</label>
         </div>
         <div class="col collapse" id="souradnice">
-<<<<<<< HEAD
-=======
           <div id="error2" class="alert alert-danger fade in hidden">
               <a href="#" class="close" data-dismiss="alert">&times;</a>
               <strong>Error!</strong> pole souradnice je povinne.
           </div>
->>>>>>> e1054c67dcd0a256edc303a9fad81a697d337bcd
           <div class="form-group">
               <label for="formGroupExampleInput">Souřadnice lat</label>
               <input id="lat" type="text" name="lat" class="form-control" id="formGroupExampleInput" placeholder="Souřadnice lat">
@@ -88,7 +85,7 @@
         <div class="col">
           <div class="form-group">
               <label for="formGroupExampleInput">Zadejte okruh, ve kterém se bude hledat (km)</label>
-              <input id="radius" type="text" name="radius" class="form-control" id="formGroupExampleInput" placeholder="Okruh">
+              <input id="radius" type="text" name="radius" class="form-control" id="formGroupExampleInput" placeholder="5 (výchozí hodnota)">
           </div>
         </div>
         <div class="col-3">
@@ -149,7 +146,7 @@
 
         //debug
         console.log(serialized);
-        document.getElementById('map').setAttribute('src', "https://tools.wmflabs.org/urbanecmbot/nenafoceneSearch/givequery.py" + serialized);
+        document.getElementById('map').setAttribute('src', "https://tools.wmflabs.org/urbanecmbot/nenafoceneSearch/map.py" + serialized);
     }
 
     $( "select" ).on( "change", showValues );
