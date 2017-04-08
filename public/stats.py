@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 #-*- coding: utf-8 -*-
 
-home = "/data/project/urbanecmbot/"
+home = "/data/project/wikinity/"
 log = open(home + 'access.log').readlines()
 
 num = 0
