@@ -15,7 +15,7 @@ print """
                 <meta charset="utf-8" />
 	</head>
 	<body>
-		<p id="stat">Tento nástroj vygeneroval již """ + str(num) + """ map.</p>
+		<i><p id="stat">Tento nástroj vygeneroval již """ + str(num) + """ map.</p></i>
 	</body>
 </html>
 """
