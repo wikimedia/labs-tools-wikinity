@@ -13,18 +13,16 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <!-- MyScript -->
-  <script>
-      $( document ).ready(function() {
-            $( "#hledej" ).click(function() {
-          });
-      });
-
-  </script>
   <style>
     .hidden {
         display: none !important;
         visibility: hidden !important;
+    }
+
+    .stat {
+        font-family: "Times New Roman", Times, serif;
+        font-size:150%;
+        text-decoration:underline;
     }
   </style>
 </head>
@@ -101,12 +99,12 @@
 
   <div class="container">
       <div class="row">
-          <div class="col" id="stat">
-          </div>
-          <div class="col">
-            <div class="embed-responsive embed-responsive-16by9">
+          <div class="col" id="map" style="padding-top:2.5%">
+            <!--<div class="embed-responsive embed-responsive-16by9">
                 <iframe id="map" class="embed-responsive-item hidden" src=""></iframe>
-            </div>
+            </div>-->
+          </div>
+          <div class="col" id="stat">
           </div>
       </div>
   </div>
@@ -154,7 +152,10 @@
 
         //debug
         console.log(serialized);
-        document.getElementById('map').setAttribute('src', "https://tools.wmflabs.org/urbanecmbot/nenafoceneSearch/map.py" + serialized);
+        //document.getElementById('map').setAttribute('src', "https://tools.wmflabs.org/urbanecmbot/nenafoceneSearch/map.py" + serialized);
+        var addr = "https://tools.wmflabs.org/urbanecmbot/nenafoceneSearch/map.py" + serialized;
+        console.log(addr);
+        $('#map').load(addr, "#map");
     }
 
     $( "select" ).on( "change", showValues );
