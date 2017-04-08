@@ -152,7 +152,7 @@
 
         //debug
         console.log(serialized);
-        //document.getElementById('map').setAttribute('src', "https://tools.wmflabs.org/urbanecmbot/nenafoceneSearch/map.py" + serialized);
+        //document.getElementById('map').setAttribute('src', "https://tools.wmflabs.org/wikinity/map.py" + serialized);
         var addr = "https://tools.wmflabs.org/wikinity/map.py" + serialized;
         console.log(addr);
         $('#map').load(addr, "#map");
@@ -161,10 +161,10 @@
     $( "select" ).on( "change", showValues );
 
     $( document ).ready(function() {
-        $( "#stat" ).load( "https://tools.wmflabs.org/urbanecmbot/nenafoceneSearch/stats.py p#stat" );
+        $( "#stat" ).load( "https://tools.wmflabs.org/wikinity/stats.py p#stat" );
         $("#item").collapse('show');
         $( "#hledej" ).click(function() {
-            $( "#stat" ).load( "https://tools.wmflabs.org/urbanecmbot/nenafoceneSearch/stats.py p#stat" );
+            $( "#stat" ).load( "https://tools.wmflabs.org/wikinity/stats.py p#stat" );
             $("#map").removeClass("hidden");
             showValues();
         });
