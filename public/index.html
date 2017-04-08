@@ -99,10 +99,10 @@
 
   <div class="container">
       <div class="row">
-          <div class="col">
-            <div class="embed-responsive embed-responsive-16by9">
+          <div class="col" id="map">
+            <!--<div class="embed-responsive embed-responsive-16by9">
                 <iframe id="map" class="embed-responsive-item hidden" src=""></iframe>
-            </div>
+            </div>-->
           </div>
           <div class="col" id="stat">
           </div>
@@ -152,7 +152,9 @@
 
         //debug
         console.log(serialized);
-        document.getElementById('map').setAttribute('src', "https://tools.wmflabs.org/urbanecmbot/nenafoceneSearch/map.py" + serialized);
+        //document.getElementById('map').setAttribute('src', "https://tools.wmflabs.org/urbanecmbot/nenafoceneSearch/map.py" + serialized);
+        var addr = "https://tools.wmflabs.org/urbanecmbot/nenafoceneSearch/map.py" + serialized;
+        $('map').load("addr #map")
     }
 
     $( "select" ).on( "change", showValues );
