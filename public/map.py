@@ -66,7 +66,6 @@ header = """
 <html lang="cs-cz">
         <head>
                 <meta charset="utf-8" />
-                <title>Titulek</title>
 """
 tail = """
         </body>
