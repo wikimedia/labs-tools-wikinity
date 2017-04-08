@@ -82,7 +82,7 @@ else:
 url = "https://query.wikidata.org/embed.html#" + urllib.quote(query)
 
 #Create content and print it
-content = '<iframe style="width:80vw; height:50vh;" frameborder="0" src="' + url + '">'
+content = '<iframe style="width:80vw; height:50vh;" frameborder="0" src="' + url + '"></ifŕame>'
 print header
 print content
 print tail
