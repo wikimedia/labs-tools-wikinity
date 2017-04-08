@@ -154,7 +154,8 @@
         console.log(serialized);
         //document.getElementById('map').setAttribute('src', "https://tools.wmflabs.org/urbanecmbot/nenafoceneSearch/map.py" + serialized);
         var addr = "https://tools.wmflabs.org/urbanecmbot/nenafoceneSearch/map.py" + serialized;
-        $('#map').load("addr #map")
+        console.log(addr);
+        $('#map').load(addr, "#map");
     }
 
     $( "select" ).on( "change", showValues );
