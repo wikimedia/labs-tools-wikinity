@@ -1,3 +1,8 @@
+<?php
+require_once __DIR__ . '/../vendor/autoload.php';
+$I18N = new Intuition( 'wikinity' );
+$I18N->registerDomain( 'wikinity', __DIR__ . '/../messages' );
+?>
 <!doctype html>
 <html lang="cs">
 <head>
@@ -47,16 +52,16 @@
       <div class="row">
           <div class="col">
             <div class="radio">
-                <label><input type="radio" name="optradio" data-toggle="collapse" data-target="#item" checked>Číslo položky na Wikidatech, kolem které budou objekty hledány</label>
+                <label><input type="radio" name="optradio" data-toggle="collapse" data-target="#item" checked><?php echo $I18N->msg("enter-number-of-item"); ?></label>
             </div>
           </div>
         <div class="col collapse" id="item">
           <div class="form-group">
-              <input type="text" class="form-control" name="cislo" id="cislo" placeholder="Q1085 (Praha, výchozí hodnota)">
+              <input type="text" class="form-control" name="cislo" id="cislo" placeholder="Q1085 (<?php echo $I18N->msg("prague"); ?>, <?php echo $I18N->msg("default-value");?>)">
           </div>
         </div>
         <div class="radio">
-            <label><input type="radio" name="optradio" data-toggle="collapse" data-target="#souradnice">Vyhledejte objekty pomocí souřadnic</label>
+            <label><input type="radio" name="optradio" data-toggle="collapse" data-target="#souradnice"><?php echo $I18N->msg("enter-coordinates");?></label>
         </div>
         <div class="col collapse" id="souradnice">
           <div id="error2" class="alert alert-danger fade in hidden">
@@ -65,15 +70,15 @@
           </div>
           <div class="form-group">
               <label for="formGroupExampleInput">Souřadnice lat</label>
-              <input id="lat" type="text" name="lat" class="form-control" id="formGroupExampleInput" placeholder="50.088611 (Praha, výchozí hodnota)">
+              <input id="lat" type="text" name="lat" class="form-control" id="formGroupExampleInput" placeholder="50.088611 (<?php echo $I18N->msg("prague"); ?>, <?php echo $I18N->msg("default-value");?>)">
           </div>
           <div class="form-group">
               <label for="formGroupExampleInput2">Souřadnice lon</label>
-              <input id="lon" type="text" name="lon" class="form-control" id="formGroupExampleInput2" placeholder="14.421389 (Praha, výchozí hodnota)">
+              <input id="lon" type="text" name="lon" class="form-control" id="formGroupExampleInput2" placeholder="14.421389 (<?php echo $I18N->msg("prague"); ?>, <?php echo $I18N->msg("default-value");?>)">
           </div>
         </div>
         <div class="col">
-            <label>Které objekty mají být zobrazené na mapě</label>
+            <label><?php echo $I18N->msg("select-displayed"); ?></label>
         </div>
         <div class="col">
           <input id="nafocene" type="checkbox" name="check" value="nafoceno">
@@ -85,12 +90,12 @@
         </div>
         <div class="col">
           <div class="form-group">
-              <label for="formGroupExampleInput">Zadejte okruh, ve kterém se bude hledat (km)</label>
-              <input id="radius" type="text" name="radius" class="form-control" id="formGroupExampleInput" placeholder="5 (výchozí hodnota)">
+              <label for="formGroupExampleInput"><?php echo $I18N->msg("enter-radius"); ?></label>
+              <input id="radius" type="text" name="radius" class="form-control" id="formGroupExampleInput" placeholder="5 (<?php echo $I18N->msg("default-value");?>)">
           </div>
         </div>
         <div class="col-3">
-              <button type="button" class="btn btn-primary" id="hledej">Hledej</button>
+              <button type="button" class="btn btn-primary" id="hledej"><?php echo $I18N->msg("search");?></button>
         </div>
 
       </div>
