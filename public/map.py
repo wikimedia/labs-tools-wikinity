@@ -60,6 +60,7 @@ if 'QUERY_STRING' in os.environ:
 				f = "searchByCoorAll.txt"
 			else:
 				f = "searchByCoorNenafoceno.txt"
+			f = "../queries/" + f
 			query = open(f).read().replace('@@@LAT@@@', lat).replace('@@@LON@@@', lon).replace('@@@RADIUS@@@', str(radius))
 			print "<pre>" + query + "</pre>"
 			sys.exit()
@@ -82,6 +83,7 @@ if 'QUERY_STRING' in os.environ:
 				f = "searchByItemAll.txt"
 			else:
 				f = "searchByItemNenafoceno.txt"
+			f = "../queries/" + f
 			query = open(f).read().replace('@@@ITEM@@@', item).replace('@@@RADIUS@@@', str(radius))
 			print "<pre>" + query + "</pre>"
 			sys.exit()
