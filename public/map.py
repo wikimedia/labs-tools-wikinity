@@ -34,6 +34,57 @@ if 'QUERY_STRING' in os.environ:
 			f = "searchByCoorAll.txt"
 		else:
 			f = "searchByCoorNenafoceno.txt"
+	elif typ == "query":
+		try:
+			subtype = qs['subtype'][0]
+		except:
+			subtype = "item"
+		if subtype == "coor":
+			try:
+				lat = qs['lat'][0]
+				lon = qs['lon'][0]
+			except:
+				lat = "15.7802056"
+				lon = "50.0385383"
+			try:
+				subsubtype = qs["subsubtype"][0]
+			except:
+				subsubtype = "nenafoceno"
+			try:
+				radius = int(qs["radius"][0])
+			except:
+				radius = 1
+			if subsubtype == "nafoceno":
+				f = "searchByCoorNafoceno.txt"
+			elif subsubtype == "all":
+				f = "searchByCoorAll.txt"
+			else:
+				f = "searchByCoorNenafoceno.txt"
+			query = open(f).read().replace('@@@LAT@@@', lat).replace('@@@LON@@@', lon).replace('@@@RADIUS@@@', str(radius))
+			print "<pre>" + query + "</pre>"
+			sys.exit()
+		else:
+			try:
+				item = qs['item'][0]
+			except:
+				item = "Q1742717"
+			try:
+				radius = int(qs['radius'][0])
+			except:
+				radius = 1
+			try:
+				subsubtype = qs['subsubtype'][0]
+			except:
+				subsubtype = "nenafoceno"
+			if subtype == "nafoceno":
+				f = "searchByItemNafoceno.txt"
+			elif subtype == "all":
+				f = "searchByItemAll.txt"
+			else:
+				f = "searchByItemNenafoceno.txt"
+			query = open(f).read().replace('@@@ITEM@@@', item).replace('@@@RADIUS@@@', str(radius))
+			print "<pre>" + query + "</pre>"
+			sys.exit()
 	else:
 		try:
 			item = qs['item'][0]
