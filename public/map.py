@@ -18,8 +18,8 @@ if 'QUERY_STRING' in os.environ:
 			lat = qs['lat'][0]
 			lon = qs['lon'][0]
 		except:
-			lat = "15.7802056"
-			lon = "50.0385383"
+			lat = "50.0385383"
+			lon = "15.7802056"
 		try:
 			subtype = qs['subtype'][0]
 		except:
