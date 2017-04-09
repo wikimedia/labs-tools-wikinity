@@ -1,0 +1,10 @@
+{
+	"@metadata": {},
+	"prague": "Prag",
+	"default-value": "predefinisano",
+	"enter-number-of-item": "Broj stavke oko koje će se tražiti objekti.",
+	"enter-coordinates": "Traži objekte uz pomoć koordinata",
+	"enter-radius": "Koliko kilometara od odabranog mesta treba da se pretraži",
+	"select-displayed": "Izaberi objekte koji bi trebalo da budu pokazani na karti",
+	"search": "Traži"
+}

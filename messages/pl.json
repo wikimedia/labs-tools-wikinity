@@ -1,0 +1,10 @@
+{
+	"@metadata": {},
+	"prague": "Praga",
+	"default-value": "domyślna wartość",
+	"enter-number-of-item": "Numer elementu wókoł którego będą wyszukiwane objekty",
+	"enter-coordinates": "Wyszukiwanie objektów za pomocą koordynatów",
+	"enter-radius": "odległość (km) od punktu definowanego do wyszukiwania",
+	"select-displayed": "Które obiekty pokazać na mapie",
+	"search": "Szukaj"
+}
