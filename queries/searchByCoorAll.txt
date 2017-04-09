@@ -5,7 +5,7 @@ WHERE
   wd:Q36989 wdt:P625 ?loc . #or "Point(-121.872777777 37.304166666)"^^geo:wktLiteral
   SERVICE wikibase:around { 
       ?item wdt:P625 ?coord .
-      bd:serviceParam wikibase:center "Point(@@@LAT@@@ @@@LON@@@)"^^geo:wktLiteral .
+      bd:serviceParam wikibase:center "Point(@@@LON@@@ @@@LAT@@@)"^^geo:wktLiteral .
       bd:serviceParam wikibase:radius "@@@RADIUS@@@" . 
   } 
   
