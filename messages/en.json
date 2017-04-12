@@ -6,5 +6,7 @@
 	"enter-coordinates": "Search for objects with coordinates",
 	"enter-radius": "Set a radius for searching (km)",
 	"select-displayed": "Choose objects that should be displayed on a map",
-	"search": "Search"
+	"search": "Search",
+	"photographed": "Photographed",
+	"unphotographed": "Unphotographed"
 }

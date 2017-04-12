@@ -82,11 +82,11 @@ $I18N->registerDomain( 'wikinity', __DIR__ . '/../messages' );
         </div>
         <div class="col">
           <input id="nafocene" type="checkbox" name="check" value="nafoceno">
-          <label for="ch1">Nafocené</label>
+          <label for="ch1"><?php echo $I18N->msg("photographed");?></label>
         </div>
         <div class="col">
           <input id="nenafocene" type="checkbox" name="check" value="nenafoceno" checked>
-          <label for="ch2">Nenafocené</label>
+          <label for="ch2"><?php echo $I18N->msg("unphotographed");?></label>
         </div>
         <div class="col">
           <div class="form-group">

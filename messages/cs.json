@@ -6,5 +6,7 @@
 	"enter-coordinates": "Vyhledejte objekty pomocí souřadnic",
 	"enter-radius": "Zadejte okruh, ve kterém se bude hledat (km)",
 	"select-displayed": "Které objekty mají být zobrazené na mapě",
-	"search": "Hledej"
+	"search": "Hledej",
+	"photographed": "Nafocené",
+	"unphotographed": "Nenafocené"
 }
