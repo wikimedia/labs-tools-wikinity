@@ -49,8 +49,15 @@ $I18N->registerDomain( 'wikinity', __DIR__ . '/../messages' );
       $langs = $I18N->getAvailableLangs();
       foreach ($langs as $key => $value)
       {
-
-	      $toEcho = '<option value="' . $key . '">' . $value . '</option>';
+	      $toEcho = "";
+	      if ($key == $I18N->getLang())
+	      {
+		      $toEcho = '<option selected value="' . $key . '">' . $value . '</option>';
+	      }
+	      else
+	      {
+		      $toEcho = '<option value="' . $key . '">' . $value . '</option>';
+	      }
 	      echo( $toEcho );
       }
       ?>
