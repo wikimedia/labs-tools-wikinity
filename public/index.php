@@ -42,6 +42,21 @@ $I18N->registerDomain( 'wikinity', __DIR__ . '/../messages' );
           <i class="fa fa-github fa-lg" aria-hidden="true"></i> GitHub - zdrojový kód
       </a>
       <ul class="nav navbar-nav" style="float: right">
+      <li>
+      <form class="form-inline" style="display:inline-block;">
+      <select>
+      <?php
+      $langs = $I18N->getAvailableLangs();
+      foreach ($langs as $key => $value)
+      {
+
+	      $toEcho = '<option value="' . $key . '">' . $value . '</option>';
+	      echo( $toEcho );
+      }
+      ?>
+      </select>
+      </form>
+      </li>
       <li><a style="color: #fff" href="https://github.com/urbanecm/wikinity/issues/new">Nahlásit problém</a></li>
       </ul>
   </nav>
