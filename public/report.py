@@ -25,7 +25,7 @@ data['body'] = body
 headers = {'Content-type': 'application/json', 'Accept': 'application/json'}
 
 owner = "urbanecm"
-repo = "test"
+repo = "wikinity"
 url = 'https://api.github.com/repos/' + owner + '/' + repo + '/issues'
 
 username = "urbanecm"
