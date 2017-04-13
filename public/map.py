@@ -5,6 +5,7 @@ import urllib
 import sys
 import os
 import cgi
+import json
 
 if 'QUERY_STRING' in os.environ:
 	QS = os.environ['QUERY_STRING']
