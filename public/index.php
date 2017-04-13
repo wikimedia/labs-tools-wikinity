@@ -171,7 +171,6 @@ $I18N->registerDomain( 'wikinity', __DIR__ . '/../messages' );
         $( "#hledej" ).click(function() {
             $( "#stat" ).load( "https://tools.wmflabs.org/wikinity/stats.py p#stat" );
             $("#map").removeClass("hidden");
-            $( "#stat" ).load( "https://tools.wmflabs.org/urbanecmbot/nenafoceneSearch/stats.py p#stat" );
             showValues();
         });
 
