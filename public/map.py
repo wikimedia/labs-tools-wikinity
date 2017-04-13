@@ -35,10 +35,20 @@ if 'QUERY_STRING' in os.environ:
 		else:
 			f = "searchByCoorNenafoceno.txt"
 	else:
-		try:
-			item = qs['item'][0]
-		except:
-			item = "Q1742717"
+		if typ == "article":
+			try:
+				article = qs['article'][0]
+			except:
+				article = "Praha"
+			url = 'https://www.wikidata.org/w/api.php?action=wbgetentities&format=json&sites=cswiki&titles=' + urllib.quote(article)
+			item = json.loads(urllib.urlopen(url).read())['entities'].keys()[0]
+			if item == '-1':
+				item = 'Q1085'
+		else:
+			try:
+				item = qs['item'][0]
+			except:
+				item = "Q1742717"
 		try:
 			radius = int(qs['radius'][0])
 		except:
