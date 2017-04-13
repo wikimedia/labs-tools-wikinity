@@ -55,7 +55,7 @@ if 'QUERY_STRING' in os.environ:
 			f = "searchByItemNenafoceno.txt"
 else:
 	item = "Q1742717"
-	radius = 1
+	radius = 5
 	f = "searchByItemNenafoceno.txt"
 	typ = "item"
 	subtype = "nenafoceno"
