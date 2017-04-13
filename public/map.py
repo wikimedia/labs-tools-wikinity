@@ -42,7 +42,7 @@ if 'QUERY_STRING' in os.environ:
 			except:
 				article = "Praha"
 			url = 'https://www.wikidata.org/w/api.php?action=wbgetentities&format=json&sites=cswiki&titles=' + urllib.quote(article)
-			item = json.loads(urllib.urlopen(url).read())['entities'].keys()[0]
+			item = json.loads(urllib.urlopen(url).read())['entities'].keys()[0].encode('ascii')
 			if item == '-1':
 				item = 'Q1085'
 		else:
