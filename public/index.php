@@ -42,7 +42,7 @@ $I18N->registerDomain( 'wikinity', __DIR__ . '/../messages' );
           <i class="fa fa-github fa-lg" aria-hidden="true"></i> GitHub - zdrojový kód
       </a>
       <ul class="nav navbar-nav" style="float: right">
-      <li><a style="color: #fff" href="https://github.com/urbanecm/wikinity/issues/new">Nahlásit problém</a></li>
+      <li><a style="color: #fff" href="report.html">Nahlásit problém</a></li>
       </ul>
   </nav>
   

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="cs-cz">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Nahlásit problém - Wikinity</title>
+		<!-- font awesome -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<!-- navbar -->
+		<nav class="navbar navbar-inverse bg-faded" style="background-color:#337ab7;border-color: 2e6da4">
+		<a class="navbar-brand" href="index.php" style="color: #fff"> 
+		 Wikinity
+		</a>
+		<a class="navbar-brand" href="https://github.com/urbanecm/wikinity/" style="color: #fff;float: right">
+		<i class="fa fa-github fa-lg" aria-hidden="true"></i> GitHub - zdrojový kód
+		</a>
+		</nav>
+		<!-- Forms -->
+		<div class="container">
+			<form action="report.py" method="get">
+				<div class="row">
+					<div class="form-group">
+						<input type="text" class="form-control" name="title" id="title" placeholder="Stručný popis problému">
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group">
+						<textarea class="form-control" name="body" id="body" placeholder="Podrobný popis problému"></textarea>
+					</div>
+				</div>
+				<div class="row">
+					<input type="Submit" class="btn btn-primary" value="Odeslat">
+				</div>
+			</form>
+		</div>
+	</body>
+</html>
