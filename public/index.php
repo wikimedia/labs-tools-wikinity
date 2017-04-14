@@ -64,7 +64,7 @@ $I18N->registerDomain( 'wikinity', __DIR__ . '/../messages' );
       </select>
       </form>
       </li>
-      <li><a style="color: #fff" href="https://github.com/urbanecm/wikinity/issues/new">Nahlásit problém</a></li>
+      <li><a style="color: #fff" href="report.html">Nahlásit problém</a></li>
       </ul>
   </nav>
   
