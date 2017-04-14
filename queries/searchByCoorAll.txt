@@ -13,7 +13,7 @@ WHERE
   BIND("zaniklé objekty a záměry" AS ?layer)}
   
   OPTIONAL {
-  ?item wdt:P1435 wd:Q385405 .
+  {?item wdt:P1435 wd:Q385405 . } union {?item wdt:P1435 wd:Q649434 .}
   BIND("kulturní památky" AS ?layer)}
 
   OPTIONAL {
