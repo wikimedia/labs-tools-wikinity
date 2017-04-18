@@ -35,7 +35,7 @@ $I18N->registerDomain( 'wikinity', __DIR__ . '/../messages' );
     }
     .no-hover {
         text-decoration: none;
-        color: black;
+        color: white;
     }
   </style>
 </head>
