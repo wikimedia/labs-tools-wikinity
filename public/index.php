@@ -42,30 +42,30 @@ $I18N->registerDomain( 'wikinity', __DIR__ . '/../messages' );
       <a class="navbar-brand" href="#" style="color: #fff"> 
         Wikinity
       </a>
+      <form class="navbar-brand">
+        <select class="custom-select">
+        <?php
+        $langs = $I18N->getAvailableLangs();
+        foreach ($langs as $key => $value)
+        {
+            $toEcho = "";
+            if ($key == $I18N->getLang())
+            {
+                $toEcho = '<option selected value="' . $key . '">' . $value . '</option>';
+            }
+            else
+            {
+                $toEcho = '<option value="' . $key . '">' . $value . '</option>';
+            }
+            echo( $toEcho );
+        }
+        ?>
+        </select>
+      </form>
+      <a class="navbar-brand" style="color: #fff" href="https://github.com/urbanecm/wikinity/issues/new">Nahlásit problém</a>
       <a class="navbar-brand" href="https://github.com/urbanecm/wikinity/" style="color: #fff;float: right">
           <i class="fa fa-github fa-lg" aria-hidden="true"></i> GitHub - zdrojový kód
       </a>
-      <form>
-      <select class="custom-select">
-      <?php
-      $langs = $I18N->getAvailableLangs();
-      foreach ($langs as $key => $value)
-      {
-	      $toEcho = "";
-	      if ($key == $I18N->getLang())
-	      {
-		      $toEcho = '<option selected value="' . $key . '">' . $value . '</option>';
-	      }
-	      else
-	      {
-		      $toEcho = '<option value="' . $key . '">' . $value . '</option>';
-	      }
-	      echo( $toEcho );
-      }
-      ?>
-      </select>
-      </form>
-      <a style="color: #fff" href="https://github.com/urbanecm/wikinity/issues/new">Nahlásit problém</a>
   </nav>
   
 <!-- Forms -->
