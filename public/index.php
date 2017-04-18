@@ -47,8 +47,7 @@ $I18N->registerDomain( 'wikinity', __DIR__ . '/../messages' );
       </a>
       <ul class="nav navbar-nav" style="float: right">
       <li>
-      <form>
-      <select class="selectpicker">
+      <select class="custom-select">
       <?php
       $langs = $I18N->getAvailableLangs();
       foreach ($langs as $key => $value)
@@ -66,7 +65,6 @@ $I18N->registerDomain( 'wikinity', __DIR__ . '/../messages' );
       }
       ?>
       </select>
-      </form>
       </li>
       <li><a style="color: #fff" href="https://github.com/urbanecm/wikinity/issues/new">Nahlásit problém</a></li>
       </ul>
