@@ -217,13 +217,16 @@ $I18N->registerDomain( 'wikinity', __DIR__ . '/../messages' );
         });
 
         $('#wikiSearch').on('show.bs.collapse', function () {
-            $('#wikiSearch').collapse('hide')
+            $('#item').collapse('hide')
+            $('#souradnice').collapse('hide')
         })
         $('#item').on('show.bs.collapse', function () {
+            $('#wikiSearch').collapse('hide')
             $('#souradnice').collapse('hide')
         })
 
         $('#souradnice').on('show.bs.collapse', function () {
+            $('#wikiSearch').collapse('hide')
             $('#item').collapse('hide')
         })
 
