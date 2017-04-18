@@ -217,7 +217,7 @@ $I18N->registerDomain( 'wikinity', __DIR__ . '/../messages' );
         });
 
         $('#wikiSearch').on('show.bs.collapse', function () {
-            $('#wikiSearchPole').collapse('hide')
+            $('#wikiSearch').collapse('hide')
         })
         $('#item').on('show.bs.collapse', function () {
             $('#souradnice').collapse('hide')
