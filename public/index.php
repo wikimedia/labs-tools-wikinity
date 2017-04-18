@@ -47,6 +47,14 @@ $I18N->registerDomain( 'wikinity', __DIR__ . '/../messages' );
       </a>
       <ul class="nav navbar-nav" style="float: right">
       <li>
+        <select class="selectpicker">
+            <option>Mustard</option>
+            <option>Ketchup</option>
+            <option>Relish</option>
+        </select>
+        </li>
+      <li>
+      <form>
       <select class="custom-select">
       <?php
       $langs = $I18N->getAvailableLangs();
@@ -65,6 +73,7 @@ $I18N->registerDomain( 'wikinity', __DIR__ . '/../messages' );
       }
       ?>
       </select>
+      </form>
       </li>
       <li><a style="color: #fff" href="https://github.com/urbanecm/wikinity/issues/new">Nahlásit problém</a></li>
       </ul>
