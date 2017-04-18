@@ -138,7 +138,7 @@ $I18N->registerDomain( 'wikinity', __DIR__ . '/../messages' );
     function GetValues() {
 
         var serialized;
-        var wikiSearch = $("#wikiSearchPole").val();
+        var wikiSearch = $("#wikiSearchPole").val().replace(/ /g, '_');
         var item = $("#cislo").val();
         var lat = $("#lat").val();
         if (wikiSearch != "")
