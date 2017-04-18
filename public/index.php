@@ -34,7 +34,7 @@ $I18N->registerDomain( 'wikinity', __DIR__ . '/../messages' );
         text-decoration:underline;
     }
 
-    .no-hover { 
+    .no-hover a:hover{ 
         color: black;
     }
   </style>
