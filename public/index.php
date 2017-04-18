@@ -56,7 +56,7 @@ $I18N->registerDomain( 'wikinity', __DIR__ . '/../messages' );
       <div class="row">
           <div class="col">
             <div class="radio">
-                <label><input type="radio" name="optradio" data-toggle="collapse" data-target="#wikiSearch" checked><?php echo $I18N->msg("enter-number-of-item"); ?></label>
+                <label><input type="radio" name="optradio" data-toggle="collapse" data-target="#wikiSearch" checked><?php echo $I18N->msg("enter-name-of-article"); ?></label>
             </div>
           </div>
         <div class="col collapse" id="wikiSearch">
