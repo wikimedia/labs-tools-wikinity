@@ -2,6 +2,7 @@
 // Force HTTPS for our users
 if (getallheaders()['X-Forwarded-Proto'] == "http") {
 	header("Location: https://".$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF']);
+	die();
 }
 require_once __DIR__ . '/../vendor/autoload.php';
 $I18N = new Intuition( 'wikinity' );
