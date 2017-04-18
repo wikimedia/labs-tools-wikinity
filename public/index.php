@@ -33,10 +33,6 @@ $I18N->registerDomain( 'wikinity', __DIR__ . '/../messages' );
         font-size:150%;
         text-decoration:underline;
     }
-
-    .no-hover a:hover{ 
-        color: black;
-    }
   </style>
 </head>
 <body>
@@ -46,7 +42,7 @@ $I18N->registerDomain( 'wikinity', __DIR__ . '/../messages' );
       <a class="navbar-brand" href="#" style="color: #fff"> 
         Wikinity
       </a>
-      <form class="navbar-brand no-hover" style="float: right">
+      <form class="navbar-brand" style="float: right; color: black">
         <select class="custom-select">
         <?php
         $langs = $I18N->getAvailableLangs();
@@ -66,7 +62,7 @@ $I18N->registerDomain( 'wikinity', __DIR__ . '/../messages' );
         ?>
         </select>
       </form>
-      <a style="float: right" class="navbar-brand no-hover" href="https://github.com/urbanecm/wikinity/issues/new">Nahlásit problém</a>
+      <a style="float: right; color: black" class="navbar-brand" href="https://github.com/urbanecm/wikinity/issues/new">Nahlásit problém</a>
       <a class="navbar-brand" href="https://github.com/urbanecm/wikinity/" style="color: #fff;float: right">
           <i class="fa fa-github fa-lg" aria-hidden="true"></i> GitHub - zdrojový kód
       </a>
