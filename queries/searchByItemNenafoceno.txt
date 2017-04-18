@@ -10,13 +10,13 @@ WHERE
   } 
   
   OPTIONAL {
-  {?item p:P31/ps:P31*/wdt:P279* wd:Q44539 . } UNION {?item p:P31/ps:P31/wdt:P279* wd:Q3947 . } 
-  BIND("další budovy" AS ?layer)}
-
-  OPTIONAL {
-  ?item wdt:P1435 wd:Q385405 .
-  BIND("kulturní památky" AS ?layer)}
+  {?item p:P31/ps:P31/wdt:P279* wd:Q15893266 .}  UNION {?item p:P31/ps:P31/wdt:P279* wd:Q3918409 .}
+  BIND("zaniklé objekty a záměry" AS ?layer)}
   
+  OPTIONAL {
+  {?item wdt:P1435 wd:Q385405 . } union {?item wdt:P1435 wd:Q649434 .}
+  BIND("kulturní památky" AS ?layer)}
+
   OPTIONAL {
   ?item wdt:P677 ?kod .
   MINUS {?item wdt:P31 wd:Q811534 .}
@@ -32,8 +32,8 @@ WHERE
   BIND("sídla" AS ?layer)}
  
   OPTIONAL {
-  ?item p:P31/ps:P31/wdt:P279* wd:Q15893266 .
-  BIND("zaniklé objekty" AS ?layer)}
+  {?item p:P31/ps:P31*/wdt:P279* wd:Q44539 . } UNION {?item p:P31/ps:P31/wdt:P279* wd:Q3947 . } 
+  BIND("další budovy" AS ?layer)}
   
   MINUS {?item wdt:P18 ?img .}
   SERVICE wikibase:label { bd:serviceParam wikibase:language "cs" . }  
