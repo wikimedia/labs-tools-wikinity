@@ -38,7 +38,7 @@ if 'QUERY_STRING' in os.environ:
 	else:
 		if typ == "article":
 			try:
-				article = qs['article'][0].replace(' ', '_')
+				article = qs['article'][0]
 			except:
 				article = "Praha"
 			url = 'https://www.wikidata.org/w/api.php?action=wbgetentities&format=json&sites=cswiki&titles=' + urllib.quote(article)
