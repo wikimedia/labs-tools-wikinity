@@ -61,7 +61,7 @@ $I18N->registerDomain( 'wikinity', __DIR__ . '/../messages' );
           </div>
         <div class="col collapse" id="wikiSearch">
           <div class="form-group">
-              <input type="text" class="form-control" name="cislo" id="#wikiSearchPole" placeholder="<?php echo $I18N->msg("prague"); ?>, (<?php echo $I18N->msg("default-value");?>)">
+              <input type="text" class="form-control" name="wikiSearchPole" id="wikiSearchPole" placeholder="<?php echo $I18N->msg("prague"); ?>, (<?php echo $I18N->msg("default-value");?>)">
           </div>
         </div>
           <div class="col">
