@@ -47,7 +47,7 @@ $I18N->registerDomain( 'wikinity', __DIR__ . '/../messages' );
       </a>
       <ul class="nav navbar-nav" style="float: right">
       <li>
-      <form class="form-inline" style="display:inline-block;">
+      <form>
       <select class="selectpicker">
       <?php
       $langs = $I18N->getAvailableLangs();
