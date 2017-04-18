@@ -66,7 +66,7 @@ if 'QUERY_STRING' in os.environ:
 			f = "searchByItemNenafoceno.txt"
 else:
 	item = "Q1742717"
-	radius = 1
+	radius = 5
 	f = "searchByItemNenafoceno.txt"
 	typ = "item"
 	subtype = "nenafoceno"
@@ -97,3 +97,4 @@ content = '<iframe id="map" style="width:63vw; height:50vh;" frameborder="0" src
 print header
 print content
 print tail
+

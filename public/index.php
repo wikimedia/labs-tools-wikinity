@@ -7,7 +7,7 @@ require_once __DIR__ . '/../vendor/autoload.php';
 $I18N = new Intuition( 'wikinity' );
 $I18N->registerDomain( 'wikinity', __DIR__ . '/../messages' );
 ?>
-<!doctype html>
+<!DOCTYPE HTML>
 <html lang="cs">
 <head>
   <meta charset="utf-8">
@@ -78,7 +78,17 @@ $I18N->registerDomain( 'wikinity', __DIR__ . '/../messages' );
       <div class="row">
           <div class="col">
             <div class="radio">
-                <label><input type="radio" name="optradio" data-toggle="collapse" data-target="#item" checked><?php echo $I18N->msg("enter-number-of-item"); ?></label>
+                <label><input type="radio" name="optradio" data-toggle="collapse" data-target="#wikiSearch" checked><?php echo $I18N->msg("enter-name-of-article"); ?></label>
+            </div>
+          </div>
+        <div class="col collapse" id="wikiSearch">
+          <div class="form-group">
+              <input type="text" class="form-control" name="wikiSearchPole" id="wikiSearchPole" placeholder="<?php echo $I18N->msg("prague"); ?>, (<?php echo $I18N->msg("default-value");?>)">
+          </div>
+        </div>
+          <div class="col">
+            <div class="radio">
+                <label><input type="radio" name="optradio" data-toggle="collapse" data-target="#item"><?php echo $I18N->msg("enter-number-of-item"); ?></label>
             </div>
           </div>
         <div class="col collapse" id="item">
@@ -143,14 +153,19 @@ $I18N->registerDomain( 'wikinity', __DIR__ . '/../messages' );
 <script>
 
     
-    function showValues() {
+    function GetValues() {
 
         var serialized;
+        var wikiSearch = $("#wikiSearchPole").val();
         var item = $("#cislo").val();
         var lat = $("#lat").val();
-        if(item != "")
+        if (wikiSearch != "")
         {
-            serialized = '?' + 'type=item' + '&item=' + $("#cislo").val();
+            serialized = '?' + 'type=article' + '&article=' + wikiSearch;
+        }
+        else if(item != "")
+        {
+            serialized = '?' + 'type=item' + '&item=' + item;
         }else if(lat != "")
         { 
             serialized = '?' + 'type=coor' + '&lat=' + $("#lat").val() + '&lon=' + $("#lon").val();
@@ -189,17 +204,20 @@ $I18N->registerDomain( 'wikinity', __DIR__ . '/../messages' );
         $('#map').load(addr, "#map");
     }
 
-    $( "select" ).on( "change", showValues );
+    $( "select" ).on( "change", GetValues );
 
     $( document ).ready(function() {
         $( "#stat" ).load( "https://tools.wmflabs.org/wikinity/stats.py p#stat" );
-        $("#item").collapse('show');
+        $("#wikiSearch").collapse('show');
         $( "#hledej" ).click(function() {
             $( "#stat" ).load( "https://tools.wmflabs.org/wikinity/stats.py p#stat" );
             $("#map").removeClass("hidden");
-            showValues();
+            GetValues();
         });
 
+        $('#wikiSearch').on('show.bs.collapse', function () {
+            $('#item').collapse('hide')
+        })
         $('#item').on('show.bs.collapse', function () {
             $('#souradnice').collapse('hide')
         })
@@ -207,8 +225,8 @@ $I18N->registerDomain( 'wikinity', __DIR__ . '/../messages' );
         $('#souradnice').on('show.bs.collapse', function () {
             $('#item').collapse('hide')
         })
+
     });
 </script>
- 
 </body>
 </html>

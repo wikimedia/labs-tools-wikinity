@@ -4,6 +4,7 @@
 	"default-value": "výchozí hodnota",
 	"enter-number-of-item": "Číslo položky na Wikidatech, kolem které budou objekty hledány",
 	"enter-coordinates": "Vyhledejte objekty pomocí souřadnic",
+	"enter-name-of-article": "Zadejte jméno článku, kolem jehož souřadnic se bude hledat",
 	"enter-radius": "Zadejte okruh, ve kterém se bude hledat (km)",
 	"select-displayed": "Které objekty mají být zobrazené na mapě",
 	"search": "Hledej",
