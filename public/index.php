@@ -33,6 +33,10 @@ $I18N->registerDomain( 'wikinity', __DIR__ . '/../messages' );
         font-size:150%;
         text-decoration:underline;
     }
+    .no-hover {
+        text-decoration: none;
+        color: black;
+    }
   </style>
 </head>
 <body>
@@ -46,7 +50,7 @@ $I18N->registerDomain( 'wikinity', __DIR__ . '/../messages' );
       <a class="navbar-brand" href="https://github.com/urbanecm/wikinity/" style="color: #fff;float: right">
           <i class="fa fa-github fa-lg" aria-hidden="true"></i> GitHub - zdrojový kód
       </a>
-    <a style="float: right" class="navbar-brand" href="https://github.com/urbanecm/wikinity/issues/new">Nahlásit problém</a>
+    <a style="float: right" class="navbar-brand no-hover" href="https://github.com/urbanecm/wikinity/issues/new">Nahlásit problém</a>
     <form class="navbar-brand" style="float: right; color: black">
         <select class="custom-select">
         <?php
