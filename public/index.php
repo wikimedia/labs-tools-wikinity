@@ -45,15 +45,6 @@ $I18N->registerDomain( 'wikinity', __DIR__ . '/../messages' );
       <a class="navbar-brand" href="https://github.com/urbanecm/wikinity/" style="color: #fff;float: right">
           <i class="fa fa-github fa-lg" aria-hidden="true"></i> GitHub - zdrojový kód
       </a>
-      <ul class="nav navbar-nav" style="float: right">
-      <li>
-        <select class="selectpicker">
-            <option>Mustard</option>
-            <option>Ketchup</option>
-            <option>Relish</option>
-        </select>
-        </li>
-      <li>
       <form>
       <select class="custom-select">
       <?php
@@ -74,9 +65,7 @@ $I18N->registerDomain( 'wikinity', __DIR__ . '/../messages' );
       ?>
       </select>
       </form>
-      </li>
-      <li><a style="color: #fff" href="https://github.com/urbanecm/wikinity/issues/new">Nahlásit problém</a></li>
-      </ul>
+      <a style="color: #fff" href="https://github.com/urbanecm/wikinity/issues/new">Nahlásit problém</a>
   </nav>
   
 <!-- Forms -->
