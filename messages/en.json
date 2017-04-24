@@ -2,7 +2,7 @@
 	"@metadata": {},
 	"prague": "Prague",
 	"default-value": "default value",
-	"enter-number-of-item": "Wikidata item number. Object will be searched around this item.",
+	"enter-number-of-item": "Wikidata item number. Objects will be searched around this item.",
 	"enter-coordinates": "Search for objects with coordinates",
 	"enter-name-of-article": "Search for objects around coordinates of this article",
 	"enter-radius": "Set a radius for searching (km)",
