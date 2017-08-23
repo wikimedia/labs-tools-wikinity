@@ -43,7 +43,7 @@ $I18N->registerDomain( 'wikinity', __DIR__ . '/../messages' );
 <body>
 
   <!-- navbar -->
-  <nav class="navbar navbar-inverse bg-faded" style="background-color:#337ab7;border-color: 2e6da4">
+  <nav class="navbar navbar-inverse bg-faded" style="background-color:#337ab7;border-color: 2e6da4; border-radius: 0;">
       <a class="navbar-brand" href="#" style="color: #fff"> 
         Wikinity
       </a>
