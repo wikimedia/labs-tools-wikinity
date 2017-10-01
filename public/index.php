@@ -16,9 +16,9 @@
               <input type="text" class="form-control" name="wikiSearchPole" id="wikiSearchPole" placeholder="<?php echo $I18N->msg("prague"); ?>, (<?php echo $I18N->msg("default-value");?>)">
           </div>
 	  <div class="form-group">
-	  	<input type="text" name="language" placeholder="jazyk">
+	  	<input type="text" id="project-language" name="language" value="cs">
 		<span>.</span>
-		<select name="project">
+		<select id="project-project" name="project">
 			<option value="wiki" selected="">wikipedia</option>
 		</select>
 		<span>.org</span>
