@@ -6,18 +6,15 @@ from email.mime.text import MIMEText
 import sys
 import os
 import cgi
+import cgitb
 
-if 'QUERY_STRING' in os.environ:
-	QS = os.environ['QUERY_STRING']
-	qs = cgi.parse_qs(QS)
-	try:
-		email = qs['email'][0]
-		title = qs['title'][0]
-		body = qs['body'][0]
-	except:
-		sys.exit()
-else:
+if os.environ['REQUEST_METHOD'] != 'POST':
 	sys.exit()
+
+form = cgi.FieldStorage()
+email = form.getvalue('email')
+title = form.getvalue('title')
+body = form.getvalue('body')
 
 sender = email
 recipient = "bugs@webappky.cz"
