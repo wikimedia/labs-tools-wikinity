@@ -15,5 +15,7 @@
 	"your-email": "Your email",
 	"problem-summary": "Summary of the problem",
 	"problem-body": "Tell us more details about your problem",
-	"submit": "Submit"
+	"submit": "Submit",
+	"stats-before": "This tool has generated",
+	"stats-after": "maps already"
 }

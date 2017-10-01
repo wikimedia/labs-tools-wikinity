@@ -15,5 +15,7 @@
 	"your-email": "Váš e-mail",
 	"problem-summary": "Shrnutí problému",
 	"problem-body": "Podrobnější informace o problému",
-	"submit": "Odeslat"
+	"submit": "Odeslat",
+	"stats-before": "Tento nástroj vygeneroval již",
+	"stats-after": "map"
 }

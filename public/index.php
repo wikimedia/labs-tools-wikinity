@@ -76,7 +76,7 @@
             </div>-->
           </div>
           <div class="col" id="stat">
-			  <p>Tento nástroj vygeneroval již <span id="statnum"></span> map.</p>
+			  <p><?php echo $I18N->msg("stats-before");?> <span id="statnum"></span> <?php echo $I18N->msg("stats-after");?>.</p>
           </div>
       </div>
   </div>
