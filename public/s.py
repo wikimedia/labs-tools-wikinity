@@ -28,4 +28,6 @@ if len(data) == 0:
 	print 'No such URL'
 	sys.exit()
 
-print data[0][0]
+print 'Content-Type: text/html'
+print 'Location: ' + data[0][0]
+print
