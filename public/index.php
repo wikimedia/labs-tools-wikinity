@@ -102,7 +102,7 @@
         var lat = $("#lat").val();
         if (wikiSearch != "")
         {
-			var project = $('#project-language').value + $('#project-project').value;
+			var project = $('#project-language')[0].value + $('#project-project')[0].value;
             serialized = '?' + 'type=article' + '&article=' + wikiSearch + '&project=' + project;
         }
         else if(item != "")
