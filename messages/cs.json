@@ -11,5 +11,9 @@
 	"photographed": "Nafocené",
 	"unphotographed": "Nenafocené",
 	"report-problem": "Nahlásit problém",
-	"source-code": "zdrojový kód"
+	"source-code": "zdrojový kód",
+	"your-email": "Váš e-mail",
+	"problem-summary": "Shrnutí problému",
+	"problem-body": "Podrobnější informace o problému",
+	"submit": "Odeslat"
 }

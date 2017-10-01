@@ -11,5 +11,9 @@
 	"photographed": "Photographed",
 	"unphotographed": "Unphotographed",
 	"report-problem": "Report problem",
-	"source-code": "source code"
+	"source-code": "source code",
+	"your-email": "Your email",
+	"problem-summary": "Summary of the problem",
+	"problem-body": "Tell us more details about your problem",
+	"submit": "Submit"
 }
