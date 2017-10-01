@@ -38,5 +38,8 @@ $I18N->registerDomain( 'wikinity', __DIR__ . '/../messages' );
 			</a>
 		  <a style="float: right; color: white;" class="navbar-brand no-hover" href="reportproblem.php">Nahlásit problém</a>
 		</nav>
+		<script type="text/javascript">
+			swal ( "Problém nahlášen", "Co nejrychleji se mu budeme věnovat.", "success" )
+		</script>
 	</body>
 </html>
