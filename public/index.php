@@ -71,9 +71,6 @@
   <div class="container">
       <div class="row">
           <div class="col" id="map" style="padding-top:2.5%; width:70%">
-            <!--<div class="embed-responsive embed-responsive-16by9">
-                <iframe id="map" class="embed-responsive-item hidden" src=""></iframe>
-            </div>-->
           </div>
           <div class="col" id="stat">
 			  <p><?php echo $I18N->msg("stats-before");?> <span id="statnum"></span> <?php echo $I18N->msg("stats-after");?>.</p>
