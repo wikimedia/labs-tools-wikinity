@@ -29,7 +29,8 @@
 		  <a style="float: right; color: white;" class="navbar-brand no-hover" href="reportproblem.php">Nahlásit problém</a>
 		</nav>
 		<div class="container">
-			<iframe id="map" style="width:63vw; height:50vh;" frameborder="0" src=""></iframe>
+			<div class="col" id="map" style="padding-top:2.5%; width:70%">
+			</div>
 			<script type="text/javascript">
 				function getParameterByName(name, url) {
 					if (!url) url = window.location.href;
@@ -46,7 +47,7 @@
 				} else {
 					var url = 'https://tools.wmflabs.org/wikinity/getshort.py?id=' + id;
 					$.get(url, function (data, status) {
-						$('#map')[0].src = data;
+						$('#map').load(data, "#map");
 					})
 				}
 			</script>
