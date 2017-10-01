@@ -5,7 +5,7 @@
 	</a>
 
 	<a class="navbar-brand" href="https://github.com/urbanecm/wikinity/" style="color: #fff;float: right">
-		<i class="fa fa-github fa-lg" aria-hidden="true"></i> GitHub - zdrojový kód
+		<i class="fa fa-github fa-lg" aria-hidden="true"></i> GitHub - <?php echo $I18N->msg("source-code"); ?>
 	</a>
-  <a style="float: right; color: white;" class="navbar-brand no-hover" href="reportproblem.php">Nahlásit problém</a>
+  <a style="float: right; color: white;" class="navbar-brand no-hover" href="reportproblem.php"><?php echo $I18N->msg("report-problem"); ?></a>
 </nav>

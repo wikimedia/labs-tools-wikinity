@@ -9,5 +9,7 @@
 	"select-displayed": "Choose objects that should be displayed on a map",
 	"search": "Search",
 	"photographed": "Photographed",
-	"unphotographed": "Unphotographed"
+	"unphotographed": "Unphotographed",
+	"report-problem": "Report problem",
+	"source-code": "source code"
 }
