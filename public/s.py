@@ -24,4 +24,8 @@ with cur:
 	cur.execute(sql)
 	data = cur.fetchall()
 
+if len(data) == 0:
+	print 'No such URL'
+	sys.exit()
+
 print data[0][0]
