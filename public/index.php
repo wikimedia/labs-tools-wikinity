@@ -44,16 +44,16 @@ $I18N->registerDomain( 'wikinity', __DIR__ . '/../messages' );
 
   <!-- navbar -->
   <nav class="navbar navbar-inverse bg-faded" style="background-color:#337ab7;border-color: 2e6da4; border-radius: 0;">
-      <a class="navbar-brand" href="#" style="color: #fff"> 
+      <a class="navbar-brand" href="#" style="color: #fff">
         Wikinity
       </a>
 
       <a class="navbar-brand" href="https://github.com/urbanecm/wikinity/" style="color: #fff;float: right">
           <i class="fa fa-github fa-lg" aria-hidden="true"></i> GitHub - zdrojový kód
       </a>
-    <a style="float: right; color: white;" class="navbar-brand no-hover" href="https://github.com/urbanecm/wikinity/issues/new">Nahlásit problém</a>
+    <a style="float: right; color: white;" class="navbar-brand no-hover" href="reportproblem.php">Nahlásit problém</a>
   </nav>
-  
+
 <!-- Forms -->
   <div class="container">
     <form>
@@ -131,10 +131,10 @@ $I18N->registerDomain( 'wikinity', __DIR__ . '/../messages' );
           </div>
       </div>
   </div>
- 
+
 <script>
 
-    
+
     function GetValues() {
 
         var serialized;
@@ -149,7 +149,7 @@ $I18N->registerDomain( 'wikinity', __DIR__ . '/../messages' );
         {
             serialized = '?' + 'type=item' + '&item=' + item;
         }else if(lat != "")
-        { 
+        {
             serialized = '?' + 'type=coor' + '&lat=' + $("#lat").val() + '&lon=' + $("#lon").val();
         }else {
             serialized = '?' + 'type=item' + '&item=' + "Q1085";
@@ -163,7 +163,7 @@ $I18N->registerDomain( 'wikinity', __DIR__ . '/../messages' );
         }else if(nafoceno == true)
         {
             serialized += '&' + 'subtype=nafoceno';
-        }else if(nenafoceno == true) 
+        }else if(nenafoceno == true)
         {
             serialized += '&' + 'subtype=nenafoceno';
         }
