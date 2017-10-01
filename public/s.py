@@ -18,4 +18,10 @@ else:
 	print 'Add something to query string'
 	sys.exit()
 
-print id
+cur = conn.cursor()
+with cur:
+	sql = 'select url from shortener where id=' + str(id)
+	cur.execute(sql)
+	data = cur.fetchall()
+
+print data[0][0]
