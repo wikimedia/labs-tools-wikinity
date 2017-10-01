@@ -19,25 +19,6 @@ if 'QUERY_STRING' in os.environ:
 else:
 	sys.exit()
 
-header = """
-<!DOCTYPE html>
-<html lang="cs-cz">
-        <head>
-                <meta charset="utf-8" />
-"""
-tail = """
-        </body>
-</html>
-"""
-print header
-print email
-print title
-print body
-print tail
-
-sys.exit()
-
-
 sender = email
 recipient = "bugs@webappky.cz"
 
