@@ -138,10 +138,10 @@
     $( "select" ).on( "change", GetValues );
 
     $( document ).ready(function() {
-        $( "#statnum" ).load( "https://tools.wmflabs.org/wikinity/stats.py p#statnum" );
+        $.get("stats.py", function (data, status) { $('#statnum').text(data) })
         $("#wikiSearch").collapse('show');
         $( "#hledej" ).click(function() {
-            $( "#statnum" ).load( "https://tools.wmflabs.org/wikinity/stats.py p#statnum" );
+            $.get("stats.py", function (data, status) { $('#statnum').text(data) })
             $("#map").removeClass("hidden");
             GetValues();
         });
