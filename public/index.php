@@ -76,6 +76,7 @@
             </div>-->
           </div>
           <div class="col" id="stat">
+			  <p>Tento nástroj vygeneroval již <span id="statnum"></span> map.</p>
           </div>
       </div>
   </div>
@@ -137,10 +138,10 @@
     $( "select" ).on( "change", GetValues );
 
     $( document ).ready(function() {
-        $( "#stat" ).load( "https://tools.wmflabs.org/wikinity/stats.py p#stat" );
+        $( "#statnum" ).load( "https://tools.wmflabs.org/wikinity/stats.py p#statnum" );
         $("#wikiSearch").collapse('show');
         $( "#hledej" ).click(function() {
-            $( "#stat" ).load( "https://tools.wmflabs.org/wikinity/stats.py p#stat" );
+            $( "#statnum" ).load( "https://tools.wmflabs.org/wikinity/stats.py p#statnum" );
             $("#map").removeClass("hidden");
             GetValues();
         });
