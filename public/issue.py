@@ -30,4 +30,4 @@ s.ehlo()
 s.sendmail(sender, recipient, msg.as_string())
 s.quit()
 
-print "Mail sent"
+print 'Location: https://tools.wmflabs.org/wikinity/successfullyreported.php'
