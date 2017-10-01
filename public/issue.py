@@ -9,6 +9,7 @@ import cgi
 import cgitb
 
 if os.environ['REQUEST_METHOD'] != 'POST':
+	print 'Use POST please'
 	sys.exit()
 
 form = cgi.FieldStorage()
