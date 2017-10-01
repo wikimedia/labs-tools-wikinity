@@ -31,9 +31,24 @@
 		<div class="container">
 			<iframe id="map" style="width:63vw; height:50vh;" frameborder="0" src=""></iframe>
 			<script type="text/javascript">
-				$.get('https://tools.wmflabs.org/wikinity/getshort.py?id=1', function (data, status) {
-					$('#map')[0].src = data;
-				})
+				function getParameterByName(name, url) {
+					if (!url) url = window.location.href;
+					name = name.replace(/[\[\]]/g, "\\$&");
+					var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+						results = regex.exec(url);
+					if (!results) return null;
+					if (!results[2]) return '';
+					return decodeURIComponent(results[2].replace(/\+/g, " "));
+				}
+				var id = getParameterByName('id');
+				if (id == null) {
+					swal ( "Oops" ,  "Something went wrong!" ,  "error" );
+				} else {
+					var url = 'https://tools.wmflabs.org/wikinity/getshort.py?id=' + id;
+					$.get(url, function (data, status) {
+						$('#map')[0].src = data;
+					})
+				}
 			</script>
 		</div>
 	</body>
