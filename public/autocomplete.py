@@ -26,6 +26,7 @@ else:
 conn = db.connect(project)
 
 if thing == 'article':
+	cur = conn.cursor()
 	with cur:
 		sql = 'select page_title from page where page_namespace=0 and page_title like "' + start + '%"'
 		cur.execute(sql)
