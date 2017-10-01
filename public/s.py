@@ -4,7 +4,7 @@
 import yaml
 config = yaml.load(open('config.yaml'))
 from wmflabs import db
-conn = db.connect()
+conn = db.connect(config['DB_NAME'])
 import sys
 import os
 import cgi
