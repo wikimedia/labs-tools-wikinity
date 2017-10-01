@@ -131,7 +131,7 @@ $I18N->registerDomain( 'wikinity', __DIR__ . '/../messages' );
           </div>
       </div>
   </div>
-  <form class="hidden" id="urlform" action="storeshort.py" method="post">
+  <form class="hidden" action="storeshort.py" method="post">
   	<input type="text" id="url" name="url" value="">
   </form>
 <script>
