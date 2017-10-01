@@ -31,3 +31,5 @@ s = smtplib.SMTP('mail.tools.wmflabs.org')
 s.ehlo()
 s.sendmail(sender, recipient, msg.as_string())
 s.quit()
+
+print "Mail sent"
