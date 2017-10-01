@@ -1,0 +1,14 @@
+.hidden {
+	display: none !important;
+	visibility: hidden !important;
+}
+
+.stat {
+	font-family: "Times New Roman", Times, serif;
+	font-size:150%;
+	text-decoration:underline;
+}
+.no-hover {
+	text-decoration: none;
+	color: white;
+}

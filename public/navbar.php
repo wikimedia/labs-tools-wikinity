@@ -17,6 +17,7 @@ $I18N->registerDomain( 'wikinity', __DIR__ . '/../messages' );
   <title>Wikinity</title>
   <!-- font awesome -->
   <link rel="stylesheet" href="https://tools-static.wmflabs.org/cdnjs/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://tools-static.wmflabs.org/wikinity/stylesheet.css">
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://tools-static.wmflabs.org/cdnjs/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
