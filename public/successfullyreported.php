@@ -1,4 +1,4 @@
-<?php include 'navbar.php'; ?>
+<?php include 'header.php'; ?>
 	<body>
 		<!-- navbar -->
 		<nav class="navbar navbar-inverse bg-faded" style="background-color:#337ab7;border-color: 2e6da4; border-radius: 0;">
