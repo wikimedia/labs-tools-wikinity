@@ -49,7 +49,7 @@ if 'QUERY_STRING' in os.environ:
 			try:
 				item = qs['item'][0]
 			except:
-				item = "Q1742717"
+				item = "Q1085"
 		try:
 			radius = int(qs['radius'][0])
 		except:
@@ -65,7 +65,7 @@ if 'QUERY_STRING' in os.environ:
 		except:
 			f = "searchByItemNenafoceno.txt"
 else:
-	item = "Q1742717"
+	item = "Q1085"
 	radius = 5
 	f = "searchByItemNenafoceno.txt"
 	typ = "item"
@@ -97,4 +97,3 @@ content = '<iframe id="map" style="width:63vw; height:50vh;" frameborder="0" src
 print header
 print content
 print tail
-
