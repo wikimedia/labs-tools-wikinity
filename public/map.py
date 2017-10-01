@@ -6,6 +6,7 @@ import sys
 import os
 import cgi
 import json
+import requests
 
 if 'QUERY_STRING' in os.environ:
 	QS = os.environ['QUERY_STRING']
@@ -87,7 +88,16 @@ if typ == "coor":
 	query = open(f).read().replace('@@@LAT@@@', lat).replace('@@@LON@@@', lon).replace('@@@RADIUS@@@', str(radius))
 else:
 	#Create query for item type
-	query = open(f).read().replace('@@@ITEM@@@', item).replace('@@@RADIUS@@@', str(radius))
+	r = requests.get('https://wikidata.org/entity/' + item + '.json')
+	data = r.json()
+	if 'P625' in data['entities'][item]['claims']:
+		query = open(f).read().replace('@@@ITEM@@@', item).replace('@@@RADIUS@@@', str(radius))
+	else:
+		content = "<h1>Zadaná položka neobsahuje souřadnice</h1>"
+		print header
+		print content
+		print tail
+		sys.exit()
 
 # Create URL
 url = "https://query.wikidata.org/embed.html#" + urllib.quote(query)
