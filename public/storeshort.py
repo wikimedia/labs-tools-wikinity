@@ -17,6 +17,11 @@ if os.environ['REQUEST_METHOD'] != 'POST':
 form = cgi.FieldStorage()
 url = form.getvalue('url')
 
+if not url.startswith('https://tools.wmflabs.org/wikinity'):
+	print 'Wrong URL'
+	print "We aren't a shortener!"
+	sys.exit()
+
 cur = conn.cursor()
 with cur:
 	sql = 'insert into shortener(url) values ("' + url + '");'
