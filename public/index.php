@@ -78,6 +78,8 @@
           <div class="col" id="stat">
 			  <p><?php echo $I18N->msg("stats-before");?> <span id="statnum"></span> <?php echo $I18N->msg("stats-after");?>.</p>
           </div>
+
+		  <footer><?php echo $I18N->getFooterLine( TSINT_HELP_NONE ); ?></footer>
       </div>
   </div>
 
