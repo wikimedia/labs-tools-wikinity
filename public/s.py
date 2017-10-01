@@ -13,7 +13,7 @@ import cgitb
 if 'QUERY_STRING' in os.environ:
 	QS = os.environ['QUERY_STRING']
 	qs = cgi.parse_qs(QS)
-	id = qs.keys()[0]
+	id = qs['id'][0]
 else:
 	print 'Add something to query string'
 	sys.exit()
