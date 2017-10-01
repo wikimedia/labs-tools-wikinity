@@ -28,7 +28,7 @@ conn = db.connect(project)
 if thing == 'article':
 	cur = conn.cursor()
 	with cur:
-		sql = 'select page_title from page where page_namespace=0 and page_title like "' + start + '%"'
+		sql = 'select page_title from page where page_namespace=0 and page_title like "' + start + '%" order by page_title limit 10'
 		cur.execute(sql)
 		data = cur.fetchall()
 	pages = []
