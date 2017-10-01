@@ -30,4 +30,5 @@ s.ehlo()
 s.sendmail(sender, recipient, msg.as_string())
 s.quit()
 
+print 'Status: 303 See other'
 print 'Location: https://tools.wmflabs.org/wikinity/successfullyreported.php'
