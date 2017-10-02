@@ -142,8 +142,8 @@
         //debug
         //console.log(serialized);
         //document.getElementById('map').setAttribute('src', "https://tools.wmflabs.org/wikinity/map.py" + serialized);
-        //addr = "map.py" + serialized;
-        console.log(addr);
+        addr = "map.py" + serialized;
+        //console.log(addr);
         $('#map').load(addr, "#map");
     }
 
