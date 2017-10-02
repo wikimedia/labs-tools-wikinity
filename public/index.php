@@ -94,7 +94,7 @@
 
 <script>
     var addr = null;
-    shortUrl();
+    //shortUrl();
 
     function GetValues() {
         shortUrl();
