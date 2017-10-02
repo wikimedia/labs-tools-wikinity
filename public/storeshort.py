@@ -24,6 +24,16 @@ if not url.startswith('https://tools.wmflabs.org/wikinity'):
 
 cur = conn.cursor()
 with cur:
+	sql = 'select id from shortener where url="' + url + '"'
+	cur.execute(sql)
+	data = cur.fetchall()
+
+if len(data) != 0:
+	print data[0][0]
+	sys.exit()
+
+cur = conn.cursor()
+with cur:
 	sql = 'insert into shortener(url) values ("' + url + '");'
 	cur.execute(sql)
 
