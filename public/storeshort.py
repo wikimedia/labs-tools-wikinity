@@ -33,4 +33,8 @@ with cur:
 	cur.execute(sql)
 	data = cur.fetchall()
 
+print 'Cache-Control: no-cache, no-store, must-revalidate'
+print 'Pragma: no-cache'
+print 'Expires: 0'
+print
 print data[0][0]
