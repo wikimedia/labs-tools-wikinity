@@ -186,9 +186,7 @@
         var data = 'https://tools.wmflabs.org/wikinity/' + addr;
       }
       $.post('https://tools.wmflabs.org/wikinity/storeshort.py', {url: data}, function(result){
-        setTimeout(funtion() {
-          $('#shortUrl').html('<b>short url:</b> <a href="https://tools.wmflabs.org/wikinity/restore.php?id=' + result + '">https://tools.wmflabs.org/wikinity/restore.php?id=' + result + '</a>');
-        }, 2000)
+        $('#shortUrl').html('<b>short url:</b> <a href="https://tools.wmflabs.org/wikinity/restore.php?id=' + result + '">https://tools.wmflabs.org/wikinity/restore.php?id=' + result + '</a>');
       });
     }
 </script>
