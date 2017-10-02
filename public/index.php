@@ -85,10 +85,7 @@
 			  <p><?php echo $I18N->msg("stats-before");?> <span id="statnum"></span> <?php echo $I18N->msg("stats-after");?>.</p>
           </div>
 
-		  <!--
-		  This is working but it needs to be true - we need to be connected to translatewiki.net somehow.
-		  <footer><?php echo $I18N->getFooterLine( TSINT_HELP_NONE ); ?></footer>
-	  	  -->
+		  <?php include 'footer.php'; ?>
       </div>
   </div>
 
