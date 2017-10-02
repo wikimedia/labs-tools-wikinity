@@ -94,8 +94,8 @@
 
 <script>
     var addr = null;
-    //shortUrl();
 
+    //shortUrl();
     function GetValues() {
         shortUrl();
 
@@ -186,7 +186,9 @@
         var data = 'https://tools.wmflabs.org/wikinity/' + addr;
       }
       $.post('https://tools.wmflabs.org/wikinity/storeshort.py', {url: data}, function(result){
-        $('#shortUrl').html('<b>short url:</b> <a href="https://tools.wmflabs.org/wikinity/restore.php?id=' + result + '">https://tools.wmflabs.org/wikinity/restore.php?id=' + result + '</a>');
+        setTimeout(funtion() {
+          $('#shortUrl').html('<b>short url:</b> <a href="https://tools.wmflabs.org/wikinity/restore.php?id=' + result + '">https://tools.wmflabs.org/wikinity/restore.php?id=' + result + '</a>');
+        }, 2000)
       });
     }
 </script>
