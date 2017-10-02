@@ -1,5 +1,9 @@
 {
-	"@metadata": {},
+	"@metadata": {
+		"authors": [
+			"Martin Urbanec"
+		]
+	},
 	"prague": "Praha",
 	"default-value": "výchozí hodnota",
 	"enter-number-of-item": "Číslo položky na Wikidatech, kolem které budou objekty hledány",

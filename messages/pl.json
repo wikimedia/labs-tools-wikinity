@@ -1,5 +1,9 @@
 {
-	"@metadata": {},
+	"@metadata": {
+		"authors": [
+			"Aktron"
+		]
+	},
 	"prague": "Praga",
 	"default-value": "domyślna wartość",
 	"enter-number-of-item": "Numer elementu wókoł którego będą wyszukiwane objekty",

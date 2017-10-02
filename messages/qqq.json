@@ -1,5 +1,9 @@
 {
-	"@metadata": {},
+	"@metadata": {
+		"authors": [
+			"Martin Urbanec"
+		]
+	},
 	"prague": "Praha",
 	"default-value": "text which tells users this is a default value for some field",
 	"enter-number-of-item": "Description of object search form field",
