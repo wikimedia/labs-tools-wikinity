@@ -7,5 +7,6 @@
 		<script type="text/javascript">
 			swal ( "Problém nahlášen", "Co nejrychleji se mu budeme věnovat.", "success" );
 		</script>
+		<?php include 'footer.php'; ?>
 	</body>
 </html>
