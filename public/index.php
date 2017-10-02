@@ -70,6 +70,7 @@
         </div>
         <div class="col-3">
               <button type="button" class="btn btn-primary" id="hledej"><?php echo $I18N->msg("search");?></button>
+              <span id="shortUrl"></span>
         </div>
 
       </div>
@@ -92,7 +93,7 @@
   </div>
 
 <script>
-    var addr = '';
+    var addr = null;
 
     function GetValues() {
 
@@ -176,9 +177,14 @@
 
     function shortUrl() {
       console.log(addr);
-      var data = 'https://tools.wmflabs.org/wikinity/' + addr;
+      var data = '';
+      if (addr == null) {
+        data = 'https://tools.wmflabs.org/wikinity/map.py?type=item&item=Q1085&subtype=nenafoceno&radius=5';
+      } else {
+        var data = 'https://tools.wmflabs.org/wikinity/' + addr;
+      }
       $.post('https://tools.wmflabs.org/wikinity/storeshort.py', {url: data}, function(result){
-        alert(result);
+        $('#shortUrl').html('<a href="' + result + '">' + result + '</a>');
       });
     }
 </script>
