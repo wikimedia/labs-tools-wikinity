@@ -176,7 +176,6 @@
 
     function shortUrl() {
       console.log(addr);
-      console.log(serialized);
       var data = 'https://tools.wmflabs.org/wikinity/' + addr;
       var returndata;
       $.ajax({
