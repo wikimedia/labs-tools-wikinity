@@ -1,5 +1,9 @@
 {
-	"@metadata": {},
+	"@metadata": {
+		"authors": [
+			"Martin Urbanec"
+		]
+	},
 	"prague": "Prague",
 	"default-value": "default value",
 	"enter-number-of-item": "Wikidata item number. Objects will be searched around this item.",

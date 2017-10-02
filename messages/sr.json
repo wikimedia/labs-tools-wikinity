@@ -1,5 +1,9 @@
 {
-	"@metadata": {},
+	"@metadata": {
+		"authors": [
+			"Aktron"
+		]
+	},
 	"prague": "Prag",
 	"default-value": "predefinisano",
 	"enter-number-of-item": "Broj stavke oko koje će se tražiti objekti.",
