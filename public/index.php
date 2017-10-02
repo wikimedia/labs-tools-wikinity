@@ -177,14 +177,9 @@
     function shortUrl() {
       console.log(addr);
       var data = 'https://tools.wmflabs.org/wikinity/' + addr;
-      var returndata;
-      $.ajax({
-        type: "POST",
-        url: 'https://tools.wmflabs.org/wikinity/storeshort.py',
-        data: data,
-        success: returndata,
+      $.post('https://tools.wmflabs.org/wikinity/storeshort.py', {url: data}, function(result){
+        alert(result);
       });
-      alert(returndata);
     }
 </script>
 </body>
