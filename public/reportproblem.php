@@ -21,6 +21,7 @@
 				  <button type="submit" class="btn btn-primary" id="submit"><?php echo $I18N->msg("submit"); ?></button>
 			</div>
 		</form>
+		<?php include 'footer.php'; ?>
 	</div>
 </body>
 </html>
