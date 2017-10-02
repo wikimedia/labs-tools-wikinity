@@ -1,0 +1,21 @@
+{
+	"@metadata": {},
+	"prague": "Praha",
+	"default-value": "text which tells users this is a default value for some field",
+	"enter-number-of-item": "Description of object search form field",
+	"enter-coordinates": "Description of object search form field",
+	"enter-name-of-article": "Description of object search form field",
+	"enter-radius": "Description of object search form field",
+	"select-displayed": "Description of object search form field",
+	"search": "Submit button's caption of object search form",
+	"photographed": "Caption of a checkbox which include photographed objects",
+	"unphotographed": "Caption of a checkbox which include photographed objects",
+	"report-problem": "Submit button of report problem form.",
+	"source-code": "caption of the link to source code of this tool",
+	"your-email": "Description of an email field in report problem form.",
+	"problem-summary": "Description of a field containing problem summary in report problem form",
+	"problem-body": "Description of a field containing more infromation about a reported problem in report problem form",
+	"submit": "General submit button's description",
+	"stats-before": "Text which is displayed before number telling users how much maps has this tool generated.",
+	"stats-after": "Text which is displayed after number telling users how much maps has this tool generated."
+}
