@@ -93,7 +93,6 @@
 
 <script>
 
-
     function GetValues() {
 
         var serialized;
@@ -102,20 +101,21 @@
         var lat = $("#lat").val();
         if (wikiSearch != "")
         {
-			var project = $('#project-language')[0].value + $('#project-project')[0].value;
+			      var project = $('#project-language')[0].value + $('#project-project')[0].value;
             serialized = '?' + 'type=article' + '&article=' + wikiSearch + '&project=' + project;
         }
         else if(item != "")
         {
             serialized = '?' + 'type=item' + '&item=' + item;
-        }else if(lat != "")
+        } else if(lat != "")
         {
             serialized = '?' + 'type=coor' + '&lat=' + $("#lat").val() + '&lon=' + $("#lon").val();
-        }else {
+        } else {
             serialized = '?' + 'type=item' + '&item=' + "Q1085";
         }
-        var nafoceno = $('#nafocene').is(':checked');
+
         var nenafoceno = $('#nenafocene').is(':checked');
+        var nafoceno = $('#nafocene').is(':checked');
         //check if all checkbox are checked
         if(nafoceno == true && nenafoceno == true)
         {
@@ -172,6 +172,18 @@
         })
 
     });
+
+    function shortUrl() {
+      var data = 'https://tools.wmflabs.org/wikinity/' + addr;
+      var returndata;
+      $.ajax({
+        type "POST",
+        url: 'https://tools.wmflabs.org/wikinity/storeshort.py',
+        data: data,
+        success: returndata,
+      });
+      alert(returndata);
+    }
 </script>
 </body>
 </html>
