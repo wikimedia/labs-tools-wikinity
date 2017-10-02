@@ -94,8 +94,10 @@
 
 <script>
     var addr = null;
+    shortUrl();
 
     function GetValues() {
+        shortUrl();
 
         var serialized;
         var wikiSearch = $("#wikiSearchPole").val().replace(/ /g, '_');
@@ -184,7 +186,7 @@
         var data = 'https://tools.wmflabs.org/wikinity/' + addr;
       }
       $.post('https://tools.wmflabs.org/wikinity/storeshort.py', {url: data}, function(result){
-        $('#shortUrl').html('<a href="' + result + '">' + result + '</a>');
+        $('#shortUrl').html('short url: <a href="' + result + '">' + result + '</a>');
       });
     }
 </script>
