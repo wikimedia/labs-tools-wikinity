@@ -177,7 +177,7 @@
       var data = 'https://tools.wmflabs.org/wikinity/' + addr;
       var returndata;
       $.ajax({
-        type "POST",
+        type: "POST",
         url: 'https://tools.wmflabs.org/wikinity/storeshort.py',
         data: data,
         success: returndata,
