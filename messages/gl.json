@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Elisardojm"
+		]
+	},
+	"prague": "Praga",
+	"default-value": "valor por defecto",
+	"enter-number-of-item": "Número de elemento de Wikidata. Procuraranse obxectos ó redor deste elemento.",
+	"enter-coordinates": "Procurar obxectos con coordenadas",
+	"enter-name-of-article": "Procurar obxectos ó redor das coordenadas deste artigo",
+	"enter-radius": "Establece un radio para a procura (km)",
+	"select-displayed": "Escolle obxectos que deberían amosarse no mapa",
+	"search": "Procurar",
+	"photographed": "Fotografado",
+	"unphotographed": "Non fotografado",
+	"report-problem": "Informar sobre un problema",
+	"source-code": "código fonte",
+	"your-email": "O seu enderezo electrónico",
+	"problem-summary": "Resumo do problema",
+	"problem-body": "Cóntenos máis sobre o seu problema",
+	"submit": "Enviar",
+	"stats-before": "Esta ferramenta xerou",
+	"stats-after": "mapas ata agora"
+}

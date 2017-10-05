@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Beta16"
+		]
+	},
+	"default-value": "valore predefinito",
+	"enter-number-of-item": "Numero elemento Wikidata. Gli oggetti verranno ricercati intorno a questo elemento.",
+	"enter-coordinates": "Cerca oggetti con coordinate",
+	"enter-name-of-article": "Cerca oggetti intorno alle coordinate di questa voce",
+	"select-displayed": "Scegli oggetti che devono essere visualizzati in una mappa",
+	"search": "Cerca",
+	"photographed": "Fotografato",
+	"unphotographed": "Non fotografato",
+	"source-code": "codice sorgente",
+	"your-email": "La tua email",
+	"problem-summary": "Riassunto del problema",
+	"submit": "Invia",
+	"stats-before": "Questo strumento ha generato"
+}

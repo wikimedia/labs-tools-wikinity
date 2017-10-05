@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Macofe"
+		]
+	},
+	"prague": "Praga",
+	"default-value": "valor predeterminado",
+	"enter-number-of-item": "Número de elemento de Wikidata. Se buscarán objetos alrededor de este elemento.",
+	"enter-coordinates": "Buscar objetos con coordenadas",
+	"enter-name-of-article": "Buscar objetos alrededor de las coordenadas de este artículo",
+	"enter-radius": "Establece un radio de búsqueda (km)",
+	"select-displayed": "Elige objetos que deberían mostrarse en el mapa",
+	"search": "Buscar",
+	"photographed": "Fotografiado",
+	"unphotographed": "No fotografiado",
+	"report-problem": "Informar sobre un problema",
+	"source-code": "código fuente",
+	"your-email": "Tu correo electrónico",
+	"problem-summary": "Resumen del problema",
+	"problem-body": "Cuéntanos más sobre tu problema",
+	"submit": "Enviar",
+	"stats-before": "Esta herramienta ha generado",
+	"stats-after": "mapas hasta ahora"
+}

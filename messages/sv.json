@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bengtsson96"
+		]
+	},
+	"prague": "Prag",
+	"default-value": "standardvärde",
+	"enter-number-of-item": "Wikidataobjektets ID-nummer. Objekt kommer sökas i objektets närhet",
+	"enter-coordinates": "Sök efter objekt med koordinater",
+	"enter-name-of-article": "Sök efter objekt nära artikelns koordinater",
+	"enter-radius": "Ange sökradie (km)",
+	"select-displayed": "Välj objekt att visa på kartan",
+	"search": "Sök",
+	"photographed": "Fotograferad",
+	"unphotographed": "Utan fotografi",
+	"report-problem": "Rapportera ett problem",
+	"source-code": "källkod",
+	"your-email": "Din e-postadress",
+	"problem-summary": "Sammanfattning av problemet",
+	"problem-body": "Berätta mer om problemet",
+	"submit": "Skicka",
+	"stats-before": "Detta verktyg har skapat",
+	"stats-after": "kartor"
+}

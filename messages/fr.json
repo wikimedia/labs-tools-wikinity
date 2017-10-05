@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"Wladek92"
+		]
+	},
+	"prague": "Prague",
+	"default-value": "valeur par défaut",
+	"enter-number-of-item": "Numéro d'élément Wikidata. Les objets seront recherchés autour de cet élément.",
+	"enter-coordinates": "Chercher des objets par leurs coordonnées",
+	"enter-name-of-article": "Chercher des objets autour des coordonnées de cet article",
+	"enter-radius": "Etablir un rayon de recherche (km)",
+	"search": "Chercher",
+	"photographed": "Photographié",
+	"unphotographed": "Non photographié",
+	"report-problem": "Signaler un problème",
+	"source-code": "code source",
+	"your-email": "Votre courriel",
+	"problem-summary": "Résumé du problème",
+	"problem-body": "Donnez nous plus de détails sur votre problème",
+	"submit": "Envoyer",
+	"stats-before": "Cet outil a généré"
+}

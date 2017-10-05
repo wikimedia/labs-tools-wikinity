@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Liuxinyu970226"
+		]
+	},
+	"prague": "布拉格",
+	"default-value": "默认值",
+	"enter-number-of-item": "维基数据项编号。将搜索该项近似的目标。",
+	"enter-coordinates": "搜索带坐标的目标",
+	"enter-name-of-article": "搜索此条目的坐标周围的目标",
+	"enter-radius": "设置搜索半径（公里）",
+	"select-displayed": "选择应在地图中显示的目标",
+	"search": "搜索",
+	"photographed": "已拍摄",
+	"unphotographed": "未拍摄",
+	"report-problem": "报告问题",
+	"source-code": "源代码",
+	"your-email": "您的电子邮件",
+	"problem-summary": "问题摘要",
+	"problem-body": "告诉我们更多关于您问题的详情",
+	"submit": "提交",
+	"stats-before": "此工具已生成",
+	"stats-after": "个地图"
+}

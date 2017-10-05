@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Metalhead64"
+		]
+	},
+	"prague": "Prag",
+	"default-value": "Standardwert",
+	"enter-number-of-item": "Wikidata-Objektnummer. Objekte werden um dieses gesucht.",
+	"enter-coordinates": "Nach Objekten mit Koordinaten suchen",
+	"enter-name-of-article": "Nach Objekten im Umkreis der Koordinaten dieses Artikels suchen",
+	"enter-radius": "Einen Suchradius festlegen (km)",
+	"select-displayed": "Wähle Objekte aus, die auf einer Karte angezeigt werden sollen.",
+	"search": "Suchen",
+	"photographed": "Fotografiert",
+	"unphotographed": "Nicht fotografiert",
+	"report-problem": "Problem melden",
+	"source-code": "Quellcode",
+	"your-email": "Deine E-Mail-Adresse",
+	"problem-summary": "Zusammenfassung des Problems",
+	"problem-body": "Erzähle uns weitere Einzelheiten über dein Problem",
+	"submit": "Übermitteln",
+	"stats-before": "Dieses Werkzeug hat bereits",
+	"stats-after": "Karten erzeugt"
+}

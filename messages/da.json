@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joedalton"
+		]
+	},
+	"prague": "Prag",
+	"default-value": "standardværdi",
+	"enter-number-of-item": "Wikidataelementnummer. Objekter vil blive gennemsøgt omkring dette element.",
+	"enter-coordinates": "Søg efter objekter med koordinater",
+	"enter-name-of-article": "Søg efter objekter omkring koordinater for denne artikel",
+	"enter-radius": "Angiv søgeradius (km)",
+	"select-displayed": "Vælg objekter som skal vises på et kort",
+	"search": "Søg",
+	"photographed": "Fotograferet",
+	"unphotographed": "Uden fotografi",
+	"report-problem": "Anmeld problem",
+	"source-code": "kildekode",
+	"your-email": "Din e-post",
+	"problem-summary": "Sammenfatning af problemet",
+	"problem-body": "Giv os venligst flere detaljer om problemet",
+	"submit": "Send",
+	"stats-before": "Dette værktøj har oprettet",
+	"stats-after": "kort allerede"
+}

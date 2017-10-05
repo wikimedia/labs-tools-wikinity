@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kly"
+		]
+	},
+	"prague": "布拉格",
+	"default-value": "預設值",
+	"enter-number-of-item": "維基數據項目編號。會搜尋圍繞此項目的物件。",
+	"enter-coordinates": "搜尋帶有座標的物件",
+	"enter-name-of-article": "搜尋圍繞此條目座標的物件",
+	"enter-radius": "設定搜尋半徑（公里）",
+	"select-displayed": "挑選應要顯示在地圖上的物件",
+	"search": "搜尋",
+	"photographed": "拍攝",
+	"unphotographed": "未拍攝",
+	"report-problem": "回報問題",
+	"source-code": "原始碼",
+	"your-email": "您的電子郵件",
+	"problem-summary": "問題摘要",
+	"problem-body": "告訴我們更多有關您的問題細節",
+	"submit": "提交",
+	"stats-before": "此工具已產生",
+	"stats-after": "地圖就緒"
+}
