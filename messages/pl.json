@@ -1,14 +1,19 @@
 {
 	"@metadata": {
 		"authors": [
-			"Aktron"
+			"Aktron",
+			"Chrumps"
 		]
 	},
 	"prague": "Praga",
 	"default-value": "domyślna wartość",
-	"enter-number-of-item": "Numer elementu wókoł którego będą wyszukiwane objekty",
+	"enter-number-of-item": "Numer elementu Wikidanych, wokół którego będą wyszukiwane obiekty.",
 	"enter-coordinates": "Wyszukiwanie objektów za pomocą koordynatów",
 	"enter-radius": "odległość (km) od punktu definowanego do wyszukiwania",
 	"select-displayed": "Które obiekty pokazać na mapie",
-	"search": "Szukaj"
+	"search": "Szukaj",
+	"report-problem": "Zgłoś problem",
+	"source-code": "kod źródłowy",
+	"your-email": "Twój adres e-mail",
+	"submit": "Wyślij"
 }

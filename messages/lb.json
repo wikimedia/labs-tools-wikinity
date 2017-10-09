@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Robby"
+		]
+	},
+	"prague": "Prag",
+	"default-value": "Standard-Wäert",
+	"search": "Sichen",
+	"photographed": "Fotograféiert",
+	"unphotographed": "Net fotograféiert",
+	"report-problem": "Problem mellen",
+	"source-code": "Quellcode",
+	"your-email": "Är E-Mail-Adress",
+	"problem-summary": "Resumé vum Problem",
+	"problem-body": "Gitt eis méi Eenzelheeten iwwer Äre Problem",
+	"submit": "Späicheren"
+}

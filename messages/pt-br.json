@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eduardo Addad de Oliveira"
+		]
+	},
+	"prague": "Praga",
+	"default-value": "valor padrão",
+	"enter-number-of-item": "Número do item Wikidata. Os objetos serão pesquisados em torno deste item.",
+	"enter-coordinates": "Procure objetos com coordenadas",
+	"enter-name-of-article": "Procure objetos em torno de coordenadas deste artigo",
+	"enter-radius": "Defina um raio para pesquisa (km)",
+	"select-displayed": "Escolha objetos que devem ser exibidos em um mapa",
+	"search": "Pesquisar",
+	"photographed": "Fotografado",
+	"unphotographed": "Não fotografado",
+	"report-problem": "Informar um problema",
+	"source-code": "Código fonte",
+	"your-email": "Seu Email",
+	"problem-summary": "Resumo do problema",
+	"problem-body": "Conte-nos mais detalhes sobre o seu problema",
+	"submit": "Enviar",
+	"stats-before": "Esta ferramenta gerou",
+	"stats-after": "mapas já"
+}

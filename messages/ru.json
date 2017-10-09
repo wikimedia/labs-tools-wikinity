@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Okras"
+		]
+	},
+	"prague": "Прага",
+	"default-value": "значение по умолчанию",
+	"search": "Поиск",
+	"report-problem": "Сообщить о проблеме",
+	"source-code": "исходный код",
+	"your-email": "Ваш адрес эл. почты",
+	"problem-summary": "Описание проблемы",
+	"problem-body": "Расскажите нам подробнее о вашей проблеме",
+	"submit": "Отправить"
+}

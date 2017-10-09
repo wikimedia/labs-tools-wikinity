@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Belkacem77"
+		]
+	},
+	"prague": "Pṛag",
+	"default-value": "Azal amezwer",
+	"enter-number-of-item": "Uṭṭun n uferdis Wikidata. Tiɣawsiwin ad ttunadint rrif n uferdis-agi.",
+	"enter-coordinates": "Nadi tiɣawsiwin s imsidag-is",
+	"enter-name-of-article": "Nadi tiɣawsiwin rrif n imsidag n umagrad-agi",
+	"enter-radius": "Sbadu aẓenẓar n unadi (km)",
+	"select-displayed": "Fren tiɣawsiwin i yessefk ad d-banent ɣef tkarḍa",
+	"search": "Nadi",
+	"photographed": "Tettwaṭṭef-as tewlaft",
+	"unphotographed": "Ur s-tettwaṭṭef ara tewlaft",
+	"report-problem": "Azen ugur",
+	"source-code": "Tangalt aɣbalu",
+	"your-email": "Imayl-ik",
+	"problem-summary": "Agzul n wugur-ik",
+	"problem-body": "Ini-yaɣ-d ugar n telqayt ɣef wugur-ik",
+	"submit": "Azen",
+	"stats-before": "Afecku-agi yettwasirew",
+	"stats-after": "tikarḍiwin yakan"
+}

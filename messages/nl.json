@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mainframe98"
+		]
+	},
+	"prague": "Praag",
+	"default-value": "Standaardwaarde",
+	"search": "Zoeken",
+	"report-problem": "Probleem melden",
+	"source-code": "broncode",
+	"your-email": "Uw e-mailadres",
+	"problem-summary": "Samenvatting van het probleem",
+	"submit": "Verzenden"
+}

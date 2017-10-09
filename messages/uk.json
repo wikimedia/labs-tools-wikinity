@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"SimondR"
+		]
+	},
+	"prague": "Прага",
+	"default-value": "значення за замовчуванням",
+	"enter-coordinates": "Пошук об'єктів з координатами",
+	"select-displayed": "Виберіть об'єкти, які слід відобразити на карті",
+	"search": "Пошук",
+	"photographed": "Сфотографовано",
+	"unphotographed": "Нефотографовано",
+	"report-problem": "Повідомити про проблему",
+	"source-code": "вихідний код",
+	"your-email": "Ваша електронна пошта",
+	"problem-summary": "Короткий опис проблеми",
+	"problem-body": "Розкажіть докладніше про свою проблему",
+	"submit": "Надіслати"
+}

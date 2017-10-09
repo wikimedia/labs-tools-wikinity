@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Xuacu"
+		]
+	},
+	"prague": "Praga",
+	"default-value": "valor predetermináu",
+	"enter-number-of-item": "Númberu d'elementu de Wikidata. Buscaránse los oxetos alredor d'esti elementu.",
+	"enter-coordinates": "Buscar oxetos con coordenaes",
+	"enter-name-of-article": "Buscar oxetos alredor de les coordenaes d'esti artículu",
+	"enter-radius": "Establez un radiu de busca (km)",
+	"select-displayed": "Escueyi los oxetos que tendríen de vese nel mapa",
+	"search": "Buscar",
+	"photographed": "Fotografiaos",
+	"unphotographed": "Sin fotografiar",
+	"report-problem": "Informar d'un problema",
+	"source-code": "códigu fonte",
+	"your-email": "Corréu electrónicu",
+	"problem-summary": "Resume del problema",
+	"problem-body": "Apúrrenos más detalles sobre'l problema",
+	"submit": "Unviar",
+	"stats-before": "Esta ferramienta yá xeneró",
+	"stats-after": "mapes"
+}
