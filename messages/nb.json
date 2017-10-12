@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jon Harald Søby"
+		]
+	},
+	"prague": "Praha",
+	"default-value": "standardverdi",
+	"enter-number-of-item": "Wikidata-elementnummer. Objekter rundt dette elementet vil bli søkt etter.",
+	"enter-coordinates": "Søk etter objekter med koordinater",
+	"enter-name-of-article": "Søk etter objekter rundt koordinatene til denne artikkelen",
+	"enter-radius": "Sett en søkeradius (km)",
+	"select-displayed": "Velg objekter som skal vises på kart",
+	"search": "Søk",
+	"photographed": "Med fotografi",
+	"unphotographed": "Uten fotografi",
+	"report-problem": "Rapporter et problem",
+	"source-code": "kildekode",
+	"your-email": "E-postadressen din",
+	"problem-summary": "Sammendrag av problemet",
+	"problem-body": "Fortell oss mer detaljert om problemet",
+	"submit": "Send",
+	"stats-before": "Dette verktøyet har generert",
+	"stats-after": "kart ellerede"
+}

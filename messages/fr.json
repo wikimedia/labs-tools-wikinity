@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Wladek92"
+			"Wladek92",
+			"Gomoko"
 		]
 	},
 	"prague": "Prague",
@@ -10,6 +11,7 @@
 	"enter-coordinates": "Chercher des objets par leurs coordonnées",
 	"enter-name-of-article": "Chercher des objets autour des coordonnées de cet article",
 	"enter-radius": "Etablir un rayon de recherche (km)",
+	"select-displayed": "Choisir les objets qui doivent être affichés sur une carte",
 	"search": "Chercher",
 	"photographed": "Photographié",
 	"unphotographed": "Non photographié",
@@ -19,5 +21,6 @@
 	"problem-summary": "Résumé du problème",
 	"problem-body": "Donnez nous plus de détails sur votre problème",
 	"submit": "Envoyer",
-	"stats-before": "Cet outil a généré"
+	"stats-before": "Cet outil a généré",
+	"stats-after": "cartes déjà générées"
 }
