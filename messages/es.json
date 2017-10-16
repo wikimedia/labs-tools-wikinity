@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Macofe"
+			"Macofe",
+			"Fitoschido"
 		]
 	},
 	"prague": "Praga",
@@ -10,7 +11,7 @@
 	"enter-coordinates": "Buscar objetos con coordenadas",
 	"enter-name-of-article": "Buscar objetos alrededor de las coordenadas de este artículo",
 	"enter-radius": "Establece un radio de búsqueda (km)",
-	"select-displayed": "Elige objetos que deberían mostrarse en el mapa",
+	"select-displayed": "Elige objetos que deban aparecer en el mapa",
 	"search": "Buscar",
 	"photographed": "Fotografiado",
 	"unphotographed": "No fotografiado",

@@ -17,7 +17,7 @@
 	"photographed": "Caption of a checkbox which include photographed objects",
 	"unphotographed": "Caption of a checkbox which include photographed objects",
 	"report-problem": "Submit button of report problem form.",
-	"source-code": "caption of the link to source code of this tool",
+	"source-code": "caption of the link to source code of this tool\n{{Identical|Source code}}",
 	"your-email": "Description of an email field in report problem form.",
 	"problem-summary": "Description of a field containing problem summary in report problem form",
 	"problem-body": "Description of a field containing more infromation about a reported problem in report problem form",

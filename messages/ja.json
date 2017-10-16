@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hinaloe",
+			"Phantomize"
+		]
+	},
+	"prague": "プラハ",
+	"default-value": "既定値",
+	"search": "検索",
+	"report-problem": "問題点を報告",
+	"source-code": "ソースコード",
+	"your-email": "メールアドレス",
+	"submit": "送信"
+}

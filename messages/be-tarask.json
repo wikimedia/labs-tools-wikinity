@@ -12,5 +12,7 @@
 	"enter-radius": "Радыюс для пошуку (км)",
 	"select-displayed": "Абярыце аб’екты, якія трэба паказаць на мапе",
 	"search": "Пошук",
-	"photographed": "Сфатаграфавана"
+	"photographed": "Сфатаграфавана",
+	"unphotographed": "Не сфатаграфавана",
+	"report-problem": "Паведаміць пра праблему"
 }
