@@ -6,6 +6,11 @@
 	},
 	"prague": "Prag",
 	"default-value": "Standard-Wäert",
+	"enter-number-of-item": "Nummer vum Wikidata Element. D'Objete ronderëm dëst Element gi gesicht.",
+	"enter-coordinates": "No Objete mat Koordinate sichen",
+	"enter-name-of-article": "No Objete sichen an der Géigend vun de Koordinate vun dësem Artikel",
+	"enter-radius": "Stellt de Radius a fir ze sichen (km)",
+	"select-displayed": "Objeten eraussichen déi op enger Kaart gewise gi sollen",
 	"search": "Sichen",
 	"photographed": "Fotograféiert",
 	"unphotographed": "Net fotograféiert",
@@ -14,5 +19,7 @@
 	"your-email": "Är E-Mail-Adress",
 	"problem-summary": "Resumé vum Problem",
 	"problem-body": "Gitt eis méi Eenzelheeten iwwer Äre Problem",
-	"submit": "Späicheren"
+	"submit": "Späicheren",
+	"stats-before": "Dësen Tool huet schonn",
+	"stats-after": "Kaarte generéiert"
 }

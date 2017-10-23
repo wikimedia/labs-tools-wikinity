@@ -6,7 +6,7 @@
 		]
 	},
 	"prague": "Praga",
-	"default-value": "domyślna wartość",
+	"default-value": "wartość domyślna",
 	"enter-number-of-item": "Numer elementu Wikidanych, wokół którego będą wyszukiwane obiekty.",
 	"enter-coordinates": "Wyszukiwanie objektów za pomocą koordynatów",
 	"enter-radius": "odległość (km) od punktu definowanego do wyszukiwania",
