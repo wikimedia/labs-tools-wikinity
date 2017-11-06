@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"YaronSh"
+		]
+	},
+	"prague": "פראג",
+	"default-value": "ערך בררת מחדל",
+	"enter-number-of-item": "מספר הפריט בוויקינתונים. החיפוש אחר הרכיבים יתמקדו בפריט הז.",
+	"enter-coordinates": "חיפוש אחר רכיבים עם נקודות ציון",
+	"enter-name-of-article": "חיפוש אחר רכיבים סביב נקודות הציון של ערך זה",
+	"enter-radius": "הגדרת רדיוס לחיפוש (ק״מ)",
+	"select-displayed": "נא לבחור רכיבים שאמורים להופיע על המפה",
+	"search": "חיפוש",
+	"photographed": "מצולם",
+	"unphotographed": "בלתי מצולם",
+	"report-problem": "דיווח על תקלה",
+	"source-code": "קוד מקור",
+	"your-email": "כתובת הדוא״ל שלך",
+	"problem-summary": "תקציר התקלה",
+	"problem-body": "נא לספר לנו עוד על התקלה שלך",
+	"submit": "שליחה",
+	"stats-before": "כלי זה ייצר",
+	"stats-after": "מפות עד עכשיו"
+}
