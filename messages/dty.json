@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Nirajan pant"
+		]
+	},
+	"prague": "प्राग",
+	"default-value": "पूर्वनिर्धारित मान",
+	"enter-coordinates": "निर्देशाङ्काः सङ्ङै वस्तु खिलाइ खोजः",
+	"enter-radius": "खोज्जाइ लाई व्यास तय अरः (किमी)",
+	"search": "खोजः",
+	"report-problem": "समस्याइ उजुरी दिय",
+	"source-code": "स्रोत कोड",
+	"your-email": "तमरो इमेल",
+	"problem-summary": "समस्याः सारांश",
+	"problem-body": "तमरा समस्याः बारेमी हम लाई थप विवरण भँणः",
+	"submit": "पेश",
+	"stats-before": "येइ उपकरण ले उत्पन्न अरिराइछ"
+}
