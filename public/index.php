@@ -90,6 +90,7 @@
   </div>
 
 <script>
+
     var availableTags = [];
     
     $( "#wikiSearchPole" ).on( "change", updateAutocomplete );
@@ -103,14 +104,7 @@
             availableTags = availableTags.concat(tmp);
         });
 
-        setTimeout(() => {
-            $( "#wikiSearchPole" ).autocomplete({
-                source: availableTags
-            });
-        }, 1000);
-
-        $('#wikiSearchPole').val('');
-        $('#wikiSearchPole').val(text);          
+        $('#wikiSearchPole').autocomplete("option", { source: availableTags });         
     }
 
     var addr = null;
@@ -173,6 +167,11 @@
     $( "select" ).on( "change", GetValues );
 
     $( document ).ready(function() {
+        
+        $( "#wikiSearchPole" ).autocomplete({
+                source: availableTags
+        });
+
         $.get("stats.py", function (data, status) { $('#statnum').text(data) })
         $("#wikiSearch").collapse('show');
         $( "#hledej" ).click(function() {
