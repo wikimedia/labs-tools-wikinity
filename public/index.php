@@ -8,7 +8,7 @@
       <div class="row">
           <div class="col">
             <div class="radio">
-                <label><input type="radio" name="optradio" data-toggle="collapse" data-target="#wikiSearch" checked><?php echo $I18N->msg("enter-name-of-article"); ?></label>
+                <label><input type="radio" name="optradio" data-toggle="collapse" data-target="#wikiSearch" onchange="updateAutocomplete()" checked><?php echo $I18N->msg("enter-name-of-article"); ?></label>
             </div>
           </div>
         <div class="col collapse" id="wikiSearch">
@@ -90,17 +90,16 @@
   </div>
 
 <script>
-    $( function() {
-        var availableTags = [];
-        $( "#wikiSearchPole" ).autocomplete({
-            source: availableTags
-        });
-    } );
 
     function updateAutocomplete() {
-        var lang = $('#project-language').val() + 'wiki';
-        $.get("https://tools.wmflabs.org/wikinity/autocomplete.py" + "?thing=article&start=A&project=" + lang, function(data){
-            availableTags = data;
+        let lang = $('#project-language').val() + 'wiki';
+        let text = $('#wikiSearchPole').val() 
+        $.get("https://tools.wmflabs.org/wikinity/autocomplete.py" + "?thing=article&start=" + text + "&project=" + lang, function(data){
+            availableTags = JSON.parse(data);
+        });
+
+        $( "#wikiSearchPole" ).autocomplete({
+            source: availableTags
         });
     }
     
