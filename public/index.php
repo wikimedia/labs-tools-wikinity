@@ -108,6 +108,9 @@
                 source: availableTags
             });
         }, 1000);
+
+        $('#wikiSearchPole').val('');
+        $('#wikiSearchPole').val(text);          
     }
 
     var addr = null;
