@@ -90,12 +90,11 @@
   </div>
 
 <script>
+    var availableTags = [];
 
     $( "#wikiSearchPole" ).autocomplete({
         source: availableTags
     });
-
-    var availableTags = [];
     
     function updateAutocomplete() {
         let lang = $('#project-language').val() + 'wiki';
