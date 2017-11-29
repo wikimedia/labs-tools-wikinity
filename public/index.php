@@ -90,12 +90,13 @@
   </div>
 
 <script>
+    var availableTags = []
 
     function updateAutocomplete() {
         let lang = $('#project-language').val() + 'wiki';
         let text = $('#wikiSearchPole').val() 
         $.get("https://tools.wmflabs.org/wikinity/autocomplete.py" + "?thing=article&start=" + text + "&project=" + lang, function(data){
-            availableTags = JSON.parse(data);
+            availableTags.concat(JSON.parse(data));
         });
 
         $( "#wikiSearchPole" ).autocomplete({
