@@ -100,11 +100,12 @@
             availableTags = availableTags.concat(tmp);
         });
 
-        $( "#wikiSearchPole" ).autocomplete({
-            source: availableTags
-        });
+        setTimeout(() => {
+            $( "#wikiSearchPole" ).autocomplete({
+                source: availableTags
+            });
+        }, 1000);
     }
-    
 
     var addr = null;
 
