@@ -90,6 +90,21 @@
   </div>
 
 <script>
+    $( function() {
+        var availableTags = [];
+        $( "#wikiSearchPole" ).autocomplete({
+            source: availableTags
+        });
+    } );
+
+    function updateAutocomplete() {
+        var lang = $('#project-language').val() + 'wiki';
+        $.get("https://tools.wmflabs.org/wikinity/autocomplete.py" + "?thing=article&start=A&project=" + lang, function(data){
+            availableTags = data;
+        });
+    }
+    
+
     var addr = null;
 
     //shortUrl();
