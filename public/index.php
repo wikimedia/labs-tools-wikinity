@@ -90,7 +90,7 @@
   </div>
 
 <script>
-    var availableTags;
+    var availableTags = [];
     function updateAutocomplete() {
         let lang = $('#project-language').val() + 'wiki';
         let text = $('#wikiSearchPole').val() 
