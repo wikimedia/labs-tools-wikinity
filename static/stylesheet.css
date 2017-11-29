@@ -1,3 +1,6 @@
+.ui-autocomplete {
+	background-color: white;
+}
 .hidden {
 	display: none !important;
 	visibility: hidden !important;
