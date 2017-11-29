@@ -13,7 +13,7 @@
           </div>
         <div class="col collapse" id="wikiSearch">
           <div class="form-group">
-              <input type="text" class="form-control" name="wikiSearchPole" id="wikiSearchPole" placeholder="<?php echo $I18N->msg("prague"); ?>, (<?php echo $I18N->msg("default-value");?>)">
+              <input type="text" class="form-control" name="wikiSearchPole" id="wikiSearchPole" onchange="updateAutocomplete()" placeholder="<?php echo $I18N->msg("prague"); ?>, (<?php echo $I18N->msg("default-value");?>)">
           </div>
 	  <div class="form-group">
 	  	<input type="text" id="project-language" name="language" value="cs">
@@ -91,9 +91,11 @@
 
 <script>
 
+    $( "#wikiSearchPole" ).autocomplete({
+        source: availableTags
+    });
+
     var availableTags = [];
-    
-    $( "#wikiSearchPole" ).on( "change", updateAutocomplete );
     
     function updateAutocomplete() {
         let lang = $('#project-language').val() + 'wiki';
@@ -167,11 +169,7 @@
     $( "select" ).on( "change", GetValues );
 
     $( document ).ready(function() {
-        
-        $( "#wikiSearchPole" ).autocomplete({
-                source: availableTags
-        });
-
+    
         $.get("stats.py", function (data, status) { $('#statnum').text(data) })
         $("#wikiSearch").collapse('show');
         $( "#hledej" ).click(function() {
