@@ -1,13 +1,16 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ykhwong"
+			"Ykhwong",
+			"Revi"
 		]
 	},
+	"prague": "프라하",
 	"default-value": "기본 값",
 	"enter-number-of-item": "위키데이터 항목 번호입니다. 이 항목 주위로 객체가 검색됩니다.",
 	"enter-coordinates": "좌표가 있는 객체 검색",
 	"enter-name-of-article": "이 문서의 좌표 주변의 객체 검색",
+	"enter-radius": "검색 범위 설정 (km)",
 	"select-displayed": "지도에 표시할 객체를 선택합니다",
 	"search": "검색",
 	"report-problem": "문제점 보고",
