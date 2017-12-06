@@ -8,9 +8,13 @@ WHERE
       bd:serviceParam wikibase:radius "@@@RADIUS@@@" . 
   } 
   
-  OPTIONAL {
-  {?item p:P31/ps:P31/wdt:P279* wd:Q15893266 .}  UNION {?item p:P31/ps:P31/wdt:P279* wd:Q3918409 .}
+ OPTIONAL {
+  {?item p:P31/ps:P31/wdt:P279* wd:Q15893266 .}  UNION {?item p:P31/ps:P31/wdt:P279* wd:Q3918409 .}    #objekty a záměry (A jejich podtřídy)
   BIND("zaniklé objekty a záměry" AS ?layer)}
+  
+  OPTIONAL {
+  ?item wdt:P31 wd:Q79007 .
+  BIND("ulice" AS ?layer)}
   
   OPTIONAL {
   {?item wdt:P31 wd:Q846659 . } union {?item wdt:P31 wd:Q34627 .}
@@ -18,20 +22,16 @@ WHERE
   
   OPTIONAL {
   {?item wdt:P1435 wd:Q385405 . } union {?item wdt:P1435 wd:Q649434 .}
+  minus { ?item p:P1435 ?status . ?status pq:P582 [] .  }
   BIND("kulturní památky" AS ?layer)}
 
   OPTIONAL {
   ?item wdt:P677 ?kod .
   MINUS {?item wdt:P31 wd:Q811534 .}
-  BIND("chráněná území" AS ?layer)}
+  BIND("chráněná území a památné stromy" AS ?layer)}
   
   OPTIONAL {
-  ?item wdt:P677 ?kod .
-  ?item wdt:P31 wd:Q811534 .
-  BIND("památné stromy" AS ?layer)}
-  
-  OPTIONAL {
-  ?item p:P31/ps:P31/wdt:P279 wd:Q486972 .
+  ?item p:P31/ps:P31/wdt:P279* wd:Q486972 .
   BIND("sídla" AS ?layer)}
  
   OPTIONAL {
