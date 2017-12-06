@@ -14,7 +14,7 @@ OPTIONAL {
   BIND("zaniklé objekty a záměry" AS ?layer)}
   
   OPTIONAL {
-  ?item wdt:P31 wd:Q79007 .
+  {?item wdt:P31 wd:Q79007 .} union {?item wdt:P31 wd:Q174782 .}
   BIND("ulice" AS ?layer)}
   
   OPTIONAL {
