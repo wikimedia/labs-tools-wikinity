@@ -1,0 +1,27 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hamilton Abreu",
+			"MokaAkashiyaPT",
+			"Renatinhoracing"
+		]
+	},
+	"prague": "Praga",
+	"default-value": "valor predefinido",
+	"enter-number-of-item": "Número do elemento Wikidata. Os objetos serão procurados em redor deste elemento.",
+	"enter-coordinates": "Procurar objetos com coordenadas",
+	"enter-name-of-article": "Procure os objetos em torno das coordenadas deste artigo",
+	"enter-radius": "Defina um raio para a procura (km)",
+	"select-displayed": "Escolha os objetos que devem ser mostrados num mapa",
+	"search": "Procurar",
+	"photographed": "Fotografado",
+	"unphotographed": "Não fotografado",
+	"report-problem": "Reportar um problema",
+	"source-code": "código-fonte",
+	"your-email": "O seu correio eletrónico",
+	"problem-summary": "Resumo do problema",
+	"problem-body": "Conte-nos mais detalhes sobre o seu problema",
+	"submit": "Enviar",
+	"stats-before": "Esta ferramenta gerou",
+	"stats-after": "mapas até agora"
+}
