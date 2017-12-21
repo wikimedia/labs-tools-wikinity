@@ -4,11 +4,22 @@
 			"Saraiki"
 		]
 	},
+	"prague": "پراڳ",
 	"default-value": "پہلے کنوں مقرر تھئی ہوئی قیمت",
+	"enter-number-of-item": "وکی ڈیٹا آئٹم نمبر۔ چیزاں ایں آئٹم نال ڳولیسن۔",
+	"enter-coordinates": "چیزاں کوں کوآرڈینیٹ نال ڳولو",
+	"enter-name-of-article": "ایں مضمون دے کوآرڈینیٹ دے ٻاہروں چیزاں ڳولو",
+	"enter-radius": "ڳولݨ کیتے رداس مقرر کرو(کلومیٹر)",
+	"select-displayed": "نقشے تے لاوݨ کیتے چیزاں چݨو",
 	"search": "ڳولو",
+	"photographed": "فوٹو بݨ ڳئے",
+	"unphotographed": "فوٹو نی بݨ سڳیا",
 	"report-problem": "مسئلے دی رپورٹ کرو",
 	"source-code": "سورس کوڈ",
 	"your-email": "تہاݙا ای میل",
 	"problem-summary": "مسئلے دا خلاصہ",
-	"submit": "جمع کرواؤ"
+	"problem-body": "آپݨے مسئلے بارے ٻئی تفصیل ݙسو",
+	"submit": "جمع کرواؤ",
+	"stats-before": "ایہ آوزار بݨ ڳئے",
+	"stats-after": "پہلے ہی نقشے تے ہے"
 }
