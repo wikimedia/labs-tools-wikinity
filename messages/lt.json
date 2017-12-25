@@ -1,0 +1,26 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eitvys200",
+			"Manvydasz"
+		]
+	},
+	"prague": "Praha",
+	"default-value": "numatytoji reikšmė",
+	"enter-number-of-item": "Vikiduomenų elemento numeris. Objektai bus ieškomi aplink šį elementą.",
+	"enter-coordinates": "Ieškoti objektų su koordinatėmis",
+	"enter-name-of-article": "Ieškoti objektų, esančių netoli šio straipsnio koordinačių",
+	"enter-radius": "Nustatyti paieškos spindulį (km)",
+	"select-displayed": "Pasirinkite objektus, kurie turėtų būti rodomi žemėlapyje",
+	"search": "Ieškoti",
+	"photographed": "Nufotografuota",
+	"unphotographed": "Nenufotografuota",
+	"report-problem": "Pranešti apie problemą",
+	"source-code": "šaltinio kodas",
+	"your-email": "Jūsų el. paštas",
+	"problem-summary": "Klaidos aprašymas",
+	"problem-body": "Praneškite daugiau apie problemą",
+	"submit": "Siųsti",
+	"stats-before": "Šis įrankis sugeneruotas",
+	"stats-after": "žemėlapių iki šiol"
+}
