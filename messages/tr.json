@@ -1,20 +1,21 @@
 {
 	"@metadata": {
 		"authors": [
-			"Incelemeelemani"
+			"Incelemeelemani",
+			"Hedda"
 		]
 	},
 	"prague": "Prag",
 	"default-value": "varsayılan değer",
 	"enter-number-of-item": "Wikidata öge numarası. Nesneler bu ögenin çevresinde aranacak.",
 	"enter-coordinates": "Nesneleri koordinatlarla ara",
-	"enter-name-of-article": "Bu makalenin koordinatları etrafındaki nesneleri ara",
-	"enter-radius": "Arama için bir yarıçap(km) belirle",
+	"enter-name-of-article": "Bu maddenin koordinatları etrafındaki nesneleri ara",
+	"enter-radius": "Arama için bir yarıçap (km) belirle",
 	"select-displayed": "Haritada görüntülenmesi gereken nesneleri seçin",
 	"search": "Ara",
 	"photographed": "Fotoğraflandı",
 	"unphotographed": "Fotoğraflanmadı",
-	"report-problem": "Hatayı bildir",
+	"report-problem": "Hata bildir",
 	"source-code": "kaynak kodu",
 	"your-email": "E-posta adresiniz",
 	"problem-summary": "Hatanın özeti",
