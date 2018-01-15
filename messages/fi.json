@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"Pyscowicz"
+		]
+	},
+	"prague": "Praha",
+	"default-value": "oletusarvo",
+	"enter-name-of-article": "Etsi kohteita tämän artikkelin koordinaateista",
+	"enter-radius": "Aseta säde etsittäessä (km)",
+	"select-displayed": "Valitse kohteet, jotka pitäisi näkyä kartalla",
+	"search": "Etsi",
+	"photographed": "Valokuvattu",
+	"unphotographed": "Valokuvaamaton",
+	"report-problem": "Ilmoita ongelmasta",
+	"source-code": "lähdekoodi",
+	"your-email": "Sähköpostiosoitteesi",
+	"problem-summary": "Yhteenveto ongelmasta",
+	"problem-body": "Kerro meille lisätietoja ongelmastasi",
+	"submit": "Lähetä",
+	"stats-before": "Tämä työkalu on luonut",
+	"stats-after": "karttaa jo"
+}
