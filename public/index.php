@@ -112,7 +112,6 @@
 
     //shortUrl();
     function GetValues() {
-        shortUrl();
 
         var serialized;
         var wikiSearch = $("#wikiSearchPole").val().replace(/ /g, '_');
@@ -162,6 +161,7 @@
         //document.getElementById('map').setAttribute('src', "https://tools.wmflabs.org/wikinity/map.py" + serialized);
         addr = "map.py" + serialized;
         //console.log(addr);
+        shortUrl();
         $('#map').load(addr, "#map");
     }
 
