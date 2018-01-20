@@ -105,7 +105,7 @@ else:
 url = "https://query.wikidata.org/embed.html#" + urllib.quote(query)
 
 #Create content and print it
-content = '<iframe id="map" style="width:63vw; height:50vh;" frameborder="0" src="' + url + '">'
+content = '<iframe id="map" style="width:73vw; height:90vh;" frameborder="0" src="' + url + '">'
 print header
 print content
 print tail
