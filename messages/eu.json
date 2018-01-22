@@ -5,11 +5,21 @@
 		]
 	},
 	"prague": "Praga",
+	"default-value": "lehenetsitako balioa",
+	"enter-number-of-item": "Wikidata elementuaren zenbakia. Objektuak elementu honen inguruan bilatuko dira.",
+	"enter-coordinates": "Koordenatuak dituzten objetuak bilatu",
+	"enter-name-of-article": "Artikulu honen koordenatuen inguruko objetuak bilatu",
+	"enter-radius": "Bilaketa radio bat ezarri (km)",
+	"select-displayed": "Mapan agertu beharko liratekeen objetuak aukeratu",
 	"search": "Bilatu",
+	"photographed": "Egindako argazkiak",
+	"unphotographed": "Argazkiak egiteke",
 	"report-problem": "Arazoaz ohartarazi",
 	"source-code": "iturri-kodea",
 	"your-email": "Zure e-maila",
 	"problem-summary": "Arazoaren laburpena",
 	"problem-body": "Zure arazoan inguruko xehetasun gehiago kontaizkiguzu",
-	"submit": "Bidali"
+	"submit": "Bidali",
+	"stats-before": "Tresna honek sortutakoa",
+	"stats-after": "mapak jadanik"
 }
