@@ -22,5 +22,6 @@
 	"problem-summary": "問題の概要",
 	"problem-body": "問題の詳細を教えてください",
 	"submit": "送信",
-	"stats-before": "このツールが生成した件数"
+	"stats-before": "このツールが生成した件数",
+	"stats-after": "件の地図"
 }
