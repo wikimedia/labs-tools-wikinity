@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"محمد أحمد عبد الفتاح"
+			"محمد أحمد عبد الفتاح",
+			"Omarbofoss"
 		]
 	},
+	"default-value": "قيمة افتراضية",
 	"photographed": "مصورة",
 	"unphotographed": "غير مصورة",
 	"your-email": "بريدك الإلكتروني",
