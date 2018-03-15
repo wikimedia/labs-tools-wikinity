@@ -1,11 +1,15 @@
 {
 	"@metadata": {
 		"authors": [
-			"Dishual"
+			"Dishual",
+			"Gwenn-Ael"
 		]
 	},
 	"prague": "Praha",
 	"default-value": "Talvoud dre ziouer",
+	"enter-number-of-item": "Niverenn elfenn Wikidata. Ne vo ket klasket an traoù tro-dro d'an elfenn-se.",
+	"enter-coordinates": "Klaskit traoù dre o daveennoù",
+	"enter-name-of-article": "Klaskit traoù tro-dro da zaveennoù ar pennad-se.",
 	"search": "Klask",
 	"photographed": "Luc'hskeudennet",
 	"unphotographed": "Luc'hskeudenn ebet",

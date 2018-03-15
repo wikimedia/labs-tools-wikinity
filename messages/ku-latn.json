@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bikarhêner"
+		]
+	},
+	"prague": "Prag",
+	"default-value": "mîqdara standard",
+	"enter-number-of-item": "Hejmara hêmanê ya Wikidatayê. Wê li objeyan di derdora vê hêmanê de bigere.",
+	"enter-coordinates": "Bi koordînatan li objeyan bigere",
+	"enter-name-of-article": "Li objeyên derdora koordînatên vê gotarê bigere",
+	"enter-radius": "Ji bo lêgerînê nîvtîrek (km) diyar bike",
+	"select-displayed": "Objeyên ku divê li ser nexşeyê werin xuyan bibijêre",
+	"search": "Lê bigere",
+	"photographed": "Yên fotografkirî",
+	"unphotographed": "Yên nefotografkirî",
+	"report-problem": "Pirsgirekê rapor bike",
+	"source-code": "Koda çavkaniyê",
+	"your-email": "E-nameya te",
+	"problem-summary": "Kurteya pirsgirêkê",
+	"problem-body": "Der barê pirsgirêka xwe de ji me re zêdetir dêtayan bide",
+	"submit": "Bişîne",
+	"stats-before": "Ev amûr jixwe",
+	"stats-after": "nexşe çêkiriye"
+}
