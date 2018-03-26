@@ -2,18 +2,26 @@
 	"@metadata": {
 		"authors": [
 			"Aktron",
-			"Chrumps"
+			"Chrumps",
+			"DeRudySoulStorm"
 		]
 	},
 	"prague": "Praga",
 	"default-value": "wartość domyślna",
 	"enter-number-of-item": "Numer elementu Wikidanych, wokół którego będą wyszukiwane obiekty.",
 	"enter-coordinates": "Wyszukiwanie objektów za pomocą koordynatów",
+	"enter-name-of-article": "Wyszukaj obiekty wokół współrzędnych tego artykułu",
 	"enter-radius": "odległość (km) od punktu definowanego do wyszukiwania",
 	"select-displayed": "Które obiekty pokazać na mapie",
 	"search": "Szukaj",
+	"photographed": "Sfotografowane",
+	"unphotographed": "Niesfotografowane",
 	"report-problem": "Zgłoś problem",
 	"source-code": "kod źródłowy",
 	"your-email": "Twój adres e-mail",
-	"submit": "Wyślij"
+	"problem-summary": "Podsumowanie problemu",
+	"problem-body": "Powiedz nam więcej szczegółów na temat twojego problemu",
+	"submit": "Wyślij",
+	"stats-before": "To narzędzie wygenerowało",
+	"stats-after": "Gotowe mapy"
 }
