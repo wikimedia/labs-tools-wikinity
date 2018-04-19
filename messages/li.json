@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ooswesthoesbes"
+		]
+	},
+	"prague": "Praag",
+	"default-value": "standerdwaerd",
+	"enter-number-of-item": "ID-nómmer op Wikidata. Veurwirpe waere gezóch hie róntjelóm.",
+	"enter-coordinates": "Zeuk veur veurwirpe mit coördinate",
+	"enter-name-of-article": "Zeuk veur veurwirpe róntjelóm de coördinate van dit artikel",
+	"enter-radius": "Zèt radius veur te zeuke (km)",
+	"select-displayed": "Zeuk veurwirpe die op dees kaart zówwe mótte waere getuind",
+	"search": "Zeuk",
+	"photographed": "Gefotografeerd",
+	"unphotographed": "Neet-gefotografeerd",
+	"report-problem": "Melj perbleem",
+	"source-code": "bróncode",
+	"your-email": "Dien e-mailadres",
+	"problem-summary": "Samevatting van 't perbleem",
+	"problem-body": "Vertèl mier details euver dien perbleem",
+	"submit": "Slaon op",
+	"stats-before": "'t Gereidsjap is opgewèk",
+	"stats-after": "kaarte die klaor staon"
+}
