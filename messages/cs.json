@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Martin Urbanec"
+			"Martin Urbanec",
+			"Patriccck"
 		]
 	},
 	"prague": "Praha",
@@ -11,7 +12,7 @@
 	"enter-name-of-article": "Zadejte jméno článku, kolem jehož souřadnic se bude hledat",
 	"enter-radius": "Zadejte okruh, ve kterém se bude hledat (km)",
 	"select-displayed": "Které objekty mají být zobrazené na mapě",
-	"search": "Hledej",
+	"search": "Hledat",
 	"photographed": "Nafocené",
 	"unphotographed": "Nenafocené",
 	"report-problem": "Nahlásit problém",
@@ -21,5 +22,5 @@
 	"problem-body": "Podrobnější informace o problému",
 	"submit": "Odeslat",
 	"stats-before": "Tento nástroj vygeneroval již",
-	"stats-after": "map"
+	"stats-after": "mapy"
 }
