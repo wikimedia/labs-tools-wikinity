@@ -28,7 +28,6 @@ OPTIONAL {
 
   OPTIONAL {
   ?item wdt:P677 ?kod .
-  MINUS {?item wdt:P31 wd:Q811534 .}
   BIND("chráněná území a památné stromy" AS ?layer)}
   
   OPTIONAL {
