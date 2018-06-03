@@ -39,6 +39,6 @@ OPTIONAL {
   BIND("další budovy" AS ?layer)}
   
   MINUS {?item wdt:P18 ?img .}
-  SERVICE wikibase:label { bd:serviceParam wikibase:language "cs" . }  
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "cs,en" . }  
   
 }
