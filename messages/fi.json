@@ -6,6 +6,8 @@
 	},
 	"prague": "Praha",
 	"default-value": "oletusarvo",
+	"enter-number-of-item": "Wikidata-kohteen numero. Objektit etsitään tämän kohteen ympärillä.",
+	"enter-coordinates": "Hae kohteita, joilla on koordinaatit",
 	"enter-name-of-article": "Etsi kohteita tämän artikkelin koordinaateista",
 	"enter-radius": "Aseta säde etsittäessä (km)",
 	"select-displayed": "Valitse kohteet, jotka pitäisi näkyä kartalla",

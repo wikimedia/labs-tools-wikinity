@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Quintino Lopes Castro Tavares"
+		]
+	},
+	"prague": "Praga",
+	"default-value": "Valor padron prédefinidu",
+	"enter-number-of-item": "Númeru di elementu Wikidata. Kes objetus ta ser peskizadu en tornu des elementu.",
+	"enter-coordinates": "Buska otos objetus ku kordenadas",
+	"enter-name-of-article": "Buska objetus en tornu di kordenadas des artigu",
+	"enter-radius": "Defini un raiu pa buska (km)",
+	"select-displayed": "Skodji objetus ki debi ser mostradu na mapa",
+	"search": "Buska",
+	"photographed": "Fotografadu",
+	"unphotographed": "Ka foi fotografadu",
+	"report-problem": "Informa un problema",
+	"source-code": "Kódigu-fonti",
+	"your-email": "Informa bu Email",
+	"problem-summary": "Rizumu di problema",
+	"problem-body": "Kontanu más ditalhis di bu problema",
+	"submit": "Manda",
+	"stats-before": "Es feramenta cria",
+	"stats-after": "mapas ti gósi"
+}
