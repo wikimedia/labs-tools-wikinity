@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"L2212"
+		]
+	},
+	"prague": "Praga",
+	"default-value": "valore predefinidu",
+	"enter-number-of-item": "Nùmeru elementu Wikidata. Sos ogetos ant a bènnere chircados a inghìriu de custu elementu.",
+	"enter-coordinates": "Chirca ogetos cun coordinatas",
+	"enter-name-of-article": "Chirca ogetos a inghìriu de sas coordinatas de custu artìculu",
+	"enter-radius": "Imposta unu raju de chirca (km)",
+	"select-displayed": "Issèbera sos ogetos chi diant dèpere èssere ammustrados in sa mapa",
+	"search": "Chirca",
+	"photographed": "Fotografadu",
+	"unphotographed": "Non fotografadu",
+	"report-problem": "Sinnala unu problema",
+	"source-code": "còdighe mitza",
+	"your-email": "S'indiritzu de posta eletrònica tuo",
+	"problem-summary": "Suntu de su problema",
+	"problem-body": "Daghe·nos prus informatziones a pitzu de su problema tuo",
+	"submit": "Imbia",
+	"stats-before": "Custa aina at giai ingendradu",
+	"stats-after": "mapas"
+}
