@@ -45,10 +45,6 @@ WHERE
   BIND("sídla" AS ?layer)
   BIND('00bfff' as ?rgb)
   }
- 
-  OPTIONAL {
-  {?item p:P31/ps:P31*/wdt:P279* wd:Q44539 . } UNION {?item p:P31/ps:P31/wdt:P279* wd:Q3947 . } 
-  BIND("další budovy" AS ?layer)}
   
   ?item wdt:P18 ?img .
   SERVICE wikibase:label { bd:serviceParam wikibase:language "cs,en" . }  
