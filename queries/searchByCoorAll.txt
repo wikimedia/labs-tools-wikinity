@@ -23,7 +23,7 @@ WHERE
   OPTIONAL {
   {?item wdt:P31 wd:Q846659 . } union {?item wdt:P31 wd:Q34627 .}
   BIND("židovské památky" AS ?layer)
-  BIND('48d1cc' as ?rgb)
+  BIND('ff8c00' as ?rgb)
   }
   
   OPTIONAL {
