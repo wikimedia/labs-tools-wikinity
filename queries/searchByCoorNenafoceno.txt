@@ -1,5 +1,5 @@
 #defaultView:Map
-SELECT distinct ?item ?itemLabel ?coord ?layer
+SELECT distinct ?item ?itemLabel ?coord ?layer ?rgb
 WHERE
 {
   SERVICE wikibase:around { 
@@ -10,32 +10,40 @@ WHERE
   
   OPTIONAL {
   {?item p:P31/ps:P31/wdt:P279* wd:Q15893266 .}  UNION {?item p:P31/ps:P31/wdt:P279* wd:Q3918409 .}    #objekty a záměry (A jejich podtřídy)
-  BIND("zaniklé objekty a záměry" AS ?layer)}
+  BIND("zaniklé objekty a záměry" AS ?layer)
+  BIND('000000' as ?rgb)
+  }
   
   OPTIONAL {
   {?item wdt:P31 wd:Q79007 .} union {?item wdt:P31 wd:Q174782 .}
-  BIND("ulice" AS ?layer)}
+  BIND("ulice" AS ?layer)
+  BIND('48d1cc' as ?rgb)
+  }
   
   OPTIONAL {
   {?item wdt:P31 wd:Q846659 . } union {?item wdt:P31 wd:Q34627 .}
-  BIND("židovské památky" AS ?layer)}
+  BIND("židovské památky" AS ?layer)
+  BIND('ff8c00' as ?rgb)
+  }
   
   OPTIONAL {
   {?item wdt:P1435 wd:Q385405 . } union {?item wdt:P1435 wd:Q649434 .}
   minus { ?item p:P1435 ?status . ?status pq:P582 [] .  }
-  BIND("kulturní památky" AS ?layer)}
+  BIND("kulturní památky" AS ?layer)
+  BIND('8b4513' as ?rgb)
+  }
 
   OPTIONAL {
   ?item wdt:P677 ?kod .
-  BIND("chráněná území a památné stromy" AS ?layer)}
+  BIND("chráněná území a památné stromy" AS ?layer)
+  BIND('228b22' as ?rgb)
+  }
   
   OPTIONAL {
   ?item p:P31/ps:P31/wdt:P279* wd:Q486972 .
-  BIND("sídla" AS ?layer)}
- 
-  OPTIONAL {
-  {?item p:P31/ps:P31*/wdt:P279* wd:Q44539 . } UNION {?item p:P31/ps:P31/wdt:P279* wd:Q3947 . } 
-  BIND("další budovy" AS ?layer)}
+  BIND("sídla" AS ?layer)
+  BIND('00bfff' as ?rgb)
+  }
   
   MINUS {?item wdt:P18 ?img .}
   SERVICE wikibase:label { bd:serviceParam wikibase:language "cs,en" . }  
