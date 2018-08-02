@@ -2,13 +2,26 @@
 	"@metadata": {
 		"authors": [
 			"محمد أحمد عبد الفتاح",
-			"Omarbofoss"
+			"Omarbofoss",
+			"ديفيد"
 		]
 	},
+	"prague": "براغ",
 	"default-value": "قيمة افتراضية",
+	"enter-number-of-item": "رقم بند ويكي بيانات، سيتم البحث في الكائنات حول هذا العنصر.",
+	"enter-coordinates": "البحث عن الأشياء بالإحداثيات",
+	"enter-name-of-article": "ابحث عن كائنات حول إحداثيات هذه المقالة",
+	"enter-radius": "تعيين نصف قطر للبحث (كم)",
+	"select-displayed": "اختر الكائنات التي يجب عرضها على الخريطة",
+	"search": "بحث",
 	"photographed": "مصورة",
 	"unphotographed": "غير مصورة",
+	"report-problem": "أبلغ عن مشكلة",
+	"source-code": "الكود المصدري",
 	"your-email": "بريدك الإلكتروني",
 	"problem-summary": "ملخص المشكلة",
-	"problem-body": "أخبرنا المزيد عن مشكلتك"
+	"problem-body": "أخبرنا المزيد عن مشكلتك",
+	"submit": "إرسال",
+	"stats-before": "هذه الأداة قد وُلِّدت",
+	"stats-after": "الخرائط بالفعل"
 }
