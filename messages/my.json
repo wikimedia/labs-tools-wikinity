@@ -4,9 +4,11 @@
 			"Dr Lotus Black"
 		]
 	},
+	"default-value": "နဂိုတန်ဖိုး",
 	"search": "ရှာဖွေရန်",
 	"report-problem": "ပြသနာကို တင်ပြရန်",
 	"your-email": "သင်၏ အီးမေးလ်",
 	"problem-summary": "ပြသနာ အကျဉ်းချုပ်",
-	"problem-body": "သင်၏ပြသနာကို ပို၍အသေးစိပ် ပြောပြပါ"
+	"problem-body": "သင်၏ပြသနာကို ပို၍အသေးစိပ် ပြောပြပါ",
+	"submit": "ထည့်သွင်းရန်"
 }
