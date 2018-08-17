@@ -1,20 +1,26 @@
 {
 	"@metadata": {
 		"authors": [
-			"Beta16"
+			"Beta16",
+			"Ontsed"
 		]
 	},
+	"prague": "Praga",
 	"default-value": "valore predefinito",
 	"enter-number-of-item": "Numero elemento Wikidata. Gli oggetti verranno ricercati intorno a questo elemento.",
 	"enter-coordinates": "Cerca oggetti con coordinate",
 	"enter-name-of-article": "Cerca oggetti intorno alle coordinate di questa voce",
+	"enter-radius": "Imposta un raggio di ricerca (km)",
 	"select-displayed": "Scegli oggetti che devono essere visualizzati in una mappa",
 	"search": "Cerca",
 	"photographed": "Fotografato",
 	"unphotographed": "Non fotografato",
+	"report-problem": "Segnala un problema",
 	"source-code": "codice sorgente",
 	"your-email": "La tua email",
 	"problem-summary": "Riassunto del problema",
+	"problem-body": "Aggiungi altri dettagli al problema",
 	"submit": "Invia",
-	"stats-before": "Questo strumento ha generato"
+	"stats-before": "Questo strumento ha generato",
+	"stats-after": "mappe finora"
 }
