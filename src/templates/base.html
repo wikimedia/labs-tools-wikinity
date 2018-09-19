@@ -1,13 +1,3 @@
-<?php
-// Force HTTPS for our users
-if (getallheaders()['X-Forwarded-Proto'] == "http") {
-	header("Location: https://".$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF']);
-	die();
-}
-require_once __DIR__ . '/../vendor/autoload.php';
-$I18N = new Intuition( 'wikinity' );
-$I18N->registerDomain( 'wikinity', __DIR__ . '/../messages' );
-?>
 <!DOCTYPE HTML>
 <html lang="cs">
 <head>
@@ -27,3 +17,17 @@ $I18N->registerDomain( 'wikinity', __DIR__ . '/../messages' );
   <script src="https://tools-static.wmflabs.org/cdnjs/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src="https://tools-static.wmflabs.org/wikinity/jquery-ui.min.js"></script>
 </head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-inverse bg-faded" style="background-color:#337ab7;border-color: 2e6da4; border-radius: 0;">
+        <a class="navbar-brand" href="#" style="color: #fff">
+        Wikinity
+        </a>
+
+        <a class="navbar-brand" href="https://github.com/urbanecm/wikinity/" style="color: #fff;float: right">
+            <i class="fa fa-github fa-lg" aria-hidden="true"></i> GitHub - {{ locale["source-code"] }}
+        </a>
+    <a style="float: right; color: white;" class="navbar-brand no-hover" href="reportproblem.php">{{ locale["report-problem"] }}</a>
+    </nav>
+    {% block content %}{% endblock %}
+</body>
