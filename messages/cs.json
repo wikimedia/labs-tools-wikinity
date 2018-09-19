@@ -22,5 +22,6 @@
 	"problem-body": "Podrobnější informace o problému",
 	"submit": "Odeslat",
 	"stats-before": "Tento nástroj vygeneroval již",
-	"stats-after": "map"
+	"stats-after": "map",
+	"no-coordinates": "Nebylo možné z vámi zadaných údajů zjistit souřadnice"
 }
