@@ -24,5 +24,7 @@
 	"problem-body": "Description of a field containing more infromation about a reported problem in report problem form",
 	"submit": "General submit button's description\n{{Identical|Submit}}",
 	"stats-before": "Text which is displayed before number telling users how much maps has this tool generated.",
-	"stats-after": "Text which is displayed after number telling users how much maps has this tool generated."
+	"stats-after": "Text which is displayed after number telling users how much maps has this tool generated.",
+	"no-coordinates": "Error message that can be displayed instead of the map.",
+	"change-language": "Link to the form for changing language and headline of the form itself"
 }
