@@ -2,3 +2,7 @@ STATS_COUNTER_FILE: /tmp/wikinity-stats.txt
 DEFAULT_LANGUAGE: en
 SECRET_KEY: something
 MESSAGES_DIR: ../messages
+DB_NAME: wikinity
+DB_HOST: tools-db
+DB_CONF: /data/project/wikinity/replica.my.cnf # You can use DB_USER/DB_PASS instead of this
+STATIC_URL: /static
