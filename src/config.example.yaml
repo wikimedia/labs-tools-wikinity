@@ -1,3 +1,4 @@
 STATS_COUNTER_FILE: /tmp/wikinity-stats.txt
 DEFAULT_LANGUAGE: en
 SECRET_KEY: something
+MESSAGES_DIR: ../messages
