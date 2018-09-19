@@ -23,5 +23,6 @@
 	"submit": "Odeslat",
 	"stats-before": "Tento nástroj vygeneroval již",
 	"stats-after": "map",
-	"no-coordinates": "Nebylo možné z vámi zadaných údajů zjistit souřadnice"
+	"no-coordinates": "Nebylo možné z vámi zadaných údajů zjistit souřadnice",
+	"change-language": "Změnit jazyk"
 }

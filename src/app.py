@@ -23,6 +23,7 @@ import requests
 import urllib.parse
 import toolforge
 import pymysql
+from flask_jsonlocale import Locales
 
 app = Flask(__name__)
 
@@ -30,6 +31,7 @@ app = Flask(__name__)
 __dir__ = os.path.dirname(__file__)
 app.config.update(
     yaml.safe_load(open(os.path.join(__dir__, 'config.yaml'))))
+locales = Locales(app)
 
 stats_filename = app.config.get('STATS_COUNTER_FILE', '/tmp/wikinity-stats.txt')
 
@@ -41,40 +43,17 @@ def force_https():
             code=301
         )
 
-def getdefaultlocale():
-    return app.config.get('DEFAULT_LANGUAGE', 'en')
-
-@app.route('/getlocale')
-def getlocale():
-    if request.args.get('uselang') or session.get('language'):
-        return request.args.get('uselang') or session.get('language')
-    else:
-        return getdefaultlocale()
-
-def getmessages(language=None):
-    if language is None: language = getlocale()
-    return json.loads(open(os.path.join('..', 'messages', '%s.json' % language)).read())
-
-@app.context_processor
-def messages_to_context():
-    locales = getmessages()
-    en_locales = getmessages(language='en')
-    for key in en_locales.keys():
-        if key not in locales.keys():
-            locales[key] = en_locales[key]
-    return {'locale': locales}
-
-def getmessage(message_code):
-    return getmessages().get(message_code, getmessages(language=getdefaultlocale())[message_code])
-
-@app.route('/setlocale')
-def setlocale():
-    session['language'] = request.args.get('locale')
-    return redirect(url_for('index'))
-
 @app.route('/')
 def index():
     return render_template('index.html')
+
+@app.route('/change_language', methods=['GET', 'POST'])
+def change_language():
+    if request.method == 'GET':
+        return render_template('change_language.html', locales=locales.get_locales(), permanent_locale=locales.get_permanent_locale())
+    else:
+        locales.set_locale(request.form.get('locale'))
+        return redirect(url_for('index'))
 
 @app.route('/stats')
 def stats():
@@ -133,7 +112,7 @@ def map():
         if 'P625' in data['entities'][item]['claims']:
             query = open(f).read().replace('@@@ITEM@@@', item).replace('@@@RADIUS@@@', str(radius))
         else:
-            return "<h1>%s</h1>" % getmessage('no-coordinates')
+            return "<h1>%s</h1>" % locales.getmessage('no-coordinates')
     
     return '<iframe id="map" style="width:90vw; height:90vh;" frameborder="0" src="https://query.wikidata.org/embed.html#' + urllib.parse.quote(query) + '">'
 
