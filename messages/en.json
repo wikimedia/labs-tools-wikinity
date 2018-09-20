@@ -26,7 +26,7 @@
 	"change-language": "Change language",
 	"admin-link": "Admin",
 	"admin-interface": "Admin interface",
-	"admin-description": "You can edit queries Wikinity uses here.",
+	"admin-description": "Please choose action: ",
 	"admin-variables": "List of variables",
 	"and": "and",
 	"admin-description-latlon": "Contains coordinates, only used when searching via coordinates",

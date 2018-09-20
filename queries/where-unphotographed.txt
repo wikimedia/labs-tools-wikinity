@@ -1,0 +1,1 @@
+MINUS {?item wdt:P18 ?img .}

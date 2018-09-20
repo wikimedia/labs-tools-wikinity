@@ -1,0 +1,9 @@
+#defaultView:Map
+SELECT distinct ?item ?itemLabel ?coord ?layer ?rgb
+WHERE
+{
+  SERVICE wikibase:around { 
+      ?item wdt:P625 ?coord .
+      bd:serviceParam wikibase:center "Point(@@LON@@ @@@LAT@@)"^^geo:wktLiteral .
+      bd:serviceParam wikibase:radius "@@@RADIUS@@@" . 
+  } 

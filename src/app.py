@@ -174,7 +174,7 @@ def map():
         lat = coor["latitude"]
         lon = coor["longitude"]
     
-    query = "\n".join((get_query(typ), get_layers_query(), get_query(subtype), get_query("end")))
+    query = "\n".join((open('../queries/start-%s.txt' % typ).read(), get_layers_query(), open('../queries/where-%s.txt' % subtype).read(), open('../queries/end.txt').read()))
     if typ == "coor":
         query = query.replace('@@LAT@@', lat).replace('@@LON@@', lon).replace('@@RADIUS@@', str(radius))
     else:
@@ -193,25 +193,6 @@ def map():
     }
 
     return jsonify(res)
-
-def get_query(typ):
-    conn = connect()
-    with conn.cursor() as cur:
-        cur.execute('SELECT query FROM query WHERE type=%s ORDER BY timestamp DESC LIMIT 1', typ)
-        data = cur.fetchall()
-        if len(data) == 1:
-            return data[0][0]
-        else:
-            return ''
-
-
-def get_queries():
-    conn = connect()
-    queries = {}
-    queries = {}
-    for typ in QUERY_TYPES:
-            queries[typ] = get_query(typ)
-    return queries
 
 def get_layers():
     conn = connect()
@@ -238,24 +219,9 @@ def get_layers_query():
         """ % (layer[2], layer[3], layer[1])
     return res
 
-@app.route('/admin', methods=['GET', 'POST'])
+@app.route('/admin')
 def admin():
-    if logged():
-        if not isadmin():
-            return render_template('permission_denied.html')
-        if request.method == 'GET':
-            return render_template('admin.html', queries=get_queries())
-        else:
-            conn = connect()
-            queries = get_queries()
-            for typ in request.form:
-                if typ.startswith('query-') and queries[typ.replace('query-', '')] != request.form.get(typ):
-                    with conn.cursor() as cur:
-                        cur.execute('INSERT INTO query(query, type, username) VALUES(%s, %s, %s)', (request.form.get(typ), typ.replace('query-', ''), getusername()))
-            conn.commit()
-            return render_template('admin.html', queries=get_queries(), success=True)
-    else:
-        return redirect(url_for("login"))
+    return render_template('admin.html')
 
 @app.route('/admin/layers')
 def admin_layers():

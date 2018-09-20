@@ -3,26 +3,8 @@
 <div class="container">
     <h1>{{locale['admin-interface']}}</h1>
     <p>{{locale['admin-description']}}</p>
-    <a href="{{ url_for('admin_layers') }}">{{locale["admin-edit-layers"]}}</a>
-    <h4>{{locale['admin-variables']}}</h4>
     <ul>
-        <li><code>@@LAT@@</code> {{locale["and"]}} <code>@@LON@@</code>: {{locale["admin-description-latlon"]}}</li>
-        <li><code>@@ITEM@@</code>: {{locale["admin-description-item"]}}</li>
-        <li><code>@@RADIUS@@</code>: {{locale["admin-description-radius"]}}</li>
+        <li><a href="{{ url_for('admin_layers') }}">{{locale["admin-edit-layers"]}}</a></li>
     </ul>
-
-    <form method="POST">
-        {% if success %}
-        <h3>{{locale['admin-success']}}</h3>
-        {% else %}
-
-        {% for typ in queries %}
-        <h2>{{locale["admin-" + typ]}}</h2>
-        <textarea name="query-{{typ}}" rows="10">{{queries[typ]}}</textarea>
-        {% endfor %}
-
-        <br /><input type="submit" value="{{locale['submit']}}">
-        {% endif %}
-    </form>
 </div>
 {% endblock %}
