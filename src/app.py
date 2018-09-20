@@ -215,7 +215,7 @@ def admin():
                     with conn.cursor() as cur:
                         cur.execute('INSERT INTO query(query, type, username) VALUES(%s, %s, %s)', (request.form.get(typ), typ.replace('query-', ''), getusername()))
             conn.commit()
-            return render_template('admin.html', queries=get_queries())
+            return render_template('admin.html', queries=get_queries(), success=True)
     else:
         return redirect(url_for("login"))
 
