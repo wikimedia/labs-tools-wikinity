@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <h1>{{ locale['admin-edit-user'] }}</h1>
+    <form method="POST">
+        <label for="isactive">{{ locale['admin-user-isactive'] }}</label>
+        <input type="checkbox" name="isactive" id="isactive" {% if user.2 == 1 %}checked{% endif %} value="1"><br>
+        <label for="isadmin">{{ locale['admin-user-isadmin'] }}</label>
+        <input type="checkbox" name="isadmin" id="isadmin" {% if user.3 == 1 %}checked{% endif %} value="1"><br>
+        <input type="submit" value="{{ locale['submit'] }}">
+    </form>
+</div>
+{% endblock %}

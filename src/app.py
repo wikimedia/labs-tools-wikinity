@@ -223,6 +223,26 @@ def get_layers_query():
 def admin():
     return render_template('admin/index.html')
 
+@app.route('/admin/users')
+def admin_users():
+    conn = connect()
+    with conn.cursor() as cur:
+        cur.execute('SELECT * FROM users')
+        users = cur.fetchall()
+    return render_template('admin/users.html', users=users)
+
+@app.route('/admin/user/<path:id>', methods=['GET', 'POST'])
+def admin_user(id):
+    conn = connect()
+    if request.method == 'POST':
+        with conn.cursor() as cur:
+            cur.execute('UPDATE users SET is_active=%s, is_admin=%s WHERE id=%s', (int(request.form.get('isactive', 0)), int(request.form.get('isadmin', 0)), id))
+        conn.commit()
+    with conn.cursor() as cur:
+        cur.execute('SELECT * FROM users WHERE id=%s', id)
+        user = cur.fetchall()[0]
+    return render_template('admin/user.html', user=user)
+
 @app.route('/admin/layers')
 def admin_layers():
     return render_template('admin/layers.html', layers=get_layers())

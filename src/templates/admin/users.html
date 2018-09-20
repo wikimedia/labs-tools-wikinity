@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <h1>{{locale["admin-users"]}}</h1>
+    <ul>
+        {% for user in users %}
+        <li>
+            <a href="{{ url_for('admin_user', id=user.0) }}">{{user.1}}</a>
+            {% if user.2 == 0 %}
+            ({{ locale['inactive'] }})
+            {% else %}
+            {% if user.3 == 1 %}
+            ({{ locale['administrator'] }})
+            {% endif %}
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
