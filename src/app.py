@@ -38,7 +38,6 @@ locales = Locales(app)
 stats_filename = app.config.get('STATS_COUNTER_FILE', '/tmp/wikinity-stats.txt')
 
 QUERY_TYPES = [
-    "layers",
     "coordinate",
     "item",
     "photographed",
@@ -166,7 +165,7 @@ def map():
         else:
             item = request.args.get('item') or 'Q1085'
     
-    query = "\n".join((get_query(typ), get_query("layers"), get_query(subtype), get_query("end")))
+    query = "\n".join((get_query(typ), get_layers_query(), get_query(subtype), get_query("end")))
     if typ == "coor":
         query = query.replace('@@LAT@@', lat).replace('@@LON@@', lon).replace('@@RADIUS@@', str(radius))
     else:
@@ -200,6 +199,31 @@ def get_queries():
             queries[typ] = get_query(typ)
     return queries
 
+def get_layers():
+    conn = connect()
+    with conn.cursor() as cur:
+        cur.execute('SELECT * FROM layers')
+        return cur.fetchall()
+
+def get_layer(id):
+    conn = connect()
+    with conn.cursor() as cur:
+        cur.execute('SELECT * FROM layers WHERE id=%s', id)
+        return cur.fetchall()[0]
+
+def get_layers_query():
+    layers = get_layers()
+    res = ""
+    for layer in layers:
+        res += """
+        OPTIONAL {
+            %s
+            BIND("%s" AS ?layer)
+            BIND("%s" as ?rgb)
+        }
+        """ % (layer[2], layer[3], layer[1])
+    return res
+
 @app.route('/admin', methods=['GET', 'POST'])
 def admin():
     if logged():
@@ -218,6 +242,34 @@ def admin():
             return render_template('admin.html', queries=get_queries(), success=True)
     else:
         return redirect(url_for("login"))
+
+@app.route('/admin/layers')
+def admin_layers():
+    return render_template('admin_layers.html', layers=get_layers())
+
+@app.route('/admin/layer/new', methods=['GET', 'POST'])
+def admin_layer_new():
+    if request.method == 'GET':
+        return render_template('admin_layer.html')
+    else:
+        conn = connect()
+        with conn.cursor() as cur:
+            cur.execute('INSERT INTO layers(color, definition, name) VALUES(%s, %s, %s)', (request.form['color'], request.form['definition'], request.form['name']))
+        conn.commit()
+        with conn.cursor() as cur:
+            cur.execute('SELECT id FROM layers ORDER BY id DESC')
+        return redirect(url_for('admin_layer', id=cur.fetchall()[0][0]))
+
+@app.route('/admin/layer/<path:id>', methods=['GET', 'POST'])
+def admin_layer(id):
+    if request.method == 'GET':
+        return render_template('admin_layer.html', layer=get_layer(id))
+    else:
+        conn = connect()
+        with conn.cursor() as cur:
+            cur.execute('UPDATE layers SET color=%s, definition=%s, name=%s WHERE id=%s', (request.form['color'], request.form['definition'], request.form['name'], id))
+        conn.commit()
+        return render_template('admin_layer.html', layer=get_layer(id), success=True)
 
 @app.route('/login')
 def login():

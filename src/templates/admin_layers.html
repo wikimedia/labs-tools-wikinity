@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <h1>Layers</h1>
+    <ul>
+        {% for layer in layers %}
+        <li><a href="{{url_for('admin_layer', id=layer.0)}}">{{layer.3}}</a></li>
+        {% endfor %}
+    </ul>
+
+    <a href="{{url_for('admin_layer_new')}}">Add layer</a>
+</div>
+{% endblock %}

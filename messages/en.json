@@ -43,5 +43,9 @@
 	"welcome": "Welcome",
 	"login": "Login",
 	"logout": "Logout",
-	"permission-denied": "Permission denied. If you believe this happened in error, contact an administrator."
+	"permission-denied": "Permission denied. If you believe this happened in error, contact an administrator.",
+	"new": "new",
+	"admin-layer-name": "Name",
+	"admin-layer-color": "Color",
+	"admin-layer-definition": "Definition"
 }

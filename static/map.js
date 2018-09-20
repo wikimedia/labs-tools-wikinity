@@ -1,4 +1,10 @@
+var mapsPlaceholder = []
+L.Map.addInitHook(function () {
+    mapsPlaceholder.push(this);
+});
 function GetValues() {
+    if(mapsPlaceholder.length == 1) {mapsPlaceholder[0].remove()}
+    $('#map').attr("class", "");
     $('#map').html("<h1>Processing...</h1>");
     var type = $('input[name="optradio"]:checked').val();
     
