@@ -33,9 +33,7 @@
         {% else %}
         <a class="navbar-brand no-hover menuitem" href="login">{{locale["login"]}}</a>
         {% endif %}
-        <a class="navbar-brand menuitem" href="https://phabricator.wikimedia.org/source/tool-wikinity">
-            <i class="fa fa-github fa-lg" aria-hidden="true"></i> {{ locale["source-code"] }}
-        </a>
+        <a class="navbar-brand no-hover menuitem" href="{{url_for('change_language')}}">{{locale["change-language"]}}</a>
         <a class="navbar-brand no-hover menuitem" href="https://phabricator.wikimedia.org/maniphest/task/edit/form/1/?project=wikinity">{{ locale["report-problem"] }}</a>
     </nav>
     {% block content %}{% endblock %}
