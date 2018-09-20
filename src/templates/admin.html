@@ -3,6 +3,12 @@
 <div class="container">
     <h1>{{locale['admin-interface']}}</h1>
     <p>{{locale['admin-description']}}</p>
+    <h4>{{locale['admin-variables']}}</h4>
+    <ul>
+        <li><code>@@LAT@@</code> {{locale["and"]}} <code>@@LON@@</code>: {{locale["admin-description-latlon"]}}</li>
+        <li><code>@@ITEM@@</code>: {{locale["admin-description-item"]}}</li>
+        <li><code>@@RADIUS@@</code>: {{locale["admin-description-radius"]}}</li>
+    </ul>
 
     <form method="POST">
         {% if success %}
