@@ -3,6 +3,7 @@
 <div class="container">
     <h1>{{locale['admin-interface']}}</h1>
     <p>{{locale['admin-description']}}</p>
+    <a href="{{ url_for('admin_layers') }}">{{locale["admin-edit-layers"]}}</a>
     <h4>{{locale['admin-variables']}}</h4>
     <ul>
         <li><code>@@LAT@@</code> {{locale["and"]}} <code>@@LON@@</code>: {{locale["admin-description-latlon"]}}</li>
