@@ -26,5 +26,13 @@
 	"stats-before": "Text which is displayed before number telling users how much maps has this tool generated.",
 	"stats-after": "Text which is displayed after number telling users how much maps has this tool generated.",
 	"no-coordinates": "Error message that can be displayed instead of the map.",
-	"change-language": "Link to the form for changing language and headline of the form itself"
+	"change-language": "Link to the form for changing language and headline of the form itself",
+	"admin-link": "Link to admin interface",
+	"admin-interface": "Headline of admin interface",
+	"admin-description": "Description displayed in the admin interface",
+	"admin-success": "Success message after saving queries",
+	"welcome": "Welcome message displayed next to username",
+	"login": "Login button",
+	"logout": "Logout button",
+	"permission-denied": "General permission denied error, currently used in admin interface when visited by non-admin"
 }
