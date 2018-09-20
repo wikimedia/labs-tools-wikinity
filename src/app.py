@@ -186,10 +186,35 @@ def map():
     sparql = SPARQLWrapper("https://query.wikidata.org/sparql")
     sparql.setQuery(query)
     sparql.setReturnFormat(JSON)
+    wd_res = sparql.query().convert()
+    wikidata = {}
+    layers_src = get_layers()
+    layers = {}
+    for layer in layers_src:
+        layers[layer[3]] = layer[0]
+    for point in wd_res["results"]["bindings"]:
+        try:
+            layer = point['layer']['value']
+            rgb = point['rgb']['value']
+        except KeyError:
+            layer = "ostatní"
+            rgb = "fff"
+        id = layers.get(layer, -1)
+        if id not in wikidata:
+            wikidata[id] = {
+                "name": layer,
+                "color": rgb,
+                "points": []
+            }
+        coord = point['coord']['value'].replace('Point(', '').replace(')', '').split(' ')
+        wikidata[id]['points'].append({
+            "lat": coord[1],
+            "lon": coord[0]
+        })
     res = {
         "lat": lat,
         "lon": lon,
-        "wikidata": sparql.query().convert()
+        "wikidata": wikidata
     }
 
     return jsonify(res)

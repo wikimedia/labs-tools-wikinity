@@ -43,40 +43,40 @@ function GetValues() {
                     attribution: 'Wikimedia maps beta | Map data &copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
         }).addTo(map);
 
-        var markers = L.markerClusterGroup();
-        for(var i = 0; i < data.wikidata.results.bindings.length; i++)
+        var overlays = {};
+        for(var layer in data.wikidata)
         {
-            var pointData = data.wikidata.results.bindings[i];
-            var coor = pointData.coord.value.replace("Point(", "").replace(")", "").split(" ");
-            if(pointData.rgb) {
-                var markerHtmlStyles = `
-                background-color: #${pointData.rgb.value};
-                width: 3rem;
-                height: 3rem;
-                display: block;
-                left: -1.5rem;
-                top: -1.5rem;
-                position: relative;
-                border-radius: 3rem 3rem 0;
-                transform: rotate(45deg);
-                border: 1px solid #FFFFFF`;
-            } else {
-                continue;
-            }
-            var marker = L.marker(new L.LatLng(coor[1], coor[0]), {
-                icon: L.divIcon({
-                    className: "my-custom-pin",
-                    iconAnchor: [0, 24],
-                    labelAnchor: [-6, 0],
-                    popupAnchor: [0, -36],
-                    html: `<span style="${markerHtmlStyles}" />`                  
-                }),
-                title: pointData.itemLabel.value
+            var markers = L.markerClusterGroup();
+            var markerHtmlStyles = `
+            background-color: #${data.wikidata[layer].color};
+            width: 3rem;
+            height: 3rem;
+            display: block;
+            left: -1.5rem;
+            top: -1.5rem;
+            position: relative;
+            border-radius: 3rem 3rem 0;
+            transform: rotate(45deg);
+            border: 1px solid #FFFFFF`;
+            var icon = L.divIcon({
+                className: "my-custom-pin",
+                iconAnchor: [0, 24],
+                labelAnchor: [-6, 0],
+                popupAnchor: [0, -36],
+                html: `<span style="${markerHtmlStyles}" />`
             });
-            marker.bindPopup(`<a href="${pointData.item.value}">${pointData.itemLabel.value}</a>`);
-            markers.addLayer(marker);
+            for(var i = 0; i < data.wikidata[layer].points.length; i++)
+            {
+                var point = data.wikidata[layer].points[i];
+                var marker = L.marker(new L.LatLng(point.lat, point.lon), {
+                    icon: icon
+                });
+                // marker.bindPopup(`<a href="${pointData.item.value}">${pointData.itemLabel.value}</a>`);
+                markers.addLayer(marker);
+            }
+            overlays[data.wikidata[layer].name] = markers;
         }
-        map.addLayer(markers);
+        L.control.layers(null, overlays, { collapsed: false }).addTo(map);
 
         $.get("stats", function (data, status) { $('#statnum').text(data) })
     })
