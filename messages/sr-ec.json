@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Obsuser",
-			"Acamicamacaraca"
+			"Acamicamacaraca",
+			"BadDog"
 		]
 	},
 	"prague": "Праг",
@@ -22,5 +23,7 @@
 	"problem-body": "Кажите нам више информација о свом проблему",
 	"submit": "Пошаљи",
 	"stats-before": "Ова алатка генерише",
-	"stats-after": "мапа тренутно"
+	"stats-after": "мапа тренутно",
+	"no-coordinates": "Нисмо у могућности да пронађемо координате из информација које сте послали.",
+	"change-language": "Промени језик"
 }

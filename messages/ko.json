@@ -18,5 +18,7 @@
 	"your-email": "이메일",
 	"problem-summary": "문제점 요약",
 	"problem-body": "문제에 대해 더 자세히 알려주세요",
-	"submit": "제출"
+	"submit": "제출",
+	"no-coordinates": "제출하신 정보로부터 좌표를 찾을 수 없었습니다.",
+	"change-language": "언어 바꾸기"
 }

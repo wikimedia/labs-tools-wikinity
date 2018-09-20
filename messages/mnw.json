@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Htawmonzel"
+			"Htawmonzel",
+			"Aue Nai"
 		]
 	},
 	"prague": "ဍုင်ဇၞော်ပရက်",
@@ -21,5 +22,7 @@
 	"problem-body": "ဆက် လဴကဵုပိုယ် ပရူပြသၞာ မၞးမဒးဆဵုဂဗ",
 	"submit": "ပတိုန်ထ္ၜး",
 	"stats-before": "ကရိယာဏအ် မရပ်စပ်လဝ်",
-	"stats-after": "ဗီုတိ ဒှ်ဒတုဲရ"
+	"stats-after": "ဗီုတိ ဒှ်ဒတုဲရ",
+	"no-coordinates": "ပိုယ်ဟွံသၟဟ်အစောမ်သွက်ဂွံဂၠာဲမကောပ်ကာဲနူတၚ်နၚ်မၞးမတိုန်နၚ်လဝ်.",
+	"change-language": "သၠာဲ အရေဝ်ဘာသာ"
 }

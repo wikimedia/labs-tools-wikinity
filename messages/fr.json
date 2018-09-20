@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Wladek92",
-			"Gomoko"
+			"Gomoko",
+			"Zarisi"
 		]
 	},
 	"prague": "Prague",
@@ -22,5 +23,7 @@
 	"problem-body": "Donnez nous plus de détails sur votre problème",
 	"submit": "Envoyer",
 	"stats-before": "Cet outil a généré",
-	"stats-after": "cartes déjà générées"
+	"stats-after": "cartes déjà générées",
+	"no-coordinates": "Nous ne sommes pas capables de trouver des coordonnées depuis les informations que vous avez entré.",
+	"change-language": "Changer de langue"
 }

@@ -21,5 +21,10 @@
 	"problem-body": "Erzähle uns weitere Einzelheiten über dein Problem",
 	"submit": "Übermitteln",
 	"stats-before": "Dieses Werkzeug hat bereits",
-	"stats-after": "Karten erzeugt"
+	"stats-after": "Karten erzeugt",
+	"no-coordinates": "Von deinen übermittelten Informationen konnten wir keine Koordinaten finden.",
+	"change-language": "Sprache ändern",
+	"welcome": "Willkommen",
+	"login": "Anmelden",
+	"logout": "Abmelden"
 }

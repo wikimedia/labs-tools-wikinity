@@ -22,5 +22,7 @@
 	"problem-body": "Aggiungi altri dettagli al problema",
 	"submit": "Invia",
 	"stats-before": "Questo strumento ha generato",
-	"stats-after": "mappe finora"
+	"stats-after": "mappe finora",
+	"no-coordinates": "Non siamo stati in grado di trovare le coordinate dalle informazioni che ci hai fornito.",
+	"change-language": "Cambia lingua"
 }
