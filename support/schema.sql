@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Počítač: localhost:3306
--- Vytvořeno: Čtv 20. zář 2018, 10:53
+-- Vytvořeno: Čtv 20. zář 2018, 17:17
 -- Verze serveru: 10.3.9-MariaDB-1:10.3.9+maria~bionic
 -- Verze PHP: 7.1.20-1+ubuntu18.04.1+deb.sury.org+1
 
@@ -19,6 +19,19 @@ SET time_zone = "+00:00";
 --
 -- Databáze: `wikinity`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabulky `layers`
+--
+
+CREATE TABLE `layers` (
+  `id` int(11) NOT NULL,
+  `color` varchar(10) COLLATE utf8_czech_ci NOT NULL,
+  `definition` varchar(255) COLLATE utf8_czech_ci NOT NULL,
+  `name` varchar(255) COLLATE utf8_czech_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_czech_ci;
 
 -- --------------------------------------------------------
 
@@ -53,6 +66,12 @@ CREATE TABLE `users` (
 --
 
 --
+-- Klíče pro tabulku `layers`
+--
+ALTER TABLE `layers`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Klíče pro tabulku `query`
 --
 ALTER TABLE `query`
@@ -69,10 +88,15 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT pro tabulku `layers`
+--
+ALTER TABLE `layers`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+--
 -- AUTO_INCREMENT pro tabulku `query`
 --
 ALTER TABLE `query`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 --
 -- AUTO_INCREMENT pro tabulku `users`
 --
