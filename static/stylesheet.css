@@ -23,3 +23,11 @@
 textarea {
 	width: 100%;
 }
+
+.bigmap { 
+	height: 600px;
+}
+
+#map {
+	margin-top: 10px;
+}

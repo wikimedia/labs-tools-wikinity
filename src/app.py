@@ -25,6 +25,7 @@ import toolforge
 import pymysql
 import mwoauth
 from flask_jsonlocale import Locales
+from SPARQLWrapper import SPARQLWrapper, JSON
 
 app = Flask(__name__)
 
@@ -35,6 +36,16 @@ app.config.update(
 locales = Locales(app)
 
 stats_filename = app.config.get('STATS_COUNTER_FILE', '/tmp/wikinity-stats.txt')
+
+QUERY_TYPES = [
+    "layers",
+    "coordinate",
+    "item",
+    "photographed",
+    "unphotographed",
+    "all",
+    "end",
+]
 
 @app.before_request
 def force_https():
@@ -131,15 +142,15 @@ def map():
         open(stats_filename, 'w').write('1')
 
     typ = request.args.get('type', 'item')
-    subtype = request.args.get('subtype', 'nenafoceno')
+    subtype = request.args.get('subtype', 'unphotographed')
     radius = int(request.args.get('radius') or 5)
 
-    if typ == "coor":
+    if typ == "coordinate":
         lat = request.args.get('lat') or '50.0385383'
         lon = request.args.get('lon') or '15.7802056'
-        filetype = "Coor"
     else:
         if typ == "article":
+            typ = "item"
             article = request.args.get('article') or 'Praha'
             project = request.args.get('project') or 'cswiki'
 
@@ -154,49 +165,39 @@ def map():
                 item = 'Q1085'
         else:
             item = request.args.get('item') or 'Q1085'
-        
-        filetype = "Item"
-    if subtype == "nafoceno":
-        f = "searchBy%sNafoceno.txt" % filetype
-    elif subtype == "all":
-        f = "searchBy%sAll.txt" % filetype
-    else: # Process in nenafoceno mode
-        f = "searchBy%sNenafoceno.txt" % filetype
     
-    f = os.path.join('..', 'queries', f)
-
+    query = "\n".join((get_query(typ), get_query("layers"), get_query(subtype), get_query("end")))
     if typ == "coor":
-        query = open(f).read().replace('@@@LAT@@@', lat).replace('@@@LON@@@', lon).replace('@@@RADIUS@@@', str(radius))
+        query = query.replace('@@LAT@@', lat).replace('@@LON@@', lon).replace('@@RADIUS@@', str(radius))
     else:
-        r = requests.get('https://wikidata.org/entity/%s.json' % item)
-        data = r.json()
-        if 'P625' in data['entities'][item]['claims']:
-            query = open(f).read().replace('@@@ITEM@@@', item).replace('@@@RADIUS@@@', str(radius))
-        else:
-            return "<h1>%s</h1>" % locales.getmessage('no-coordinates')
+        query = query.replace('@@ITEM@@', item).replace('@@RADIUS@@', str(radius))
     
-    return '<iframe id="map" style="width:90vw; height:90vh;" frameborder="0" src="https://query.wikidata.org/embed.html#' + urllib.parse.quote(query) + '">'
+    if request.args.get('onlyquery'): return query
+
+    sparql = SPARQLWrapper("https://query.wikidata.org/sparql")
+    sparql.setQuery(query)
+    sparql.setReturnFormat(JSON)
+    res = sparql.query().convert()
+
+    return jsonify(res)
+
+def get_query(typ):
+    conn = connect()
+    with conn.cursor() as cur:
+        cur.execute('SELECT query FROM query WHERE type=%s ORDER BY timestamp DESC LIMIT 1', typ)
+        data = cur.fetchall()
+        if len(data) == 1:
+            return data[0][0]
+        else:
+            return ''
+
 
 def get_queries():
     conn = connect()
     queries = {}
-    types = [
-        "layers",
-        "coordinate",
-        "item",
-        "photographed",
-        "unphotographed",
-        "end",
-    ]
     queries = {}
-    for typ in types:
-        with conn.cursor() as cur:
-            cur.execute('SELECT query FROM query WHERE type=%s ORDER BY timestamp DESC LIMIT 1', typ)
-            data = cur.fetchall()
-            if len(data) == 1:
-                queries[typ] = data[0][0]
-            else:
-                queries[typ] = ""
+    for typ in QUERY_TYPES:
+            queries[typ] = get_query(typ)
     return queries
 
 @app.route('/admin', methods=['GET', 'POST'])

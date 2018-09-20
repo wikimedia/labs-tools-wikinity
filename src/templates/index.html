@@ -34,7 +34,7 @@
           </div>
         </div>
         <div class="radio">
-            <label><input type="radio" name="optradio" value="coor" data-toggle="collapse" data-target="#souradnice">{{ locale["enter-coordinates"] }}</label>
+            <label><input type="radio" name="optradio" value="coordinate" data-toggle="collapse" data-target="#souradnice">{{ locale["enter-coordinates"] }}</label>
         </div>
         <div class="col collapse" id="souradnice">
           <div id="error2" class="alert alert-danger fade in hidden">
@@ -78,8 +78,7 @@
 
   <div class="container">
       <div class="row">
-          <div class="col" id="map" style="padding-top:2.5%; width:70%">
-          </div>
+          <div id="map"></div>
           <div class="col" id="stat">
 			  <p>{{ locale["stats-before"] }} <span id="statnum"></span> {{ locale["stats-after"] }}.</p>
           </div>
@@ -87,63 +86,6 @@
       </div>
   </div>
 
-<script>
-    var addr = null;
-    function GetValues() {
-        var type = $('input[name="optradio"]:checked').val();
-        
-        var subtype = "nenafoceno";
-        if ($('#nafocene')[0].checked && $('#nenafocene')[0].checked) subtype = "all";
-        else if ($('#nafocene')[0].checked && !$('#nenafocene')[0].checked) subtype = "nenafoceno";
-        else if (!$('#nafocene')[0].checked && $('#nenafocene')[0].checked) subtype = "nenafoceno";
-
-        var payload = {
-            type: type,
-            subtype: subtype,
-            radius: $('#radius').val(),
-        };
-
-        if (type == "article") {
-            payload["article"] = $('input[name="wikiSearchPole"]').val();
-            payload["project"] = $('#project-language').val() + $('#project-project').val();
-        } else if (type == "item") {
-            payload["item"] = $('input[name="cislo"]').val();
-        } else if (type == "coor") {
-            payload["lat"] = $('input[name="cislo"]').val();
-            payload["lon"] = $('input[name="lon"]').val();
-        }
-
-        $.get('map', payload, function(data) {
-            $('#map').html(data);
-            $.get("stats", function (data, status) { $('#statnum').text(data) })
-        })
-    }
-
-    $( document ).ready(function() {
-    
-        $.get("stats", function (data, status) { $('#statnum').text(data) })
-
-        $("#wikiSearch").collapse('show');
-        $( "#hledej" ).click(function() {
-            $("#map").removeClass("hidden");
-            GetValues();
-        });
-
-        $('#wikiSearch').on('show.bs.collapse', function () {
-            $('#item').collapse('hide')
-            $('#souradnice').collapse('hide')
-        })
-        $('#item').on('show.bs.collapse', function () {
-            $('#wikiSearch').collapse('hide')
-            $('#souradnice').collapse('hide')
-        })
-
-        $('#souradnice').on('show.bs.collapse', function () {
-            $('#wikiSearch').collapse('hide')
-            $('#item').collapse('hide')
-        })
-
-    });
-
-</script>
+<script src="{{config.STATIC_URL}}formlogic.js"></script>
+<script src="{{config.STATIC_URL}}map.js"></script>
 {% endblock %}

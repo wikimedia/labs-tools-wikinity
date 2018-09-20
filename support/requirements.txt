@@ -7,3 +7,4 @@ flask-mwoauth
 mwparserfromhell
 toolforge
 Flask-JSONLocale
+sparqlwrapper
