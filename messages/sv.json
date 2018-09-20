@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Bengtsson96"
+			"Bengtsson96",
+			"WikiPhoenix"
 		]
 	},
 	"prague": "Prag",
@@ -21,5 +22,7 @@
 	"problem-body": "Berätta mer om problemet",
 	"submit": "Skicka",
 	"stats-before": "Detta verktyg har skapat",
-	"stats-after": "kartor"
+	"stats-after": "kartor",
+	"no-coordinates": "Vi kunde inte hitta koordinater från informationen du skickade.",
+	"change-language": "Byt språk"
 }
