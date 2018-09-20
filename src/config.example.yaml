@@ -6,3 +6,6 @@ DB_NAME: wikinity
 DB_HOST: tools-db
 DB_CONF: /data/project/wikinity/replica.my.cnf # You can use DB_USER/DB_PASS instead of this
 STATIC_URL: /static
+CONSUMER_KEY: your consumer key
+CONSUMER_SECRET: your secret consumer key
+OAUTH_MWURI: https://meta.wikimedia.org/w/index.php

@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <h1>{{locale['admin-interface']}}</h1>
+    <p>{{locale['admin-description']}}</p>
+
+    <form method="POST">
+        {% if success %}
+        <h3>{{locale['admin-success']}}</h3>
+        {% else %}
+
+        <h2>{{locale["admin-layers"]}}</h2>
+        <textarea name="query-layers" rows="10">{{queries["layers"]}}</textarea>
+
+        <h2>{{locale["admin-coordinate"]}}</h2>
+        <textarea name="query-coordinate">{{queries["coordinate"]}}</textarea>
+
+        <h2>{{locale["admin-item"]}}</h2>
+        <textarea name="query-item">{{queries["item"]}}</textarea>
+
+        <h2>{{locale["admin-unphotographed"]}}</h2>
+        <textarea name="query-unphotographed">{{queries["unphotographed"]}}</textarea>
+
+        <h2>{{locale["admin-photographed"]}}</h2>
+        <textarea name="query-photographed">{{queries["photographed"]}}</textarea>
+
+        <h2>{{locale["admin-end"]}}</h2>
+        <textarea name="query-end">{{queries["end"]}}</textarea>
+
+        <br /><input type="submit" value="{{locale['submit']}}">
+        {% endif %}
+    </form>
+</div>
+{% endblock %}

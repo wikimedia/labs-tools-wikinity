@@ -23,6 +23,7 @@ import requests
 import urllib.parse
 import toolforge
 import pymysql
+import mwoauth
 from flask_jsonlocale import Locales
 
 app = Flask(__name__)
@@ -43,6 +44,61 @@ def force_https():
             code=301
         )
 
+@app.before_request
+def db_check_language_permissions():
+    if logged():
+        conn = connect()
+        with conn.cursor() as cur:
+            cur.execute('SELECT id, is_active, language FROM users WHERE username=%s', getusername())
+            data = cur.fetchall()
+        if len(data) == 0:
+            with conn.cursor() as cur:
+                cur.execute('INSERT INTO users(username, language) VALUES (%s, %s)', (getusername(), locales.get_locale()))
+                conn.commit()
+        else:
+            if data[0][1] == 1:
+                locales.set_locale(data[0][2])
+            else:
+                return render_template('permission_denied.html')
+
+@app.context_processor
+def inject_base_variables():
+    return {
+        "logged": logged(),
+        "username": getusername(),
+        "admin": isadmin()
+    }
+
+def connect():
+    if app.config.get('DB_CONF'):
+        return pymysql.connect(
+            database=app.config.get('DB_NAME'),
+            host=app.config.get('DB_HOST'),
+            read_default_file=app.config.get('DB_CONF')
+        )
+    else:
+        return pymysql.connect(
+            database=app.config.get('DB_NAME'),
+            host=app.config.get('DB_HOST'),
+            user=app.config.get('DB_USER'),
+            password=app.config.get('DB_PASS')
+        )
+
+def logged():
+	return flask.session.get('username') != None
+
+def getusername():
+    return flask.session.get('username')
+
+def isadmin():
+    if logged():
+        conn = connect()
+        with conn.cursor() as cur:
+            cur.execute('SELECT username FROM users WHERE is_active=1 AND is_admin=1 AND username=%s', getusername())
+            return len(cur.fetchall()) == 1
+    else:
+        return False
+
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -52,6 +108,11 @@ def change_language():
     if request.method == 'GET':
         return render_template('change_language.html', locales=locales.get_locales(), permanent_locale=locales.get_permanent_locale())
     else:
+        if logged():
+            conn = connect()
+            with conn.cursor() as cur:
+                cur.execute('UPDATE users SET language=%s WHERE username=%s', (request.form.get('locale', 'en'), getusername()))
+            conn.commit()
         locales.set_locale(request.form.get('locale'))
         return redirect(url_for('index'))
 
@@ -115,6 +176,98 @@ def map():
             return "<h1>%s</h1>" % locales.getmessage('no-coordinates')
     
     return '<iframe id="map" style="width:90vw; height:90vh;" frameborder="0" src="https://query.wikidata.org/embed.html#' + urllib.parse.quote(query) + '">'
+
+def get_queries():
+    conn = connect()
+    queries = {}
+    types = [
+        "layers",
+        "coordinate",
+        "item",
+        "photographed",
+        "unphotographed",
+        "end",
+    ]
+    queries = {}
+    for typ in types:
+        with conn.cursor() as cur:
+            cur.execute('SELECT query FROM query WHERE type=%s ORDER BY timestamp DESC LIMIT 1', typ)
+            data = cur.fetchall()
+            if len(data) == 1:
+                queries[typ] = data[0][0]
+            else:
+                queries[typ] = ""
+    return queries
+
+@app.route('/admin', methods=['GET', 'POST'])
+def admin():
+    if logged():
+        if not isadmin():
+            return render_template('permission_denied.html')
+        if request.method == 'GET':
+            return render_template('admin.html', queries=get_queries())
+        else:
+            conn = connect()
+            queries = get_queries()
+            for typ in request.form:
+                if typ.startswith('query-') and queries[typ.replace('query-', '')] != request.form.get(typ):
+                    with conn.cursor() as cur:
+                        cur.execute('INSERT INTO query(query, type, username) VALUES(%s, %s, %s)', (request.form.get(typ), typ.replace('query-', ''), getusername()))
+            conn.commit()
+            return render_template('admin.html', queries=get_queries())
+    else:
+        return redirect(url_for("login"))
+
+@app.route('/login')
+def login():
+	"""Initiate an OAuth login.
+	Call the MediaWiki server to get request secrets and then redirect the
+	user to the MediaWiki server to sign the request.
+	"""
+	consumer_token = mwoauth.ConsumerToken(
+		app.config['CONSUMER_KEY'], app.config['CONSUMER_SECRET'])
+	try:
+		redirect, request_token = mwoauth.initiate(
+		app.config['OAUTH_MWURI'], consumer_token)
+	except Exception:
+		app.logger.exception('mwoauth.initiate failed')
+		return flask.redirect(flask.url_for('index'))
+	else:
+		flask.session['request_token'] = dict(zip(
+		request_token._fields, request_token))
+		return flask.redirect(redirect)
+
+@app.route('/oauth-callback')
+def oauth_callback():
+	"""OAuth handshake callback."""
+	if 'request_token' not in flask.session:
+		flask.flash(u'OAuth callback failed. Are cookies disabled?')
+		return flask.redirect(flask.url_for('index'))
+	consumer_token = mwoauth.ConsumerToken(app.config['CONSUMER_KEY'], app.config['CONSUMER_SECRET'])
+
+	try:
+		access_token = mwoauth.complete(
+		app.config['OAUTH_MWURI'],
+		consumer_token,
+		mwoauth.RequestToken(**flask.session['request_token']),
+		flask.request.query_string)
+		identity = mwoauth.identify(app.config['OAUTH_MWURI'], consumer_token, access_token)
+	except Exception:
+		app.logger.exception('OAuth authentication failed')
+	else:
+		flask.session['request_token_secret'] = dict(zip(access_token._fields, access_token))['secret']
+		flask.session['request_token_key'] = dict(zip(access_token._fields, access_token))['key']
+		flask.session['username'] = identity['username']
+
+	return flask.redirect(flask.url_for('index'))
+
+
+@app.route('/logout')
+def logout():
+	"""Log the user out by clearing their session."""
+	flask.session.clear()
+	return flask.redirect(flask.url_for('index'))
+
 
 if __name__ == "__main__":
 	app.run(debug=True, threaded=True)
