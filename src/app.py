@@ -221,16 +221,16 @@ def get_layers_query():
 
 @app.route('/admin')
 def admin():
-    return render_template('admin.html')
+    return render_template('admin/index.html')
 
 @app.route('/admin/layers')
 def admin_layers():
-    return render_template('admin_layers.html', layers=get_layers())
+    return render_template('admin/layers.html', layers=get_layers())
 
 @app.route('/admin/layer/new', methods=['GET', 'POST'])
 def admin_layer_new():
     if request.method == 'GET':
-        return render_template('admin_layer.html')
+        return render_template('admin/layer.html')
     else:
         conn = connect()
         with conn.cursor() as cur:
@@ -243,13 +243,13 @@ def admin_layer_new():
 @app.route('/admin/layer/<path:id>', methods=['GET', 'POST'])
 def admin_layer(id):
     if request.method == 'GET':
-        return render_template('admin_layer.html', layer=get_layer(id))
+        return render_template('admin/layer.html', layer=get_layer(id))
     else:
         conn = connect()
         with conn.cursor() as cur:
             cur.execute('UPDATE layers SET color=%s, definition=%s, name=%s WHERE id=%s', (request.form['color'], request.form['definition'], request.form['name'], id))
         conn.commit()
-        return render_template('admin_layer.html', layer=get_layer(id), success=True)
+        return render_template('admin/layer.html', layer=get_layer(id), success=True)
 
 @app.route('/login')
 def login():
