@@ -164,6 +164,15 @@ def map():
                 item = 'Q1085'
         else:
             item = request.args.get('item') or 'Q1085'
+        r = requests.get('https://www.wikidata.org/w/api.php', params={
+            "action": "wbgetclaims",
+            "format": "json",
+            "entity": item
+        })
+        data = r.json()
+        coor = data["claims"]["P625"][0]["mainsnak"]["datavalue"]["value"]
+        lat = coor["latitude"]
+        lon = coor["longitude"]
     
     query = "\n".join((get_query(typ), get_layers_query(), get_query(subtype), get_query("end")))
     if typ == "coor":
@@ -176,7 +185,11 @@ def map():
     sparql = SPARQLWrapper("https://query.wikidata.org/sparql")
     sparql.setQuery(query)
     sparql.setReturnFormat(JSON)
-    res = sparql.query().convert()
+    res = {
+        "lat": lat,
+        "lon": lon,
+        "wikidata": sparql.query().convert()
+    }
 
     return jsonify(res)
 

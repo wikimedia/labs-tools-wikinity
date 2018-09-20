@@ -48,5 +48,6 @@
 	"new": "new",
 	"admin-layer-name": "Name",
 	"admin-layer-color": "Color",
-	"admin-layer-definition": "Definition"
+	"admin-layer-definition": "Definition",
+	"processing": "Processing..."
 }

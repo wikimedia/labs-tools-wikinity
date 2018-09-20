@@ -3,9 +3,9 @@ L.Map.addInitHook(function () {
     mapsPlaceholder.push(this);
 });
 function GetValues() {
+    $('#processing').removeClass("hidden");
     if(mapsPlaceholder.length == 1) {mapsPlaceholder[0].remove()}
     $('#map').attr("class", "");
-    $('#map').html("<h1>Processing...</h1>");
     var type = $('input[name="optradio"]:checked').val();
     
     var subtype = "unphotographed";
@@ -31,11 +31,12 @@ function GetValues() {
 
     $.get('map', payload, function(data) {
         $('#map').html("").addClass("bigmap");
+        $('#processing').addClass("hidden");
         var style = 'osm-intl';
         var server = 'https://maps.wikimedia.org/';
 
         var map = L.map('map');
-        map.setView([50, 16], 7);
+        map.setView([data.lat, data.lon], 13);
         L.tileLayer(server + style + '/{z}/{x}/{y}.png', {
                     maxZoom: 18,
                     id: 'wikipedia-map-01',
@@ -43,9 +44,9 @@ function GetValues() {
         }).addTo(map);
 
         var markers = L.markerClusterGroup();
-        for(var i = 0; i < data.results.bindings.length; i++)
+        for(var i = 0; i < data.wikidata.results.bindings.length; i++)
         {
-            var pointData = data.results.bindings[i];
+            var pointData = data.wikidata.results.bindings[i];
             var coor = pointData.coord.value.replace("Point(", "").replace(")", "").split(" ");
             if(pointData.rgb) {
                 var markerHtmlStyles = `
