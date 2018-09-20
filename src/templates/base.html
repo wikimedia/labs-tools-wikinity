@@ -32,13 +32,13 @@
         </a>
 
         {% if logged %}
-        <a class="navbar-brand no-hover menuitem" href="logout">{{locale["logout"]}}</a>
+        <a class="navbar-brand no-hover menuitem" href="{{ url_for('logout') }}">{{locale["logout"]}}</a>
         <span class="navbar-brand no-hover menuitem" href="#">{{locale["welcome"]}}, {{username}}</span>
         {% if admin %}
-        <a class="navbar-brand no-hover menuitem" href="admin">{{locale["admin-link"]}}</a>
+        <a class="navbar-brand no-hover menuitem" href="{{ url_for('admin') }}">{{locale["admin-link"]}}</a>
         {% endif %}
         {% else %}
-        <a class="navbar-brand no-hover menuitem" href="login">{{locale["login"]}}</a>
+        <a class="navbar-brand no-hover menuitem" href="{{ url_for('login') }}">{{locale["login"]}}</a>
         {% endif %}
         <a class="navbar-brand no-hover menuitem" href="{{url_for('change_language')}}">{{locale["change-language"]}}</a>
         <a class="navbar-brand no-hover menuitem" href="https://phabricator.wikimedia.org/maniphest/task/edit/form/1/?project=wikinity">{{ locale["report-problem"] }}</a>
