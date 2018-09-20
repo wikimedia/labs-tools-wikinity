@@ -180,7 +180,8 @@ def map():
     else:
         query = query.replace('@@ITEM@@', item).replace('@@RADIUS@@', str(radius))
     
-    if request.args.get('onlyquery'): return query
+    if request.args.get('onlyquery'):
+        return query
 
     sparql = SPARQLWrapper("https://query.wikidata.org/sparql")
     sparql.setQuery(query)
