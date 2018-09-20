@@ -203,6 +203,7 @@ def map():
         if id not in wikidata:
             wikidata[id] = {
                 "name": layer,
+                "html_name": '<span class="legend-item" style="background-color: #%s"></span> %s' % (rgb, layer),
                 "color": rgb,
                 "points": []
             }

@@ -74,7 +74,7 @@ function GetValues() {
                 // marker.bindPopup(`<a href="${pointData.item.value}">${pointData.itemLabel.value}</a>`);
                 markers.addLayer(marker);
             }
-            overlays[data.wikidata[layer].name] = markers;
+            overlays[data.wikidata[layer].html_name] = markers;
         }
         L.control.layers(null, overlays, { collapsed: false }).addTo(map);
 

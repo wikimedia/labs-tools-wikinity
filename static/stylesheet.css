@@ -31,3 +31,10 @@ textarea {
 #map {
 	margin-top: 10px;
 }
+
+.legend-item {
+	width: 10px;
+	height: 10px;
+	display: inline-block;
+	border-radius: 50%;
+}
