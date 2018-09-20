@@ -5,7 +5,7 @@ MESSAGES_DIR: ../messages
 DB_NAME: wikinity
 DB_HOST: tools-db
 DB_CONF: /data/project/wikinity/replica.my.cnf # You can use DB_USER/DB_PASS instead of this
-STATIC_URL: /static
+STATIC_URL: /static/
 APPLICATION_ROOT: /
 CONSUMER_KEY: your consumer key
 CONSUMER_SECRET: your secret consumer key
