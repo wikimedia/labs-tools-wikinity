@@ -71,6 +71,11 @@ def db_check_language_permissions():
             else:
                 return render_template('permission_denied.html')
 
+@app.before_request
+def check_admin_permissions():
+    if '/admin' in request.url and not isadmin():
+        return render_template('permission_denied.html')
+
 @app.context_processor
 def inject_base_variables():
     return {
