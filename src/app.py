@@ -217,7 +217,9 @@ def map():
         coord = point['coord']['value'].replace('Point(', '').replace(')', '').split(' ')
         wikidata[id]['points'].append({
             "lat": coord[1],
-            "lon": coord[0]
+            "lon": coord[0],
+            "url": point['item']['value'],
+            "name": point['itemLabel']['value'],
         })
     res = {
         "lat": lat,

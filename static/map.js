@@ -71,7 +71,7 @@ function GetValues() {
                 var marker = L.marker(new L.LatLng(point.lat, point.lon), {
                     icon: icon
                 });
-                // marker.bindPopup(`<a href="${pointData.item.value}">${pointData.itemLabel.value}</a>`);
+                marker.bindPopup(`<a href="${point.url}">${point.name}</a>`);
                 markers.addLayer(marker);
             }
             overlays[data.wikidata[layer].html_name] = markers.addTo(map);
