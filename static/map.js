@@ -10,8 +10,8 @@ function GetValues() {
     
     var subtype = "unphotographed";
     if ($('#nafocene')[0].checked && $('#nenafocene')[0].checked) subtype = "all";
-    else if ($('#nafocene')[0].checked && !$('#nenafocene')[0].checked) subtype = "unphotographed";
-    else if (!$('#nafocene')[0].checked && $('#nenafocene')[0].checked) subtype = "photographed";
+    else if ($('#nafocene')[0].checked && !$('#nenafocene')[0].checked) subtype = "photographed";
+    else if (!$('#nafocene')[0].checked && $('#nenafocene')[0].checked) subtype = "unphotographed";
 
     var payload = {
         type: type,
