@@ -192,6 +192,8 @@ def map():
     sparql.setQuery(query)
     sparql.setReturnFormat(JSON)
     wd_res = sparql.query().convert()
+    if 'onlywd' in request.args:
+        return jsonify(wd_res)
     wikidata = {}
     layers_src = get_layers()
     layers = {}
