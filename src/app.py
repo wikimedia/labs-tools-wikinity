@@ -13,15 +13,14 @@
 # You should have received a copy of the GNU General Public License along
 # with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-import flask
 import os
 import yaml
-from flask import redirect, request, jsonify, render_template, session, url_for
+from flask import redirect, request, jsonify, render_template, url_for
 from flask import Flask
 import requests
 import pymysql
-import mwoauth
 from flask_jsonlocale import Locales
+from flask_mwoauth import MWOAuth
 from SPARQLWrapper import SPARQLWrapper, JSON
 
 app = Flask(__name__)
@@ -31,6 +30,13 @@ __dir__ = os.path.dirname(__file__)
 app.config.update(
     yaml.safe_load(open(os.path.join(__dir__, 'config.yaml'))))
 locales = Locales(app)
+
+mwoauth = MWOAuth(
+    consumer_key=app.config.get('CONSUMER_KEY'),
+    consumer_secret=app.config.get('CONSUMER_SECRET'),
+    base_url=app.config.get('OAUTH_MWURI'),
+)
+app.register_blueprint(mwoauth.bp)
 
 stats_filename = app.config.get('STATS_COUNTER_FILE', '/tmp/wikinity-stats.txt')
 
@@ -42,6 +48,9 @@ QUERY_TYPES = [
     "all",
     "end",
 ]
+
+def logged():
+    return mwoauth.get_current_user() is not None
 
 @app.before_request
 def force_https():
@@ -56,11 +65,11 @@ def db_check_language_permissions():
     if logged():
         conn = connect()
         with conn.cursor() as cur:
-            cur.execute('SELECT id, is_active, language FROM users WHERE username=%s', getusername())
+            cur.execute('SELECT id, is_active, language FROM users WHERE username=%s', mwoauth.get_current_user())
             data = cur.fetchall()
         if len(data) == 0:
             with conn.cursor() as cur:
-                cur.execute('INSERT INTO users(username, language) VALUES (%s, %s)', (getusername(), locales.get_locale()))
+                cur.execute('INSERT INTO users(username, language) VALUES (%s, %s)', (mwoauth.get_current_user(), locales.get_locale()))
                 conn.commit()
         else:
             if data[0][1] == 1:
@@ -77,7 +86,7 @@ def check_admin_permissions():
 def inject_base_variables():
     return {
         "logged": logged(),
-        "username": getusername(),
+        "username": mwoauth.get_current_user(),
         "admin": isadmin()
     }
 
@@ -96,17 +105,11 @@ def connect():
             password=app.config.get('DB_PASS')
         )
 
-def logged():
-    return session.get('username') is not None
-
-def getusername():
-    return session.get('username')
-
 def isadmin():
     if logged():
         conn = connect()
         with conn.cursor() as cur:
-            cur.execute('SELECT username FROM users WHERE is_active=1 AND is_admin=1 AND username=%s', getusername())
+            cur.execute('SELECT username FROM users WHERE is_active=1 AND is_admin=1 AND username=%s', mwoauth.get_current_user())
             return len(cur.fetchall()) == 1
     else:
         return False
@@ -123,7 +126,7 @@ def change_language():
         if logged():
             conn = connect()
             with conn.cursor() as cur:
-                cur.execute('UPDATE users SET language=%s WHERE username=%s', (request.form.get('locale', 'en'), getusername()))
+                cur.execute('UPDATE users SET language=%s WHERE username=%s', (request.form.get('locale', 'en'), mwoauth.get_current_user()))
             conn.commit()
         locales.set_locale(request.form.get('locale'))
         return redirect(url_for('index'))
@@ -302,56 +305,6 @@ def admin_layer(id):
             cur.execute('UPDATE layers SET color=%s, definition=%s, name=%s WHERE id=%s', (request.form['color'], request.form['definition'], request.form['name'], id))
         conn.commit()
         return render_template('admin/layer.html', layer=get_layer(id), success=True)
-
-@app.route('/login')
-def login():
-    """Initiate an OAuth login.
-    Call the MediaWiki server to get request secrets and then redirect the
-    user to the MediaWiki server to sign the request.
-    """
-	consumer_token = mwoauth.ConsumerToken(
-		app.config['CONSUMER_KEY'], app.config['CONSUMER_SECRET'])
-	try:
-		redirect, request_token = mwoauth.initiate(
-		app.config['OAUTH_MWURI'], consumer_token)
-	except Exception:
-		app.logger.exception('mwoauth.initiate failed')
-		return flask.redirect(flask.url_for('index'))
-	else:
-		session['request_token'] = dict(zip(
-		request_token._fields, request_token))
-		return flask.redirect(redirect)
-
-@app.route('/oauth-callback')
-def oauth_callback():
-	"""OAuth handshake callback."""
-	if 'request_token' not in session:
-		flask.flash(u'OAuth callback failed. Are cookies disabled?')
-		return flask.redirect(flask.url_for('index'))
-	consumer_token = mwoauth.ConsumerToken(app.config['CONSUMER_KEY'], app.config['CONSUMER_SECRET'])
-
-	try:
-		access_token = mwoauth.complete(
-		app.config['OAUTH_MWURI'],
-		consumer_token,
-		mwoauth.RequestToken(**session['request_token']),
-		flask.request.query_string)
-		identity = mwoauth.identify(app.config['OAUTH_MWURI'], consumer_token, access_token)
-	except Exception:
-		app.logger.exception('OAuth authentication failed')
-	else:
-		session['request_token_secret'] = dict(zip(access_token._fields, access_token))['secret']
-		session['request_token_key'] = dict(zip(access_token._fields, access_token))['key']
-		session['username'] = identity['username']
-
-	return flask.redirect(flask.url_for('index'))
-
-
-@app.route('/logout')
-def logout():
-	"""Log the user out by clearing their session."""
-	session.clear()
-	return flask.redirect(flask.url_for('index'))
 
 
 if __name__ == "__main__":
