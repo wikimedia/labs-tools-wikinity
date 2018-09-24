@@ -16,12 +16,9 @@
 import flask
 import os
 import yaml
-import simplejson as json
-from flask import redirect, request, jsonify, make_response, render_template, session, url_for
+from flask import redirect, request, jsonify, render_template, session, url_for
 from flask import Flask
 import requests
-import urllib.parse
-import toolforge
 import pymysql
 import mwoauth
 from flask_jsonlocale import Locales
@@ -100,10 +97,10 @@ def connect():
         )
 
 def logged():
-	return flask.session.get('username') != None
+    return session.get('username') is not None
 
 def getusername():
-    return flask.session.get('username')
+    return session.get('username')
 
 def isadmin():
     if logged():
@@ -140,9 +137,9 @@ def stats():
 @app.route('/map')
 def map():
     try:
-        stats_num = str(int(open(stats_filename).read())+1)
+        stats_num = str(int(open(stats_filename).read()) + 1)
         open(stats_filename, 'w').write(stats_num)
-    except:
+    except FileNotFoundError as e:
         open(stats_filename, 'w').write('1')
 
     typ = request.args.get('type', 'item')
@@ -178,13 +175,13 @@ def map():
         coor = data["claims"]["P625"][0]["mainsnak"]["datavalue"]["value"]
         lat = coor["latitude"]
         lon = coor["longitude"]
-    
+
     query = "\n".join((open('../queries/start-%s.txt' % typ).read(), get_layers_query(), open('../queries/where-%s.txt' % subtype).read(), open('../queries/end.txt').read()))
     if typ == "coor":
         query = query.replace('@@LAT@@', lat).replace('@@LON@@', lon).replace('@@RADIUS@@', str(radius))
     else:
         query = query.replace('@@ITEM@@', item).replace('@@RADIUS@@', str(radius))
-    
+
     if 'onlyquery' in request.args:
         return query
 
@@ -308,10 +305,10 @@ def admin_layer(id):
 
 @app.route('/login')
 def login():
-	"""Initiate an OAuth login.
-	Call the MediaWiki server to get request secrets and then redirect the
-	user to the MediaWiki server to sign the request.
-	"""
+    """Initiate an OAuth login.
+    Call the MediaWiki server to get request secrets and then redirect the
+    user to the MediaWiki server to sign the request.
+    """
 	consumer_token = mwoauth.ConsumerToken(
 		app.config['CONSUMER_KEY'], app.config['CONSUMER_SECRET'])
 	try:
@@ -321,14 +318,14 @@ def login():
 		app.logger.exception('mwoauth.initiate failed')
 		return flask.redirect(flask.url_for('index'))
 	else:
-		flask.session['request_token'] = dict(zip(
+		session['request_token'] = dict(zip(
 		request_token._fields, request_token))
 		return flask.redirect(redirect)
 
 @app.route('/oauth-callback')
 def oauth_callback():
 	"""OAuth handshake callback."""
-	if 'request_token' not in flask.session:
+	if 'request_token' not in session:
 		flask.flash(u'OAuth callback failed. Are cookies disabled?')
 		return flask.redirect(flask.url_for('index'))
 	consumer_token = mwoauth.ConsumerToken(app.config['CONSUMER_KEY'], app.config['CONSUMER_SECRET'])
@@ -337,15 +334,15 @@ def oauth_callback():
 		access_token = mwoauth.complete(
 		app.config['OAUTH_MWURI'],
 		consumer_token,
-		mwoauth.RequestToken(**flask.session['request_token']),
+		mwoauth.RequestToken(**session['request_token']),
 		flask.request.query_string)
 		identity = mwoauth.identify(app.config['OAUTH_MWURI'], consumer_token, access_token)
 	except Exception:
 		app.logger.exception('OAuth authentication failed')
 	else:
-		flask.session['request_token_secret'] = dict(zip(access_token._fields, access_token))['secret']
-		flask.session['request_token_key'] = dict(zip(access_token._fields, access_token))['key']
-		flask.session['username'] = identity['username']
+		session['request_token_secret'] = dict(zip(access_token._fields, access_token))['secret']
+		session['request_token_key'] = dict(zip(access_token._fields, access_token))['key']
+		session['username'] = identity['username']
 
 	return flask.redirect(flask.url_for('index'))
 
@@ -353,7 +350,7 @@ def oauth_callback():
 @app.route('/logout')
 def logout():
 	"""Log the user out by clearing their session."""
-	flask.session.clear()
+	session.clear()
 	return flask.redirect(flask.url_for('index'))
 
 
