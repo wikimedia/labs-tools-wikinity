@@ -7,12 +7,12 @@
       <div class="row">
           <div class="col">
             <div class="radio">
-                <label><input type="radio" name="optradio" value="article" data-toggle="collapse" data-target="#wikiSearch" checked>{{ locale["enter-name-of-article"] }}</label>
+                <label><input type="radio" name="optradio" value="article" data-toggle="collapse" data-target="#wikiSearch" checked>{{ _("enter-name-of-article") }}</label>
             </div>
           </div>
         <div class="col collapse" id="wikiSearch">
           <div class="form-group">
-              <input type="text" class="form-control" name="wikiSearchPole" id="wikiSearchPole" onchange="updateAutocomplete()" placeholder="{{ locale["prague"] }}, ({{ locale["default-value"] }})">
+              <input type="text" class="form-control" name="wikiSearchPole" id="wikiSearchPole" onchange="updateAutocomplete()" placeholder="{{ _("prague") }}, ({{ _("default-value") }})">
           </div>
 	  <div class="form-group">
 	  	<input type="text" id="project-language" name="language" value="cs">
@@ -25,16 +25,16 @@
         </div>
           <div class="col">
             <div class="radio">
-                <label><input type="radio" name="optradio" value="item" data-toggle="collapse" data-target="#item">{{ locale["enter-number-of-item"] }}</label>
+                <label><input type="radio" name="optradio" value="item" data-toggle="collapse" data-target="#item">{{ _("enter-number-of-item") }}</label>
             </div>
           </div>
         <div class="col collapse" id="item">
           <div class="form-group">
-              <input type="text" class="form-control" name="cislo" id="cislo" placeholder="Q1085 ({{ locale["prague"] }}, {{ locale["default-value"] }})">
+              <input type="text" class="form-control" name="cislo" id="cislo" placeholder="Q1085 ({{ _("prague") }}, {{ _("default-value") }})">
           </div>
         </div>
         <div class="radio">
-            <label><input type="radio" name="optradio" value="coordinate" data-toggle="collapse" data-target="#souradnice">{{ locale["enter-coordinates"] }}</label>
+            <label><input type="radio" name="optradio" value="coordinate" data-toggle="collapse" data-target="#souradnice">{{ _("enter-coordinates") }}</label>
         </div>
         <div class="col collapse" id="souradnice">
           <div id="error2" class="alert alert-danger fade in hidden">
@@ -43,32 +43,32 @@
           </div>
           <div class="form-group">
               <label for="formGroupExampleInput">Souřadnice lat</label>
-              <input id="lat" type="text" name="lat" class="form-control" id="formGroupExampleInput" placeholder="50.088611 ({{ locale["prague"] }}, {{ locale["default-value"] }})">
+              <input id="lat" type="text" name="lat" class="form-control" id="formGroupExampleInput" placeholder="50.088611 ({{ _("prague") }}, {{ _("default-value") }})">
           </div>
           <div class="form-group">
               <label for="formGroupExampleInput2">Souřadnice lon</label>
-              <input id="lon" type="text" name="lon" class="form-control" id="formGroupExampleInput2" placeholder="14.421389 ({{ locale["prague"] }}, {{ locale["default-value"] }})">
+              <input id="lon" type="text" name="lon" class="form-control" id="formGroupExampleInput2" placeholder="14.421389 ({{ _("prague") }}, {{ _("default-value") }})">
           </div>
         </div>
         <div class="col">
-            <label>{{ locale["select-displayed"] }}</label>
+            <label>{{ _("select-displayed") }}</label>
         </div>
         <div class="col">
           <input id="nafocene" type="checkbox" name="check" value="nafoceno">
-          <label for="ch1">{{ locale["photographed"] }}</label>
+          <label for="ch1">{{ _("photographed") }}</label>
         </div>
         <div class="col">
           <input id="nenafocene" type="checkbox" name="check" value="nenafoceno" checked>
-          <label for="ch2">{{ locale["unphotographed"] }}</label>
+          <label for="ch2">{{ _("unphotographed") }}</label>
         </div>
         <div class="col">
           <div class="form-group">
-              <label for="formGroupExampleInput">{{ locale["enter-radius"] }}</label>
-              <input id="radius" type="text" name="radius" class="form-control" id="formGroupExampleInput" placeholder="5 ({{ locale["default-value"] }})">
+              <label for="formGroupExampleInput">{{ _("enter-radius") }}</label>
+              <input id="radius" type="text" name="radius" class="form-control" id="formGroupExampleInput" placeholder="5 ({{ _("default-value") }})">
           </div>
         </div>
         <div class="col-3">
-              <button type="button" class="btn btn-primary" id="hledej">{{ locale["search"] }}</button>
+              <button type="button" class="btn btn-primary" id="hledej">{{ _("search") }}</button>
               <span id="shortUrl"></span>
         </div>
 
@@ -78,10 +78,10 @@
 
   <div class="container">
       <div class="row">
-          <h1 id="processing" class="hidden">{{locale["processing"]}}</h1>
+          <h1 id="processing" class="hidden">{{_("processing")}}</h1>
           <div id="map"></div>
           <div class="col" id="stat">
-			  <p>{{ locale["stats-before"] }} <span id="statnum"></span> {{ locale["stats-after"] }}.</p>
+			  <p>{{ _("stats-before") }} <span id="statnum"></span> {{ _("stats-after") }}.</p>
           </div>
 
       </div>

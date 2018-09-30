@@ -7,10 +7,10 @@
         <li>
             <a href="{{ url_for('admin_user', id=user.0) }}">{{user.1}}</a>
             {% if user.2 == 0 %}
-            ({{ locale['inactive'] }})
+            ({{ _("inactive") }})
             {% else %}
             {% if user.3 == 1 %}
-            ({{ locale['administrator'] }})
+            ({{ _("administrator") }})
             {% endif %}
             {% endif %}
         </li>

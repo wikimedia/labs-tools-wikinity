@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="container">
-    <h1>{{locale['admin-interface']}}</h1>
-    <p>{{locale['admin-description']}}</p>
+    <h1>{{_("admin-interface")}}</h1>
+    <p>{{_("admin-description")}}</p>
     <ul>
-        <li><a href="{{ url_for('admin_layers') }}">{{locale["admin-edit-layers"]}}</a></li>
-        <li><a href="{{ url_for('admin_users') }}">{{locale["admin-edit-users"]}}</a></li>
+        <li><a href="{{ url_for('admin_layers') }}">{{_("admin-edit-layers")}}</a></li>
+        <li><a href="{{ url_for('admin_users') }}">{{_("admin-edit-users")}}</a></li>
     </ul>
 </div>
 {% endblock %}

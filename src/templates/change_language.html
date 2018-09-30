@@ -1,14 +1,14 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="container">
-    <h1>{{locale['change-language']}}</h1>
+    <h1>{{_("change-language")}}</h1>
     <form method="post">
         <select name="locale" id="locale">
             {% for l in locales %}
             <option {% if permanent_locale == l %}selected{% endif %} value="{{l}}">{{l}}</option>
             {% endfor %}
         </select><br>
-        <input type="submit" value="{{locale['submit']}}">
+        <input type="submit" value="{{_("submit")}}">
     </form>
 </div>
 {% endblock %}
