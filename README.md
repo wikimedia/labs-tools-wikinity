@@ -8,7 +8,7 @@ Its production version is on https://tools.wmflabs.org/wikinity/.
 
 (all paths are from repository's root)
 
-1. Clone the repository (preferably from [Gerrit](https://gerrit.wikimedia.org/r/admin/projects/labs/tools/wikinity)
+1. Clone the repository (preferably from [Gerrit](https://gerrit.wikimedia.org/r/admin/projects/labs/tools/wikinity))
 2. Setup the repository for use with git review. You can use [this tutorial](https://www.mediawiki.org/wiki/Gerrit/Tutorial)
 3. Create Python3 virtual environment by running `virtualenv -p python3 venv`
 4. Activate the venv by running `source venv/bin/activate`
