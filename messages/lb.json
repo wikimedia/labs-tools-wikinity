@@ -21,5 +21,17 @@
 	"problem-body": "Gitt eis méi Eenzelheeten iwwer Äre Problem",
 	"submit": "Späicheren",
 	"stats-before": "Dësen Tool huet schonn",
-	"stats-after": "Kaarte generéiert"
+	"stats-after": "Kaarte generéiert",
+	"change-language": "Sprooch wiesselen",
+	"and": "a(n)",
+	"admin-edit-users": "Benotzer änneren",
+	"admin-users": "Benotzer",
+	"welcome": "Wëllkomm",
+	"login": "Aloggen",
+	"logout": "Ausloggen",
+	"new": "nei",
+	"admin-layer-name": "Numm",
+	"admin-layer-color": "Faarf",
+	"admin-layer-definition": "Definitioun",
+	"processing": "Verschaffen..."
 }

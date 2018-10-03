@@ -1,7 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Liuxinyu970226"
+			"Liuxinyu970226",
+			"Deathkon",
+			"Phenolla"
 		]
 	},
 	"prague": "布拉格",
@@ -21,5 +23,42 @@
 	"problem-body": "告诉我们更多关于您问题的详情",
 	"submit": "提交",
 	"stats-before": "此工具已生成",
-	"stats-after": "个地图"
+	"stats-after": "个地图",
+	"no-coordinates": "我们无法从您提交的信息中找到坐标。",
+	"change-language": "更改语言",
+	"admin-link": "管理员",
+	"admin-interface": "管理员界面",
+	"admin-description": "请选择一个操作：",
+	"admin-variables": "变量列表",
+	"and": "且",
+	"admin-description-latlon": "包含的坐标，仅在通过坐标搜索时使用",
+	"admin-description-item": "包含的商品ID（包括Q在内），仅当通过文章名称或项目编号进行搜索时使用",
+	"admin-description-radius": "包含的半径，总是使用",
+	"admin-success": "您的更改查询请求已成功完成。",
+	"admin-edit-layers": "编辑图层",
+	"admin-edit-layer": "编辑图层",
+	"admin-add-layer": "添加图层",
+	"admin-layers": "图层",
+	"admin-edit-users": "编辑用户",
+	"admin-edit-user": "编辑用户",
+	"admin-users": "用户",
+	"administrator": "管理员",
+	"inactive": "不活跃",
+	"admin-user-isactive": "是否活跃？",
+	"admin-user-isadmin": "是否为管理员？",
+	"admin-coordinate": "当按坐标搜索时，在此开始查询",
+	"admin-item": "当按项目搜索时，在此开始查询",
+	"admin-unphotographed": "当搜索未拍摄的对象时将此添加到WHERE",
+	"admin-photographed": "当搜索已被拍摄的对象时将此添加到WHERE",
+	"admin-all": "当搜索全部对象时将此添加到WHERE",
+	"admin-end": "以此结束查询",
+	"welcome": "欢迎",
+	"login": "登录",
+	"logout": "登出",
+	"permission-denied": "没有权限。如果您认为这是由于发生了错误而导致的，请与管理员联系。",
+	"new": "新",
+	"admin-layer-name": "名称",
+	"admin-layer-color": "颜色",
+	"admin-layer-definition": "定义",
+	"processing": "处理中..."
 }

@@ -31,8 +31,10 @@
 	"admin-interface": "Headline of admin interface",
 	"admin-description": "Description displayed in the admin interface",
 	"admin-success": "Success message after saving queries",
-	"welcome": "Welcome message displayed next to username",
-	"login": "Login button",
+	"welcome": "Welcome message displayed next to username\n{{Identical|Welcome}}",
+	"login": "Login button\n{{Identical|Login}}",
 	"logout": "Logout button",
-	"permission-denied": "General permission denied error, currently used in admin interface when visited by non-admin"
+	"permission-denied": "General permission denied error, currently used in admin interface when visited by non-admin",
+	"admin-layer-name": "{{Identical|Name}}",
+	"admin-layer-color": "{{Identical|Color}}"
 }

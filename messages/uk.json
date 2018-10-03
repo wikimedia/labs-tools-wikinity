@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"SimondR",
-			"Piramidion"
+			"Piramidion",
+			"Movses"
 		]
 	},
 	"prague": "Прага",
@@ -16,7 +17,7 @@
 	"photographed": "Сфотографовано",
 	"unphotographed": "Нефотографовано",
 	"report-problem": "Повідомити про проблему",
-	"source-code": "вихідний код",
+	"source-code": "Вихідний код",
 	"your-email": "Ваша електронна пошта",
 	"problem-summary": "Короткий опис проблеми",
 	"problem-body": "Розкажіть докладніше про свою проблему",

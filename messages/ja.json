@@ -3,7 +3,8 @@
 		"authors": [
 			"Hinaloe",
 			"Phantomize",
-			"Omotecho"
+			"Omotecho",
+			"Otokoume"
 		]
 	},
 	"prague": "プラハ",
@@ -23,5 +24,6 @@
 	"problem-body": "問題の詳細を教えてください",
 	"submit": "送信",
 	"stats-before": "このツールが生成した件数",
-	"stats-after": "件の地図"
+	"stats-after": "件の地図",
+	"change-language": "言語を変更"
 }

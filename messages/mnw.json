@@ -16,7 +16,7 @@
 	"photographed": "ဗီုဓါတ်",
 	"unphotographed": "ဗီုဓါတ်ဟွံသေင်",
 	"report-problem": "ဂရင်ဗ္တီ ဗၠေတ်",
-	"source-code": "ကုတ် တမ်ရိုဟ်",
+	"source-code": " တမ်ရိုဟ် ခတ်",
 	"your-email": "အဳမေလ် မၞး",
 	"problem-summary": "သကေံချူ ပြသၞာမဗၠေတ်ဂှ်",
 	"problem-body": "ဆက် လဴကဵုပိုယ် ပရူပြသၞာ မၞးမဒးဆဵုဂဗ",
@@ -24,5 +24,17 @@
 	"stats-before": "ကရိယာဏအ် မရပ်စပ်လဝ်",
 	"stats-after": "ဗီုတိ ဒှ်ဒတုဲရ",
 	"no-coordinates": "ပိုယ်ဟွံသၟဟ်အစောမ်သွက်ဂွံဂၠာဲမကောပ်ကာဲနူတၚ်နၚ်မၞးမတိုန်နၚ်လဝ်.",
-	"change-language": "သၠာဲ အရေဝ်ဘာသာ"
+	"change-language": "သၠာဲ အရေဝ်ဘာသာ",
+	"admin-link": "ညးကောပ်ကာဲ",
+	"admin-description": "သ္ပဂုဏ်တုဲ ရုဲစှ် ကမၠောန်:",
+	"and": "ကေုာံ",
+	"admin-users": "ညးလွပ်ဂမၠိုၚ်",
+	"administrator": "မၞိဟ်မကောပ်ကာဲ",
+	"welcome": "ဒုင်တၠုင်ရအဴ",
+	"login": "လုပ်ဇၟိက်",
+	"logout": "တိတ်ဇၟိက်",
+	"new": "တၟိ",
+	"admin-layer-name": "ယၟု",
+	"admin-layer-color": "သာ်",
+	"admin-layer-definition": "အဓိပ္ပါယ်"
 }

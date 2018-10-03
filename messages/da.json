@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Joedalton"
+			"Joedalton",
+			"Saederup92"
 		]
 	},
 	"prague": "Prag",
@@ -15,11 +16,33 @@
 	"photographed": "Fotograferet",
 	"unphotographed": "Uden fotografi",
 	"report-problem": "Anmeld problem",
-	"source-code": "kildekode",
+	"source-code": "Kildekode",
 	"your-email": "Din e-post",
 	"problem-summary": "Sammenfatning af problemet",
 	"problem-body": "Giv os venligst flere detaljer om problemet",
 	"submit": "Send",
 	"stats-before": "Dette værktøj har oprettet",
-	"stats-after": "kort allerede"
+	"stats-after": "kort allerede",
+	"change-language": "Skift sprog",
+	"admin-link": "Administrator",
+	"admin-variables": "Liste over variabler",
+	"and": "og",
+	"admin-edit-layers": "Rediger lag",
+	"admin-edit-layer": "Rediger lag",
+	"admin-add-layer": "Tilføj lag",
+	"admin-layers": "Lag",
+	"admin-edit-users": "Rediger brugere",
+	"admin-edit-user": "Rediger bruger",
+	"admin-users": "Brugere",
+	"administrator": "administrator",
+	"inactive": "Inaktiv",
+	"admin-user-isactive": "Er aktiv?",
+	"admin-user-isadmin": "Er administrator?",
+	"welcome": "Velkommen",
+	"login": "Log på",
+	"logout": "Log af",
+	"new": "ny",
+	"admin-layer-name": "Navn",
+	"admin-layer-color": "Farve",
+	"processing": "Bearbejder..."
 }

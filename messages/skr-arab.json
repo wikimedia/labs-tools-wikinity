@@ -23,5 +23,19 @@
 	"stats-before": "ایہ آوزار بݨ ڳئے",
 	"stats-after": "پہلے ہی نقشے تے ہے",
 	"no-coordinates": "جہڑیاں معلومات تساں ݙتیاں ہن، انہاں نال اساں کوآرڈینیٹ نسے لبھ سڳدے۔",
-	"change-language": "زبان وٹاؤ"
+	"change-language": "زبان وٹاؤ",
+	"admin-link": "ایڈمن",
+	"and": "اتے",
+	"admin-users": "ورتݨ آلے",
+	"administrator": "ایڈمن",
+	"inactive": "غیرفعال",
+	"admin-user-isactive": "بھلا فعال ہے؟",
+	"welcome": "ست بسم اللہ",
+	"login": "لاگ ان",
+	"logout": "لاگ آؤٹ",
+	"new": "نواں",
+	"admin-layer-name": "ناں",
+	"admin-layer-color": "رنگ",
+	"admin-layer-definition": "تعریف",
+	"processing": "عمل تھیندا پئے۔۔۔"
 }
