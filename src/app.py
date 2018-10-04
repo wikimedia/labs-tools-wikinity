@@ -23,7 +23,7 @@ from flask_jsonlocale import Locales
 from flask_mwoauth import MWOAuth
 from SPARQLWrapper import SPARQLWrapper, JSON
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='../static')
 
 # Load configuration from YAML file
 __dir__ = os.path.dirname(__file__)
