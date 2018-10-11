@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Macofe",
-			"Fitoschido"
+			"Fitoschido",
+			"Racha"
 		]
 	},
 	"prague": "Praga",
@@ -22,5 +23,18 @@
 	"problem-body": "Cuéntanos más sobre tu problema",
 	"submit": "Enviar",
 	"stats-before": "Esta herramienta ha generado",
-	"stats-after": "mapas hasta ahora"
+	"stats-after": "mapas hasta ahora",
+	"change-language": "Cambiar idioma",
+	"admin-link": "Administrador",
+	"and": "y",
+	"administrator": "administrador",
+	"inactive": "Inactivo",
+	"welcome": "Bienvenido/a",
+	"login": "Iniciar sesión",
+	"logout": "Salir",
+	"new": "nuevo",
+	"admin-layer-name": "Nombre",
+	"admin-layer-color": "Color",
+	"admin-layer-definition": "Definición",
+	"processing": "Procesando…"
 }

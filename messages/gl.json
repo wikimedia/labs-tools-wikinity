@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Elisardojm"
+			"Elisardojm",
+			"Banjo"
 		]
 	},
 	"prague": "Praga",
@@ -15,11 +16,32 @@
 	"photographed": "Fotografado",
 	"unphotographed": "Non fotografado",
 	"report-problem": "Informar sobre un problema",
-	"source-code": "código fonte",
+	"source-code": "Código fonte",
 	"your-email": "O seu enderezo electrónico",
 	"problem-summary": "Resumo do problema",
 	"problem-body": "Cóntenos máis sobre o seu problema",
 	"submit": "Enviar",
 	"stats-before": "Esta ferramenta xerou",
-	"stats-after": "mapas ata agora"
+	"stats-after": "mapas ata agora",
+	"change-language": "Cambiar a lingua",
+	"admin-link": "Administrador",
+	"admin-interface": "Interface de administración",
+	"admin-variables": "Lista de variables",
+	"and": "e",
+	"admin-edit-layers": "Editar capas",
+	"admin-edit-layer": "Editar capa",
+	"admin-add-layer": "Engadir capa",
+	"admin-layers": "Capas",
+	"admin-edit-users": "Editar usuarios",
+	"admin-edit-user": "Editar usuario",
+	"admin-users": "Usuarios",
+	"administrator": "administrador",
+	"inactive": "Inactivo",
+	"admin-user-isactive": "Está activo?",
+	"admin-user-isadmin": "É administrador?",
+	"new": "novo",
+	"admin-layer-name": "Nome",
+	"admin-layer-color": "Cor",
+	"admin-layer-definition": "Definición",
+	"processing": "Procesando..."
 }
