@@ -118,10 +118,6 @@ def isadmin():
 def index():
     return render_template('index.html')
 
-@app.route('/test')
-def test():
-    return locales.get_message('login-a')
-
 @app.route('/change_language', methods=['GET', 'POST'])
 def change_language():
     if request.method == 'GET':
