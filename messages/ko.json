@@ -13,6 +13,8 @@
 	"enter-radius": "검색 범위 설정 (km)",
 	"select-displayed": "지도에 표시할 객체를 선택합니다",
 	"search": "검색",
+	"photographed": "촬영됨",
+	"unphotographed": "촬영되지 않음",
 	"report-problem": "문제점 보고",
 	"source-code": "소스 코드",
 	"your-email": "이메일",
