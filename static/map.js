@@ -25,7 +25,7 @@ function GetValues() {
     } else if (type == "item") {
         payload["item"] = $('input[name="cislo"]').val();
     } else if (type == "coordinate") {
-        payload["lat"] = $('input[name="cislo"]').val();
+        payload["lat"] = $('input[name="lat"]').val();
         payload["lon"] = $('input[name="lon"]').val();
     }
 

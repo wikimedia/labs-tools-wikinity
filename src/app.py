@@ -180,7 +180,7 @@ def map():
         lon = coor["longitude"]
 
     query = "\n".join((open('../queries/start-%s.txt' % typ).read(), get_layers_query(), open('../queries/where-%s.txt' % subtype).read(), open('../queries/end.txt').read()))
-    if typ == "coor":
+    if typ == "coordinate":
         query = query.replace('@@LAT@@', lat).replace('@@LON@@', lon).replace('@@RADIUS@@', str(radius))
     else:
         query = query.replace('@@ITEM@@', item).replace('@@RADIUS@@', str(radius))
