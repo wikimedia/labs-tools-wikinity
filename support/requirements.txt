@@ -8,5 +8,8 @@ mwparserfromhell
 toolforge
 Flask-JSONLocale
 Flask-SQLAlchemy
+SQLAlchemy-Utils
 Flask-Migrate
 sparqlwrapper
+nose2
+mysqlclient

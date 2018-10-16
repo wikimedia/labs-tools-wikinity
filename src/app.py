@@ -29,7 +29,7 @@ app = Flask(__name__, static_folder='../static')
 # Load configuration from YAML file
 __dir__ = os.path.dirname(__file__)
 app.config.update(
-    yaml.safe_load(open(os.path.join(__dir__, 'config.yaml'))))
+    yaml.safe_load(open(os.path.join(__dir__, os.environ.get('FLASK_CONFIG_FILE', 'config.yaml')))))
 locales = Locales(app)
 _ = locales.get_message
 
@@ -198,7 +198,7 @@ def map():
         lat = coor["latitude"]
         lon = coor["longitude"]
 
-    query = "\n".join((open('../queries/start-%s.txt' % typ).read(), get_layers_query(), open('../queries/where-%s.txt' % subtype).read(), open('../queries/end.txt').read()))
+    query = "\n".join((open(os.path.join(__dir__, '../queries/start-%s.txt' % typ)).read(), get_layers_query(), open(os.path.join(__dir__, '../queries/where-%s.txt' % subtype)).read(), open(os.path.join(__dir__, '../queries/end.txt')).read()))
     if typ == "coordinate":
         query = query.replace('@@LAT@@', lat).replace('@@LON@@', lon).replace('@@RADIUS@@', str(radius))
     else:

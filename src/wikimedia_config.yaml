@@ -1,0 +1,9 @@
+STATS_COUNTER_FILE: /tmp/wikinity-stats.txt
+SECRET_KEY: something
+MESSAGES_DIR: ../messages
+SQLALCHEMY_DATABASE_URI: mysql://root@localhost/wikinity?unix_socket=/tmp/mysqld/mysqld.sock
+STATIC_URL: /static/
+APPLICATION_ROOT: /
+CONSUMER_KEY: 50511c78b8eece829f579b623eeb870e
+CONSUMER_SECRET: c917f80d469beadd1cbe9cfc11aaf97c588d066b
+OAUTH_MWURI: https://meta.wikimedia.org/w
