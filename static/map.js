@@ -23,11 +23,25 @@ function GetValues() {
     if (type == "article") {
         payload["article"] = $('input[name="wikiSearchPole"]').val();
         payload["project"] = $('#project-language').val() + $('#project-project').val();
+
+        if (payload["article"] == "" || payload["project"] == "") {
+            payload["article"] = "Praha";
+            payload["project"] = "cswiki";
+        }
     } else if (type == "item") {
         payload["item"] = $('input[name="cislo"]').val();
+
+        if(payload["item"] == "") {
+            payload["item"] = "Q1085";
+        }
     } else if (type == "coordinate") {
         payload["lat"] = $('input[name="lat"]').val();
         payload["lon"] = $('input[name="lon"]').val();
+
+        if (payload["lat"] == "" || payload["lon"] == "") {
+            payload["lat"] = "50.088611";
+            payload["lon"] = "14.421389";
+        }
     }
 
     $.get('map', payload, function(data) {
