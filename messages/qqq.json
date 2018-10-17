@@ -36,5 +36,10 @@
 	"logout": "Logout button",
 	"permission-denied": "General permission denied error, currently used in admin interface when visited by non-admin",
 	"admin-layer-name": "{{Identical|Name}}",
-	"admin-layer-color": "{{Identical|Color}}"
+	"admin-layer-color": "{{Identical|Color}}",
+	"admin-layer-definition": "Description of field containing SPARQL statement used as the layer",
+	"processing": "This is displayed while processing user's query",
+	"missing-coordinates": "Error message: User didn't specify coordinates",
+	"invalid-coordinates": "Error message: User specified coordinates in invalid format",
+	"unknown-error": "Error message: Unknown error happened"
 }

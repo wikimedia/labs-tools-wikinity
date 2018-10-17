@@ -58,5 +58,10 @@
 	"admin-layer-name": "Name",
 	"admin-layer-color": "Color",
 	"admin-layer-definition": "Definition",
-	"processing": "Processing..."
+	"processing": "Processing...",
+	"missing-coordinates": "You did not specify coordinates while searching by coordinates",
+	"invalid-coordinates": "You specified coordinates in invalid format. Please use decimal format.",
+	"missing-article": "You did not specify any article",
+	"nonexistent-article": "Article you specified doesn't exist or doesn't have Wikidata item attachted",
+	"unknown-error": "Unknown error happened"
 }

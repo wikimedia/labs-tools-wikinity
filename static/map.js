@@ -3,6 +3,7 @@ L.Map.addInitHook(function () {
     mapsPlaceholder.push(this);
 });
 function GetValues() {
+    $('#error').addClass("hidden");
     $('#processing').removeClass("hidden");
     if(mapsPlaceholder.length == 1) {mapsPlaceholder[0].remove()}
     $('#map').attr("class", "");
@@ -79,5 +80,9 @@ function GetValues() {
         L.control.layers(null, overlays, { collapsed: false }).addTo(map);
 
         $.get("stats", function (data, status) { $('#statnum').text(data) })
-    })
+    }).fail(function(data) {
+        $('#processing').addClass("hidden");
+        $('#error').removeClass("hidden");
+        $('#error').text(data.responseJSON.errortext);
+    });
 }

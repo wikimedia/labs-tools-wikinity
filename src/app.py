@@ -15,7 +15,7 @@
 
 import os
 import yaml
-from flask import redirect, request, jsonify, render_template, url_for
+from flask import redirect, request, jsonify, render_template, url_for, make_response
 from flask import Flask
 import requests
 import pymysql
@@ -30,6 +30,7 @@ __dir__ = os.path.dirname(__file__)
 app.config.update(
     yaml.safe_load(open(os.path.join(__dir__, 'config.yaml'))))
 locales = Locales(app)
+_ = locales.get_message
 
 mwoauth = MWOAuth(
     consumer_key=app.config.get('CONSUMER_KEY'),
@@ -89,6 +90,13 @@ def inject_base_variables():
         "username": mwoauth.get_current_user(),
         "admin": isadmin()
     }
+
+
+def make_error(errorcode):
+    return make_response(jsonify({
+        "errorcode": errorcode,
+        "errortext": _(errorcode)
+    }), 400)
 
 def connect():
     if app.config.get('DB_CONF'):
@@ -150,13 +158,25 @@ def map():
     radius = int(request.args.get('radius') or 5)
 
     if typ == "coordinate":
-        lat = request.args.get('lat') or '50.0385383'
-        lon = request.args.get('lon') or '15.7802056'
+        lat = request.args.get('lat')
+        lon = request.args.get('lon')
+        if lat is None or lon is None or lat == '' or lon == '':
+            return make_error("missing-coordinates")
+
+        # Conversion from string to float and back is to ensure the string contains correct coordinate format
+        try:
+            lat = str(float(lat))
+            lon = str(float(lon))
+        except ValueError:
+            return make_error("invalid-coordinates")
     else:
         if typ == "article":
             typ = "item"
-            article = request.args.get('article') or 'Praha'
-            project = request.args.get('project') or 'cswiki'
+            article = request.args.get('article')
+            project = request.args.get('project')
+
+            if article is None or project is None or article == '' or project == '':
+                return make_error("missing-article")
 
             r = requests.get('https://www.wikidata.org/w/api.php', params={
                 "action": "wbgetentities",
@@ -166,7 +186,7 @@ def map():
             })
             item = list(r.json()['entities'].keys())[0]
             if item == '-1':
-                item = 'Q1085'
+                return make_error("nonexistent-article")
         else:
             item = request.args.get('item') or 'Q1085'
         r = requests.get('https://www.wikidata.org/w/api.php', params={
