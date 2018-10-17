@@ -4,7 +4,7 @@
     <h1>{{ _("admin-layers") }}</h1>
     <ul>
         {% for layer in layers %}
-        <li><a href="{{url_for('admin_layer', id=layer.0)}}">{{layer.3}}</a></li>
+        <li><a href="{{url_for('admin_layer', id=layer.id)}}">{{layer.name}}</a></li>
         {% endfor %}
     </ul>
 

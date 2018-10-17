@@ -1,14 +1,14 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="container">
-    <h1>Edit layer - {% if layer %} {{layer.3}} {% else %}{{_("new")}}{% endif %}</h1>
+    <h1>Edit layer - {% if layer %} {{layer.name}} {% else %}{{_("new")}}{% endif %}</h1>
     <form method="POST">
         <label for="name">{{_("admin-layer-name")}}</label>
-        <input class="form-control" type="text" name="name" id="name" {% if layer %} value="{{layer.3}}" {% endif %}>
+        <input class="form-control" type="text" name="name" id="name" {% if layer %} value="{{layer.name}}" {% endif %}>
         <label for="color">{{_("admin-layer-color")}}</label>
-        <input class="form-control" type="text" name="color" id="color" {% if layer %} value={{layer.1}} {% endif %}>
+        <input class="form-control" type="text" name="color" id="color" {% if layer %} value={{layer.color}} {% endif %}>
         <label for="definition">{{_("admin-layer-definition")}}</label>
-        <textarea name="definition" id="definition" rows="2">{% if layer %} {{layer.2}} {% endif %}</textarea>
+        <textarea name="definition" id="definition" rows="2">{% if layer %} {{layer.definition}} {% endif %}</textarea>
         <input type="submit" value="{{_("submit")}}">
     </form>
 </div>

@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="container">
-    <h1>{{ _("admin-edit-user") }}</h1>
+    <h1>{{ _("admin-edit-user") }} – {{ user.username }}</h1>
     <form method="POST">
         <label for="isactive">{{ _("admin-user-isactive") }}</label>
-        <input type="checkbox" name="isactive" id="isactive" {% if user.2 == 1 %}checked{% endif %} value="1"><br>
+        <input type="checkbox" name="isactive" id="isactive" {% if user.is_active %}checked{% endif %} value="1"><br>
         <label for="isadmin">{{ _("admin-user-isadmin") }}</label>
-        <input type="checkbox" name="isadmin" id="isadmin" {% if user.3 == 1 %}checked{% endif %} value="1"><br>
+        <input type="checkbox" name="isadmin" id="isadmin" {% if user.is_admin %}checked{% endif %} value="1"><br>
         <input type="submit" value="{{ _("submit") }}">
     </form>
 </div>

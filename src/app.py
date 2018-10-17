@@ -18,10 +18,11 @@ import yaml
 from flask import redirect, request, jsonify, render_template, url_for, make_response
 from flask import Flask
 import requests
-import pymysql
 from flask_jsonlocale import Locales
 from flask_mwoauth import MWOAuth
 from SPARQLWrapper import SPARQLWrapper, JSON
+from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
 
 app = Flask(__name__, static_folder='../static')
 
@@ -31,6 +32,24 @@ app.config.update(
     yaml.safe_load(open(os.path.join(__dir__, 'config.yaml'))))
 locales = Locales(app)
 _ = locales.get_message
+
+db = SQLAlchemy(app)
+migrate = Migrate(app, db)
+
+class Layer(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    color = db.Column(db.String(6))
+    definition = db.Column(db.Text)
+    name = db.Column(db.String(255))
+
+class User(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(255), unique=True)
+    is_active = db.Column(db.Boolean, default=True)
+    is_admin = db.Column(db.Boolean, default=False)
+    language = db.Column(db.String(3))
+    test = db.Column(db.Boolean)
+
 
 mwoauth = MWOAuth(
     consumer_key=app.config.get('CONSUMER_KEY'),
@@ -64,17 +83,14 @@ def force_https():
 @app.before_request
 def db_check_language_permissions():
     if logged():
-        conn = connect()
-        with conn.cursor() as cur:
-            cur.execute('SELECT id, is_active, language FROM users WHERE username=%s', mwoauth.get_current_user())
-            data = cur.fetchall()
-        if len(data) == 0:
-            with conn.cursor() as cur:
-                cur.execute('INSERT INTO users(username, language) VALUES (%s, %s)', (mwoauth.get_current_user(), locales.get_locale()))
-                conn.commit()
+        user = User.query.filter_by(username=mwoauth.get_current_user()).first()
+        if user is None:
+            user = User(username=mwoauth.get_current_user(), language=locales.get_locale())
+            db.session.add(user)
+            db.session.commit()
         else:
-            if data[0][1] == 1:
-                locales.set_locale(data[0][2])
+            if user.is_active:
+                locales.set_locale(user.language)
             else:
                 return render_template('permission_denied.html')
 
@@ -98,27 +114,10 @@ def make_error(errorcode):
         "errortext": _(errorcode)
     }), 400)
 
-def connect():
-    if app.config.get('DB_CONF'):
-        return pymysql.connect(
-            database=app.config.get('DB_NAME'),
-            host=app.config.get('DB_HOST'),
-            read_default_file=app.config.get('DB_CONF')
-        )
-    else:
-        return pymysql.connect(
-            database=app.config.get('DB_NAME'),
-            host=app.config.get('DB_HOST'),
-            user=app.config.get('DB_USER'),
-            password=app.config.get('DB_PASS')
-        )
-
 def isadmin():
     if logged():
-        conn = connect()
-        with conn.cursor() as cur:
-            cur.execute('SELECT username FROM users WHERE is_active=1 AND is_admin=1 AND username=%s', mwoauth.get_current_user())
-            return len(cur.fetchall()) == 1
+        user = User.query.filter_by(username=mwoauth.get_current_user(), is_admin=True, is_active=True)
+        return user.count() == 1
     else:
         return False
 
@@ -132,10 +131,10 @@ def change_language():
         return render_template('change_language.html', locales=locales.get_locales(), permanent_locale=locales.get_permanent_locale())
     else:
         if logged():
-            conn = connect()
-            with conn.cursor() as cur:
-                cur.execute('UPDATE users SET language=%s WHERE username=%s', (request.form.get('locale', 'en'), mwoauth.get_current_user()))
-            conn.commit()
+            user = User.query.filter_by(username=mwoauth.get_current_user()).one()
+            user.language = request.form.get('locale', 'en')
+            db.session.add(user)
+            db.session.commit()
         locales.set_locale(request.form.get('locale'))
         return redirect(url_for('index'))
 
@@ -215,10 +214,10 @@ def map():
     if 'onlywd' in request.args:
         return jsonify(wd_res)
     wikidata = {}
-    layers_src = get_layers()
+    layers_src = Layer.query.all()
     layers = {}
     for layer in layers_src:
-        layers[layer[3]] = layer[0]
+        layers[layer.name] = layer.id
     for point in wd_res["results"]["bindings"]:
         try:
             layer = point['layer']['value']
@@ -249,20 +248,8 @@ def map():
 
     return jsonify(res)
 
-def get_layers():
-    conn = connect()
-    with conn.cursor() as cur:
-        cur.execute('SELECT * FROM layers')
-        return cur.fetchall()
-
-def get_layer(id):
-    conn = connect()
-    with conn.cursor() as cur:
-        cur.execute('SELECT * FROM layers WHERE id=%s', id)
-        return cur.fetchall()[0]
-
 def get_layers_query():
-    layers = get_layers()
+    layers = Layer.query.all()
     res = ""
     for layer in layers:
         res += """
@@ -271,7 +258,7 @@ def get_layers_query():
             BIND("%s" AS ?layer)
             BIND("%s" as ?rgb)
         }
-        """ % (layer[2], layer[3], layer[1])
+        """ % (layer.definition, layer.name, layer.color)
     return res
 
 @app.route('/admin')
@@ -280,51 +267,44 @@ def admin():
 
 @app.route('/admin/users')
 def admin_users():
-    conn = connect()
-    with conn.cursor() as cur:
-        cur.execute('SELECT * FROM users')
-        users = cur.fetchall()
-    return render_template('admin/users.html', users=users)
+    return render_template('admin/users.html', users=User.query.all())
 
 @app.route('/admin/user/<path:id>', methods=['GET', 'POST'])
 def admin_user(id):
-    conn = connect()
     if request.method == 'POST':
-        with conn.cursor() as cur:
-            cur.execute('UPDATE users SET is_active=%s, is_admin=%s WHERE id=%s', (int(request.form.get('isactive', 0)), int(request.form.get('isadmin', 0)), id))
-        conn.commit()
-    with conn.cursor() as cur:
-        cur.execute('SELECT * FROM users WHERE id=%s', id)
-        user = cur.fetchall()[0]
-    return render_template('admin/user.html', user=user)
+        user = User.query.get(id)
+        user.is_active = int(request.form.get('isactive', 0)) == 1
+        user.is_admin = int(request.form.get('isadmin', 0)) == 1
+        db.session.add(user)
+        db.session.commit()
+    return render_template('admin/user.html', user=User.query.get(id))
 
 @app.route('/admin/layers')
 def admin_layers():
-    return render_template('admin/layers.html', layers=get_layers())
+    return render_template('admin/layers.html', layers=Layer.query.all())
 
 @app.route('/admin/layer/new', methods=['GET', 'POST'])
 def admin_layer_new():
     if request.method == 'GET':
         return render_template('admin/layer.html')
     else:
-        conn = connect()
-        with conn.cursor() as cur:
-            cur.execute('INSERT INTO layers(color, definition, name) VALUES(%s, %s, %s)', (request.form['color'], request.form['definition'], request.form['name']))
-        conn.commit()
-        with conn.cursor() as cur:
-            cur.execute('SELECT id FROM layers ORDER BY id DESC')
-        return redirect(url_for('admin_layer', id=cur.fetchall()[0][0]))
+        layer = Layer(color=request.form['color'], definition=request.form['definition'], name=request.form['name'])
+        db.session.add(layer)
+        db.session.commit()
+        return redirect(url_for('admin_layer', id=Layer.query.filter_by(name=request.form['name']).one().id))
 
 @app.route('/admin/layer/<path:id>', methods=['GET', 'POST'])
 def admin_layer(id):
     if request.method == 'GET':
-        return render_template('admin/layer.html', layer=get_layer(id))
+        return render_template('admin/layer.html', layer=Layer.query.get(id))
     else:
-        conn = connect()
-        with conn.cursor() as cur:
-            cur.execute('UPDATE layers SET color=%s, definition=%s, name=%s WHERE id=%s', (request.form['color'], request.form['definition'], request.form['name'], id))
-        conn.commit()
-        return render_template('admin/layer.html', layer=get_layer(id), success=True)
+        layer = Layer.query.get(id)
+        layer.color = request.form['color']
+        layer.definition = request.form['definition']
+        layer.name = request.form['name']
+        db.session.add(layer)
+        db.session.commit()
+        return render_template('admin/layer.html', layer=layer, success=True)
 
 
 if __name__ == "__main__":

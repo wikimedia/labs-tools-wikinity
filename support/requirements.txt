@@ -7,4 +7,6 @@ flask-mwoauth
 mwparserfromhell
 toolforge
 Flask-JSONLocale
+Flask-SQLAlchemy
+Flask-Migrate
 sparqlwrapper
