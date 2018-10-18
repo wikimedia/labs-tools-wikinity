@@ -58,5 +58,10 @@
 	"admin-layer-name": "名稱",
 	"admin-layer-color": "色彩",
 	"admin-layer-definition": "定義",
-	"processing": "處理中..."
+	"processing": "處理中...",
+	"missing-coordinates": "在透過座標搜尋時您未指定座標",
+	"invalid-coordinates": "您指定的座標格式無效，請使用十進位制格式。",
+	"missing-article": "您沒有指定任何條目",
+	"nonexistent-article": "您所指定的條目不存在，或是沒有相對應的維基數據項目",
+	"unknown-error": "發生未知錯誤"
 }

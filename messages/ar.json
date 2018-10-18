@@ -61,5 +61,10 @@
 	"admin-layer-name": "الاسم",
 	"admin-layer-color": "اللون",
 	"admin-layer-definition": "تعريف",
-	"processing": "تجري المعالجة..."
+	"processing": "تجري المعالجة...",
+	"missing-coordinates": "لم تحدد الإحداثيات أثناء البحث بالإحداثيات",
+	"invalid-coordinates": "لقد حددت الإحداثيات بتنسيق غير صالح; يُرجَى استخدام تنسيق عشري.",
+	"missing-article": "لم تحدد أية مقالة",
+	"nonexistent-article": "المقالة التي حددتها غير موجودة أو لا تحتوي على عنصر ويكي بيانات مرفق",
+	"unknown-error": "حدث خطأ غير معروف"
 }

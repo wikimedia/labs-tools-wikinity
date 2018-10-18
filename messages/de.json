@@ -58,5 +58,10 @@
 	"admin-layer-name": "Name",
 	"admin-layer-color": "Farbe",
 	"admin-layer-definition": "Definition",
-	"processing": "Verarbeiten …"
+	"processing": "Verarbeiten …",
+	"missing-coordinates": "Bei der Suche hast du keine Koordinaten angegeben.",
+	"invalid-coordinates": "Du hast Koordinaten in einem ungültigen Format angegeben. Bitte verwende das Dezimalformat.",
+	"missing-article": "Du hast keinen Artikel angegeben",
+	"nonexistent-article": "Der angegebene Artikel ist nicht vorhanden oder hat kein zugeordnetes Wikidata-Objekt",
+	"unknown-error": "Es ist ein unbekannter Fehler aufgetreten"
 }

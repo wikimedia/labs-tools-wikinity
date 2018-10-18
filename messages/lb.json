@@ -34,5 +34,6 @@
 	"admin-layer-name": "Numm",
 	"admin-layer-color": "Faarf",
 	"admin-layer-definition": "Definitioun",
-	"processing": "Verschaffen..."
+	"processing": "Verschaffen...",
+	"unknown-error": "Et ass en onbekannte Feeler geschitt"
 }

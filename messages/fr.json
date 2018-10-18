@@ -60,5 +60,10 @@
 	"admin-layer-name": "Nom",
 	"admin-layer-color": "Couleur",
 	"admin-layer-definition": "Définition",
-	"processing": "Traitement en cours…"
+	"processing": "Traitement en cours…",
+	"missing-coordinates": "Vous n’avez pas spécifié de coordonnées en recherchant par coordonnées",
+	"invalid-coordinates": "Vous avez spécifié des coordonnées dans un format non valide. Veuillez utiliser un format décimal.",
+	"missing-article": "Vous n’avez spécifié aucun article",
+	"nonexistent-article": "L’article que vous avez spécifié n’existe pas ou n’a pas d’élément Wikidata attaché",
+	"unknown-error": "Erreur inconnue arrivée"
 }

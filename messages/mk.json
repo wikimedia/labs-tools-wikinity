@@ -58,5 +58,10 @@
 	"admin-layer-name": "Име",
 	"admin-layer-color": "Боја",
 	"admin-layer-definition": "Определба",
-	"processing": "Обработувам..."
+	"processing": "Обработувам...",
+	"missing-coordinates": "Ги немате укажано координати што ги барате",
+	"invalid-coordinates": "Координатите ви се во погрешен формат. Користете децимален облик.",
+	"missing-article": "Не укажавте ниедна статија",
+	"nonexistent-article": "Укажаната статија не постои или нема предмет на Википодатоците",
+	"unknown-error": "Се појави непозната грешка"
 }
