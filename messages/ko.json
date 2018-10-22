@@ -49,5 +49,10 @@
 	"admin-layer-name": "이름",
 	"admin-layer-color": "색",
 	"admin-layer-definition": "정의",
-	"processing": "처리 중..."
+	"processing": "처리 중...",
+	"missing-coordinates": "좌표로 검색하는 동안 좌표를 지정하지 않았습니다",
+	"invalid-coordinates": "유효하지 않은 포맷의 좌표를 지정했습니다. 10진 포맷을 사용해 주십시오.",
+	"missing-article": "문서를 지정하지 않았습니다",
+	"nonexistent-article": "지정한 문서가 존재하지 않거나 위키데이터 항목이 첨부되어 있지 않습니다",
+	"unknown-error": "알 수 없는 오류가 발생했습니다"
 }

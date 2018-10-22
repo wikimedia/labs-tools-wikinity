@@ -48,5 +48,7 @@
 	"admin-layer-name": "Nome",
 	"admin-layer-color": "Colore",
 	"admin-layer-definition": "Definizione",
-	"processing": "Elaborazione..."
+	"processing": "Elaborazione...",
+	"missing-article": "Non hai specificato alcuna voce",
+	"unknown-error": "Si è verificato un errore sconosciuto"
 }

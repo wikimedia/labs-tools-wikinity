@@ -25,6 +25,7 @@
 	"stats-after": "kort allerede",
 	"change-language": "Skift sprog",
 	"admin-link": "Administrator",
+	"admin-description": "Vælg en handlig:",
 	"admin-variables": "Liste over variabler",
 	"and": "og",
 	"admin-edit-layers": "Rediger lag",
@@ -44,5 +45,8 @@
 	"new": "ny",
 	"admin-layer-name": "Navn",
 	"admin-layer-color": "Farve",
-	"processing": "Bearbejder..."
+	"admin-layer-definition": "Definition",
+	"processing": "Bearbejder...",
+	"missing-article": "Du angav ingen artikler",
+	"unknown-error": "Der opstod en ukendt fejl"
 }
