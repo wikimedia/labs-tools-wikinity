@@ -34,13 +34,17 @@ class BasicTests(TestCase):
             for subtype in subtypes:
                 for data_query in types[type]:
                     urls = [
-                        '/map?type=%s&radius=5&subtype=%s&%s&onlyquery' % (type, subtype, data_query),
-                        '/map?type=%s&radius=5&subtype=%s&%s&onlywd' % (type, subtype, data_query),
-                        '/map?type=%s&radius=5&subtype=%s&%s' % (type, subtype, data_query),
+                        '/map?type=%s&radius=5&subtype=%s&%s&onlyquery'
+                        % (type, subtype, data_query),
+                        '/map?type=%s&radius=5&subtype=%s&%s&onlywd'
+                        % (type, subtype, data_query),
+                        '/map?type=%s&radius=5&subtype=%s&%s'
+                        % (type, subtype, data_query),
                     ]
                     for url in urls:
                         response = self.app.get(url)
-                        # TODO: Verify that actual returned content matches expected data
+                        # TODO: Verify that actual returned content
+                        # matches expected data
                         self.assertEqual(response.status_code, 200)
 
     def tearDown(self):

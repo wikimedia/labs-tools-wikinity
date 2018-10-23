@@ -15,7 +15,8 @@
 
 import os
 import yaml
-from flask import redirect, request, jsonify, render_template, url_for, make_response
+from flask import redirect, request, jsonify, render_template, url_for, \
+    make_response
 from flask import Flask
 import requests
 from flask_jsonlocale import Locales
@@ -29,7 +30,8 @@ app = Flask(__name__, static_folder='../static')
 # Load configuration from YAML file
 __dir__ = os.path.dirname(__file__)
 app.config.update(
-    yaml.safe_load(open(os.path.join(__dir__, os.environ.get('FLASK_CONFIG_FILE', 'config.yaml')))))
+    yaml.safe_load(open(os.path.join(__dir__, os.environ.get(
+        'FLASK_CONFIG_FILE', 'config.yaml')))))
 locales = Locales(app)
 _ = locales.get_message
 
@@ -58,7 +60,10 @@ mwoauth = MWOAuth(
 )
 app.register_blueprint(mwoauth.bp)
 
-stats_filename = app.config.get('STATS_COUNTER_FILE', '/tmp/wikinity-stats.txt')
+stats_filename = app.config.get(
+    'STATS_COUNTER_FILE',
+    '/tmp/wikinity-stats.txt'
+)
 
 QUERY_TYPES = [
     "coordinate",
@@ -76,16 +81,21 @@ def logged():
 def force_https():
     if request.headers.get('X-Forwarded-Proto') == 'http':
         return redirect(
-            'https://' + request.headers['Host'] + request.headers['X-Original-URI'],
+            'https://' + request.headers['Host'] +
+            request.headers['X-Original-URI'],
             code=301
         )
 
 @app.before_request
 def db_check_language_permissions():
     if logged():
-        user = User.query.filter_by(username=mwoauth.get_current_user()).first()
+        user = User.query.filter_by(
+            username=mwoauth.get_current_user()
+        ).first()
         if user is None:
-            user = User(username=mwoauth.get_current_user(), language=locales.get_locale())
+            user = User(
+                username=mwoauth.get_current_user(),
+                language=locales.get_locale())
             db.session.add(user)
             db.session.commit()
         else:
@@ -116,7 +126,11 @@ def make_error(errorcode):
 
 def isadmin():
     if logged():
-        user = User.query.filter_by(username=mwoauth.get_current_user(), is_admin=True, is_active=True)
+        user = User.query.filter_by(
+            username=mwoauth.get_current_user(),
+            is_admin=True,
+            is_active=True
+        )
         return user.count() == 1
     else:
         return False
@@ -128,10 +142,16 @@ def index():
 @app.route('/change_language', methods=['GET', 'POST'])
 def change_language():
     if request.method == 'GET':
-        return render_template('change_language.html', locales=locales.get_locales(), permanent_locale=locales.get_permanent_locale())
+        return render_template(
+            'change_language.html',
+            locales=locales.get_locales(),
+            permanent_locale=locales.get_permanent_locale()
+        )
     else:
         if logged():
-            user = User.query.filter_by(username=mwoauth.get_current_user()).one()
+            user = User.query.filter_by(
+                username=mwoauth.get_current_user()
+            ).one()
             user.language = request.form.get('locale', 'en')
             db.session.add(user)
             db.session.commit()
@@ -162,7 +182,8 @@ def map():
         if lat is None or lon is None or lat == '' or lon == '':
             return make_error("missing-coordinates")
 
-        # Conversion from string to float and back is to ensure the string contains correct coordinate format
+        # Conversion from string to float and back is to ensure
+        # the string contains correct coordinate format
         try:
             lat = str(float(lat))
             lon = str(float(lon))
@@ -174,8 +195,11 @@ def map():
             article = request.args.get('article')
             project = request.args.get('project')
 
-            if article is None or project is None or article == '' or project == '':
-                return make_error("missing-article")
+            if (
+                article is None or project is None or
+                article == '' or project == ''
+            ):
+                    return make_error("missing-article")
 
             r = requests.get('https://www.wikidata.org/w/api.php', params={
                 "action": "wbgetentities",
@@ -198,11 +222,23 @@ def map():
         lat = coor["latitude"]
         lon = coor["longitude"]
 
-    query = "\n".join((open(os.path.join(__dir__, '../queries/start-%s.txt' % typ)).read(), get_layers_query(), open(os.path.join(__dir__, '../queries/where-%s.txt' % subtype)).read(), open(os.path.join(__dir__, '../queries/end.txt')).read()))
+    query = "\n".join((
+        open(os.path.join(__dir__, '../queries/start-%s.txt' % typ)).read(),
+        get_layers_query(),
+        open(os.path.join(
+            __dir__, '../queries/where-%s.txt' % subtype
+        )).read(),
+        open(os.path.join(__dir__, '../queries/end.txt')).read()
+    ))
     if typ == "coordinate":
-        query = query.replace('@@LAT@@', lat).replace('@@LON@@', lon).replace('@@RADIUS@@', str(radius))
+        query = query\
+            .replace('@@LAT@@', lat)\
+            .replace('@@LON@@', lon)\
+            .replace('@@RADIUS@@', str(radius))
     else:
-        query = query.replace('@@ITEM@@', item).replace('@@RADIUS@@', str(radius))
+        query = query\
+            .replace('@@ITEM@@', item)\
+            .replace('@@RADIUS@@', str(radius))
 
     if 'onlyquery' in request.args:
         return query
@@ -229,11 +265,15 @@ def map():
         if id not in wikidata:
             wikidata[id] = {
                 "name": layer,
-                "html_name": '<span class="legend-item" style="background-color: #%s"></span> %s' % (rgb, layer),
+                "html_name": '<span class="legend-item" \
+                    style="background-color: #%s"></span> %s' % (rgb, layer),
                 "color": rgb,
                 "points": []
             }
-        coord = point['coord']['value'].replace('Point(', '').replace(')', '').split(' ')
+        coord = point['coord']['value']\
+            .replace('Point(', '')\
+            .replace(')', '')\
+            .split(' ')
         wikidata[id]['points'].append({
             "lat": coord[1],
             "lon": coord[0],
@@ -288,10 +328,17 @@ def admin_layer_new():
     if request.method == 'GET':
         return render_template('admin/layer.html')
     else:
-        layer = Layer(color=request.form['color'], definition=request.form['definition'], name=request.form['name'])
+        layer = Layer(
+            color=request.form['color'],
+            definition=request.form['definition'],
+            name=request.form['name']
+        )
         db.session.add(layer)
         db.session.commit()
-        return redirect(url_for('admin_layer', id=Layer.query.filter_by(name=request.form['name']).one().id))
+        return redirect(url_for(
+            'admin_layer',
+            id=Layer.query.filter_by(name=request.form['name']).one().id)
+        )
 
 @app.route('/admin/layer/<path:id>', methods=['GET', 'POST'])
 def admin_layer(id):
