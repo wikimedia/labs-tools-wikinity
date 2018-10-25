@@ -169,7 +169,7 @@ def map():
     try:
         stats_num = str(int(open(stats_filename).read()) + 1)
         open(stats_filename, 'w').write(stats_num)
-    except FileNotFoundError as e:
+    except FileNotFoundError:
         open(stats_filename, 'w').write('1')
 
     typ = request.args.get('type', 'item')
