@@ -61,5 +61,10 @@
 	"admin-layer-name": "Nome",
 	"admin-layer-color": "Cor",
 	"admin-layer-definition": "Definição",
-	"processing": "A processar..."
+	"processing": "A processar...",
+	"missing-coordinates": "Não especificou coordenadas numa pesquisa por coordenadas",
+	"invalid-coordinates": "Especificou as coordenadas num formato inválido. Use o formato decimal, por favor.",
+	"missing-article": "Não especificou nenhum artigo",
+	"nonexistent-article": "O artigo que especificou não existe ou não tem um elemento Wikidata ligado",
+	"unknown-error": "Ocorreu um erro desconhecido"
 }

@@ -58,5 +58,10 @@
 	"admin-layer-name": "Nome",
 	"admin-layer-color": "Culore",
 	"admin-layer-definition": "Definizione",
-	"processing": "Stoche a processe..."
+	"processing": "Stoche a processe...",
+	"missing-coordinates": "Non g'è specificate le coordinate mendre ca ste cirche pe coordinate",
+	"invalid-coordinates": "E' specificate coordinate in formate non valide. Pe piacere ause 'u formate decimale.",
+	"missing-article": "Non g'è specificate nisciuna vôsce",
+	"nonexistent-article": "'A vôsce ca è specificate non g'esiste o non ge tène 'na vôsce Uicchidate 'nzeccate",
+	"unknown-error": "Errore scanusciute assute"
 }
