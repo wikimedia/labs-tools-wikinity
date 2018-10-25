@@ -50,7 +50,6 @@ class User(db.Model):
     is_active = db.Column(db.Boolean, default=True)
     is_admin = db.Column(db.Boolean, default=False)
     language = db.Column(db.String(3))
-    test = db.Column(db.Boolean)
 
 
 mwoauth = MWOAuth(
