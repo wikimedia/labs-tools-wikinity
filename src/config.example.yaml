@@ -1,10 +1,7 @@
 STATS_COUNTER_FILE: /tmp/wikinity-stats.txt
 SECRET_KEY: something
 MESSAGES_DIR: ../messages
-DB_NAME: wikinity
-DB_HOST: localhost
-DB_USER: root
-DB_PASS: password
+SQLALCHEMY_DATABASE_URI: mysql://root:password@localhost/dbname
 STATIC_URL: /static/
 APPLICATION_ROOT: /
 CONSUMER_KEY: 50511c78b8eece829f579b623eeb870e
