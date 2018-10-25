@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-    
+
     $.get("stats", function (data, status) { $('#statnum').text(data) })
 
     $("#wikiSearch").collapse('show');
@@ -20,6 +20,14 @@ $( document ).ready(function() {
     $('#souradnice').on('show.bs.collapse', function () {
         $('#wikiSearch').collapse('hide')
         $('#item').collapse('hide')
+    })
+
+    $('#degdec').on('show.bs.collapse', function () {
+        $('#dms').collapse('hide')
+    })
+
+    $('#dms').on('show.bs.collapse', function () {
+        $('#degdec').collapse('hide')
     })
 
 });

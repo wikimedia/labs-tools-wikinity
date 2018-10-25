@@ -65,5 +65,12 @@
 	"nonexistent-article": "Article you specified doesn't exist or doesn't have Wikidata item attachted",
 	"unknown-error": "Unknown error happened",
 	"coor-lat": "Lat coordinate",
-	"coor-lon": "Lon coordinate"
+	"coor-lon": "Lon coordinate",
+	"degree-decimal": "Degree-Decimal",
+	"dms": "Degrees-Minutes-Seconds",
+	"deg": "Degrees",
+	"min": "Minutes",
+	"sec": "Seconds",
+	"lat": "Latitude",
+	"lon": "Longitude"
 }

@@ -24,7 +24,7 @@ textarea {
 	width: 100%;
 }
 
-.bigmap { 
+.bigmap {
 	height: 600px;
 }
 
@@ -37,4 +37,14 @@ textarea {
 	height: 10px;
 	display: inline-block;
 	border-radius: 50%;
+}
+
+input[name^="lat"], input[name^="lon"] {
+	display: inline;
+	width: 8em;
+}
+
+.indent {
+	width: 95%;
+	float: right;
 }

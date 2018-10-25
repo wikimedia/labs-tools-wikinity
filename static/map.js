@@ -8,7 +8,7 @@ function GetValues() {
     if(mapsPlaceholder.length == 1) {mapsPlaceholder[0].remove()}
     $('#map').attr("class", "");
     var type = $('input[name="optradio"]:checked').val();
-    
+
     var subtype = "unphotographed";
     if ($('#nafocene')[0].checked && $('#nenafocene')[0].checked) subtype = "all";
     else if ($('#nafocene')[0].checked && !$('#nenafocene')[0].checked) subtype = "photographed";
@@ -35,12 +35,38 @@ function GetValues() {
             payload["item"] = "Q1085";
         }
     } else if (type == "coordinate") {
-        payload["lat"] = $('input[name="lat"]').val();
-        payload["lon"] = $('input[name="lon"]').val();
+        if($("#degdec").hasClass("in")) {
+            var lat = $('input[name="lat-degdec"]').val();
+            var lon = $('input[name="lon-degdec"]').val();
 
-        if (payload["lat"] == "" || payload["lon"] == "") {
-            payload["lat"] = "50.088611";
-            payload["lon"] = "14.421389";
+            if(lat === "" || lon === "") {
+                lat = 50.088611;
+                lon = 14.421389;
+            }
+
+            payload["lat"] = lat;
+            payload["lon"] = lon;
+        } else {
+            var lat = {};
+            var lon = {};
+
+            components = ["deg", "min", "sec"];
+
+            for(component of components) {
+                lat[component] = $(`input[name="lat-${component}"]`).val();
+                lon[component] = $(`input[name="lon-${component}"]`).val();
+            }
+
+            var latInDegrees = dmsToDegrees(lat);
+            var lonInDegrees = dmsToDegrees(lon);
+
+            if(isNaN(latInDegrees) || isNaN(lonInDegrees)) {
+                latInDegrees = 50.088611;
+                lonInDegrees = 14.421389;
+            }
+
+            payload["lat"] = latInDegrees;
+            payload["lon"] = lonInDegrees;
         }
     }
 
@@ -99,4 +125,15 @@ function GetValues() {
         $('#error').removeClass("hidden");
         $('#error').text(data.responseJSON.errortext);
     });
+}
+
+function dmsToDegrees(coord) {
+    var converted =
+        parseFloat(coord.deg) +
+        parseFloat(coord.min / 60) +
+        parseFloat(coord.sec / 3600);
+
+    converted = converted.toFixed(6);
+
+    return converted;
 }

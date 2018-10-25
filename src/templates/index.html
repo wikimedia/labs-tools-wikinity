@@ -41,18 +41,48 @@
               <a href="#" class="close" data-dismiss="alert">&times;</a>
               <strong>Error!</strong> pole souradnice je povinne.
           </div>
-          <div class="form-group">
-            <label for="formGroupExampleInput">{{ _("coor-lat") }}</label>
-              <input id="lat" type="text" name="lat" class="form-control" id="formGroupExampleInput" placeholder="50.088611 ({{ _("prague") }}, {{ _("default-value") }})">
+
+          <div class="indent">
+            <div class="col">
+              <div class="radio">
+                <label><input type="radio" name="format" value="degdec" data-toggle="collapse" data-target="#degdec" checked>{{ _("degree-decimal") }}<label>
+              </div>
+              <div class="radio">
+                <label><input type="radio" name="format" value="dms" data-toggle="collapse" data-target="#dms">{{ _("dms") }}</label>
+              </div>
+            </div>
+
+            <div class="col collapse in" id="degdec">
+              <div class="form-group">
+                <label>{{_("coor-lat") }}</label>
+                  <input id="lat-degdec" type="number" min="-90" max="90" name="lat-degdec" class="form-control" placeholder={{ _("lat") }}>
+
+                  <br>
+
+                  <label>{{ _("coor-lon") }}</label>
+                  <input id="lon-degdec" type="number" min="-180" max="180" name="lon-degdec" class="form-control" placeholder={{ _("lon") }}>
+              </div>
+            </div>
+
+            <div class="col collapse" id="dms">
+              <div class="form-group">
+                  <label>{{ _("coor-lat") }}</label>
+                  <input id="lat-deg" type="number" min="-90" max="90" name="lat-deg" class="form-control" placeholder={{ _("deg") }}>
+                  <input id="lat-min" type="number" min="0" max="60" name="lat-min" class="form-control" placeholder={{ _("min") }}>
+                  <input id="lat-sec" type="number" min="0" max="60" name="lat-sec" class="form-control" placeholder={{ _("sec") }}>
+              </div>
+              <div class="form-group">
+                <label">{{ _("coor-lon") }}</label>
+                <input id="lon-deg" type="number" min="-180" max="180" name="lon-deg" class="form-control" placeholder={{ _("deg") }}>
+                <input id="lon-min" type="number" min="0" max="60" name="lon-min" class="form-control" placeholder={{ _("min") }}>
+                <input id="lon-sec" type="number" min="0" max="60" name="lon-sec" class="form-control" placeholder={{ _("sec") }}>
+              </div>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="formGroupExampleInput2">{{ _("coor-lon") }}</label>
-              <input id="lon" type="text" name="lon" class="form-control" id="formGroupExampleInput2" placeholder="14.421389 ({{ _("prague") }}, {{ _("default-value") }})">
-          </div>
-        </div>
-        <div class="col">
+      </div>
+      <div class="col">
             <label>{{ _("select-displayed") }}</label>
-        </div>
+          </div>
         <div class="col">
           <input id="nafocene" type="checkbox" name="check" value="nafoceno">
           <label for="ch1">{{ _("photographed") }}</label>
@@ -63,16 +93,14 @@
         </div>
         <div class="col">
           <div class="form-group">
-              <label for="formGroupExampleInput">{{ _("enter-radius") }}</label>
-              <input id="radius" type="text" name="radius" class="form-control" id="formGroupExampleInput" placeholder="5 ({{ _("default-value") }})">
+              <label>{{ _("enter-radius") }}</label>
+              <input id="radius" type="text" name="radius" class="form-control" placeholder="5 ({{ _("default-value") }})">
           </div>
         </div>
         <div class="col-3">
               <button type="button" class="btn btn-primary" id="hledej">{{ _("search") }}</button>
               <span id="shortUrl"></span>
         </div>
-
-      </div>
     </form>
   </div>
 
