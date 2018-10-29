@@ -41,5 +41,6 @@
 	"processing": "This is displayed while processing user's query",
 	"missing-coordinates": "Error message: User didn't specify coordinates",
 	"invalid-coordinates": "Error message: User specified coordinates in invalid format",
-	"unknown-error": "Error message: Unknown error happened"
+	"unknown-error": "Error message: Unknown error happened",
+	"sec": "{{Identical|Second}}"
 }

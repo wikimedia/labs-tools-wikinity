@@ -39,5 +39,9 @@
 	"admin-layer-name": "Nazwa",
 	"admin-layer-color": "Kolor",
 	"admin-layer-definition": "Definicja",
-	"processing": "Przetwarzanie..."
+	"processing": "Przetwarzanie...",
+	"invalid-coordinates": "Podano współrzędne w nieprawidłowym formacie. Użyj formatu dziesiętnego.",
+	"unknown-error": "Wystąpił nieznany błąd",
+	"lat": "Szerokość geograficzna",
+	"lon": "Długość geograficzna"
 }

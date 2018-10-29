@@ -65,5 +65,14 @@
 	"invalid-coordinates": "Vous avez spécifié des coordonnées dans un format non valide. Veuillez utiliser un format décimal.",
 	"missing-article": "Vous n’avez spécifié aucun article",
 	"nonexistent-article": "L’article que vous avez spécifié n’existe pas ou n’a pas d’élément Wikidata attaché",
-	"unknown-error": "Erreur inconnue arrivée"
+	"unknown-error": "Erreur inconnue arrivée",
+	"coor-lat": "Coordonnées de lattitude",
+	"coor-lon": "Coordonnées de longitude",
+	"degree-decimal": "Degré-décimal",
+	"dms": "Degrés-Minutes-Secondes",
+	"deg": "Degrés",
+	"min": "Minutes",
+	"sec": "Secondes",
+	"lat": "Latitude",
+	"lon": "Longitude"
 }

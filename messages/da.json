@@ -23,6 +23,7 @@
 	"submit": "Send",
 	"stats-before": "Dette værktøj har oprettet",
 	"stats-after": "kort allerede",
+	"no-coordinates": "Vi kunne ikke finde koordinater fra informationen du indsendte.",
 	"change-language": "Skift sprog",
 	"admin-link": "Administrator",
 	"admin-description": "Vælg en handlig:",
@@ -48,5 +49,11 @@
 	"admin-layer-definition": "Definition",
 	"processing": "Bearbejder...",
 	"missing-article": "Du angav ingen artikler",
-	"unknown-error": "Der opstod en ukendt fejl"
+	"unknown-error": "Der opstod en ukendt fejl",
+	"dms": "Degrees-Minutes-Seconds",
+	"deg": "Grader",
+	"min": "Minutter",
+	"sec": "Sekunder",
+	"lat": "Breddegrad",
+	"lon": "Længdegrad"
 }

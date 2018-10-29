@@ -37,5 +37,10 @@
 	"admin-layer-name": "ناں",
 	"admin-layer-color": "رنگ",
 	"admin-layer-definition": "تعریف",
-	"processing": "عمل تھیندا پئے۔۔۔"
+	"processing": "عمل تھیندا پئے۔۔۔",
+	"deg": "درجے",
+	"min": "منٹ",
+	"sec": "سیکنڈ",
+	"lat": "عرض البلد",
+	"lon": "طول البلد"
 }
