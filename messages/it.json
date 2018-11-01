@@ -50,5 +50,12 @@
 	"admin-layer-definition": "Definizione",
 	"processing": "Elaborazione...",
 	"missing-article": "Non hai specificato alcuna voce",
-	"unknown-error": "Si è verificato un errore sconosciuto"
+	"unknown-error": "Si è verificato un errore sconosciuto",
+	"degree-decimal": "Grado-decimale",
+	"dms": "Gradi-minuti-secondi",
+	"deg": "Gradi",
+	"min": "Minuti",
+	"sec": "Secondi",
+	"lat": "Latitudine",
+	"lon": "Longitudine"
 }

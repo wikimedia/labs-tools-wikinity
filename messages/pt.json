@@ -66,5 +66,14 @@
 	"invalid-coordinates": "Especificou as coordenadas num formato inválido. Use o formato decimal, por favor.",
 	"missing-article": "Não especificou nenhum artigo",
 	"nonexistent-article": "O artigo que especificou não existe ou não tem um elemento Wikidata ligado",
-	"unknown-error": "Ocorreu um erro desconhecido"
+	"unknown-error": "Ocorreu um erro desconhecido",
+	"coor-lat": "Coordenada de latitude",
+	"coor-lon": "Coordenada de longitude",
+	"degree-decimal": "Grau-Decimal",
+	"dms": "Graus-Minutos-Segundos",
+	"deg": "Graus",
+	"min": "Minutos",
+	"sec": "Segundos",
+	"lat": "Latitude",
+	"lon": "Longitude"
 }
