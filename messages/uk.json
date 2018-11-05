@@ -3,7 +3,8 @@
 		"authors": [
 			"SimondR",
 			"Piramidion",
-			"Movses"
+			"Movses",
+			"Vlad5250"
 		]
 	},
 	"prague": "Прага",
@@ -23,5 +24,6 @@
 	"problem-body": "Розкажіть докладніше про свою проблему",
 	"submit": "Надіслати",
 	"stats-before": "Цей інструмент уже згенерував",
-	"stats-after": "карт"
+	"stats-after": "карт",
+	"nonexistent-article": "Вказана стаття не існує або не містить сутність Вікіданих"
 }

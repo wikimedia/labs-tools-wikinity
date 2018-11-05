@@ -64,5 +64,14 @@
 	"invalid-coordinates": "Du angav koordinater i ett ogiltigt format. Använd decimalformat.",
 	"missing-article": "Du angav inte någon artikel",
 	"nonexistent-article": "Artikeln du angav finns inte eller har inte tilldelats ett Wikidata-objekt",
-	"unknown-error": "Ett okänt fel uppstod"
+	"unknown-error": "Ett okänt fel uppstod",
+	"coor-lat": "Lat-koordinat",
+	"coor-lon": "Lon-koordinat",
+	"degree-decimal": "Decimala grader",
+	"dms": "Grader-Minuter-Sekunder",
+	"deg": "Grader",
+	"min": "Minuter",
+	"sec": "Sekunder",
+	"lat": "Latitud",
+	"lon": "Longitud"
 }
