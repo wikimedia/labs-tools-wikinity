@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Mikel Ibaiba"
+			"Mikel Ibaiba",
+			"Theklan"
 		]
 	},
 	"prague": "Praga",
@@ -15,11 +16,32 @@
 	"photographed": "Egindako argazkiak",
 	"unphotographed": "Argazkiak egiteke",
 	"report-problem": "Arazoaz ohartarazi",
-	"source-code": "iturri-kodea",
+	"source-code": "Iturburu-kodea",
 	"your-email": "Zure e-maila",
 	"problem-summary": "Arazoaren laburpena",
 	"problem-body": "Zure arazoan inguruko xehetasun gehiago kontaizkiguzu",
 	"submit": "Bidali",
 	"stats-before": "Tresna honek sortutakoa",
-	"stats-after": "mapak jadanik"
+	"stats-after": "mapak jadanik",
+	"admin-link": "Administratzailea",
+	"and": "eta",
+	"admin-layers": "Geruzak",
+	"admin-edit-users": "Erabiltzaileak editatu",
+	"admin-edit-user": "Erabiltzailea editatu",
+	"admin-users": "Erabiltzaileak",
+	"administrator": "administratzaile",
+	"inactive": "inaktibo",
+	"welcome": "Ongi etorri",
+	"login": "Hasi saioa",
+	"logout": "Saioa itxi",
+	"new": "berria",
+	"admin-layer-name": "Izena",
+	"admin-layer-color": "Kolorea",
+	"admin-layer-definition": "Definizioa",
+	"processing": "Prozesatzen...",
+	"deg": "Gradu",
+	"min": "Minutu",
+	"sec": "Segundo",
+	"lat": "Latitudea",
+	"lon": "Luzera"
 }

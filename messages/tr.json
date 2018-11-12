@@ -22,5 +22,15 @@
 	"problem-body": "Sorununuzla ilgili daha fazla bilgi verin",
 	"submit": "Gönder",
 	"stats-before": "Bu araç üretildi",
-	"stats-after": "zaten haritadasınız"
+	"stats-after": "zaten haritadasınız",
+	"nonexistent-article": "Belirttiğiniz madde mevcut değil veya Vikiveri ögesi eklenmedi",
+	"coor-lat": "Enlem koordinatı",
+	"coor-lon": "Boylam koordinatı",
+	"degree-decimal": "Derece-Ondalık",
+	"dms": "Derece-Dakika-Saniye",
+	"deg": "Derece",
+	"min": "Dakika",
+	"sec": "Saniye",
+	"lat": "Enlem",
+	"lon": "Boylam"
 }

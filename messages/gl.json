@@ -43,5 +43,10 @@
 	"admin-layer-name": "Nome",
 	"admin-layer-color": "Cor",
 	"admin-layer-definition": "Definición",
-	"processing": "Procesando..."
+	"processing": "Procesando...",
+	"deg": "Graos",
+	"min": "Minutos",
+	"sec": "Segundos",
+	"lat": "Latitude",
+	"lon": "Lonxitude"
 }
