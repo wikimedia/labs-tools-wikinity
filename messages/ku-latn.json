@@ -21,5 +21,18 @@
 	"problem-body": "Der barê pirsgirêka xwe de ji me re zêdetir dêtayan bide",
 	"submit": "Bişîne",
 	"stats-before": "Ev amûr jixwe",
-	"stats-after": "nexşe çêkiriye"
+	"stats-after": "nexşe çêkiriye",
+	"no-coordinates": "Em nikarin koordînatan bibînin ji agahiya ku te şandiye.",
+	"change-language": "Zimanê biguherîne",
+	"admin-link": "Rêveber",
+	"admin-interface": "Navrûya rêvebirê",
+	"admin-description": "Xêra xwe kiryarê bibijêre:",
+	"and": "û",
+	"admin-edit-layers": "Tebeqeyan biguherîne",
+	"admin-edit-layer": "Tebeqeyê biguherîne",
+	"admin-add-layer": "Tebeqeyê îlawe bike",
+	"admin-layers": "Tebeqe",
+	"admin-edit-users": "Bikarhêneran biguherîne",
+	"admin-edit-user": "Bikarhênerê biguherîne",
+	"admin-users": "Bikarhêner"
 }
