@@ -34,5 +34,8 @@
 	"admin-description-radius": "Утрымлівае радыюс, ужываецца заўсёды",
 	"admin-success": "Вашая зьмена запытаў была пасьпяхова завершаная.",
 	"admin-edit-layers": "Рэдагаваць слаі",
-	"admin-edit-layer": "Рэдагаваць слой"
+	"admin-edit-layer": "Рэдагаваць слой",
+	"admin-add-layer": "Дадаць слой",
+	"admin-layers": "Слаі",
+	"admin-edit-users": "Рэдагаваць удзельнікаў"
 }
