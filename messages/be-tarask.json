@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Red Winged Duck"
+			"Red Winged Duck",
+			"Renessaince"
 		]
 	},
 	"prague": "Прага",
@@ -37,5 +38,31 @@
 	"admin-edit-layer": "Рэдагаваць слой",
 	"admin-add-layer": "Дадаць слой",
 	"admin-layers": "Слаі",
-	"admin-edit-users": "Рэдагаваць удзельнікаў"
+	"admin-edit-users": "Рэдагаваць удзельнікаў",
+	"admin-edit-user": "Рэдагаваць удзельніка",
+	"admin-users": "Удзельнікі",
+	"administrator": "адміністратар",
+	"inactive": "неактыўны",
+	"admin-user-isactive": "Ці актыўны?",
+	"admin-user-isadmin": "Ці адміністратар?",
+	"admin-coordinate": "Пачаць запыт з гэтага пры пошуку паводле каардынатаў",
+	"admin-item": "Пачаць з гэтага запыт пры пошуку паводле элемэнту",
+	"admin-unphotographed": "Дадаць гэта да WHERE пры пошуку несфатаграфаваных аб’ектаў",
+	"welcome": "Вітаем",
+	"login": "Увайсьці",
+	"logout": "Выйсьці",
+	"new": "новае",
+	"admin-layer-name": "Назва",
+	"admin-layer-color": "Колер",
+	"admin-layer-definition": "Вызначэньне",
+	"processing": "Апрацоўка…",
+	"coor-lat": "Шырата",
+	"coor-lon": "Даўгата",
+	"degree-decimal": "Дзесятковыя градусы",
+	"dms": "Градусы-хвіліны-сэкунды",
+	"deg": "Градусы",
+	"min": "Хвіліны",
+	"sec": "Сэкунды",
+	"lat": "Шырата",
+	"lon": "Даўгата"
 }
