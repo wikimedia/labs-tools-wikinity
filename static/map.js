@@ -3,10 +3,10 @@ L.Map.addInitHook(function () {
     mapsPlaceholder.push(this);
 });
 function GetValues() {
+    $('#mapcontainer').html("");
     $('#error').addClass("hidden");
     $('#processing').removeClass("hidden");
     if(mapsPlaceholder.length == 1) {mapsPlaceholder[0].remove()}
-    $('#map').attr("class", "");
     var type = $('input[name="optradio"]:checked').val();
 
     var subtype = "unphotographed";
@@ -71,7 +71,7 @@ function GetValues() {
     }
 
     $.get('map', payload, function(data) {
-        $('#map').html("").addClass("bigmap");
+        $('#mapcontainer').html('<div class="bigmap" id="map"></div>');
         $('#processing').addClass("hidden");
         var style = 'osm-intl';
         var server = 'https://maps.wikimedia.org/';
