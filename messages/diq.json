@@ -1,13 +1,37 @@
 {
 	"@metadata": {
 		"authors": [
-			"Mirzali"
+			"Mirzali",
+			"Orbot707"
 		]
 	},
 	"prague": "Prag",
 	"default-value": "vayeyo hesabiyaye",
 	"search": "Cı geyre",
-	"source-code": "kodê çımey",
+	"photographed": "Fotografyaye",
+	"unphotographed": "Nê fotografyayo",
+	"report-problem": "Problemê rapor kerê",
+	"source-code": "Qodê çımey",
 	"your-email": "E-postê şıma",
-	"submit": "Bırışe"
+	"submit": "Bırışe",
+	"admin-edit-users": "Karbera bıvırne",
+	"admin-edit-user": "Karberi bıvırne",
+	"admin-users": "Karberi",
+	"administrator": "administrator",
+	"inactive": "aktiv niyo",
+	"admin-user-isactive": "Aktiv o?",
+	"admin-user-isadmin": "Admin o?",
+	"welcome": "Xeyr amey",
+	"login": "Cıkewtış",
+	"logout": "Veciyayış",
+	"new": "newe",
+	"admin-layer-name": "Name",
+	"admin-layer-color": "Reng",
+	"admin-layer-definition": "Şınasiye",
+	"processing": "Karêno...",
+	"degree-decimal": "Derece-Deseki",
+	"dms": "Derece-Deqiqa-Saniye",
+	"deg": "Derece",
+	"min": "Deqiqa",
+	"sec": "Saniye"
 }
