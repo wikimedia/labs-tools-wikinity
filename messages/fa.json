@@ -1,7 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ommmmid"
+			"Ommmmid",
+			"Amirsara",
+			"Reza1615"
 		]
 	},
 	"prague": "پراگ",
@@ -10,5 +12,29 @@
 	"report-problem": "گزارش مشکل",
 	"source-code": "کد منبع",
 	"your-email": "ایمیل شما",
-	"submit": "ارسال"
+	"submit": "ارسال",
+	"admin-link": "مدیر",
+	"and": "و",
+	"admin-layers": "لایه‌ها",
+	"admin-users": "کاربران",
+	"inactive": "غیرفعال",
+	"admin-user-isactive": "آیا فعال است؟",
+	"admin-user-isadmin": "مدیر است؟",
+	"welcome": "خوش‌آمدید",
+	"login": "ورود به سامانه",
+	"logout": "خروج از سامانه",
+	"new": "تازه",
+	"admin-layer-name": "نام",
+	"admin-layer-color": "رنگ",
+	"admin-layer-definition": "تعریف",
+	"processing": "درحال پردازش...",
+	"coor-lat": "مختصات عرض جغرافیایی",
+	"coor-lon": "مختصات طول جغرافیایی",
+	"degree-decimal": "درجه-دسیمال",
+	"dms": "درجه-دقیقه-ثانیه",
+	"deg": "درجه",
+	"min": "دقیقه",
+	"sec": "ثانیه",
+	"lat": "عرض جغرافیایی",
+	"lon": "طول جغرافیایی"
 }
