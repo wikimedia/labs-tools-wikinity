@@ -26,6 +26,7 @@
 	"no-coordinates": "Vi kunne ikke finde koordinater fra informationen du indsendte.",
 	"change-language": "Skift sprog",
 	"admin-link": "Administrator",
+	"admin-interface": "Administrator grænsesnit",
 	"admin-description": "Vælg en handlig:",
 	"admin-variables": "Liste over variabler",
 	"and": "og",
