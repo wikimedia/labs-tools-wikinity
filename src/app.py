@@ -52,6 +52,11 @@ class User(db.Model):
     language = db.Column(db.String(3))
 
 
+class StoredMap(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    payload = db.Column(db.Text)
+
+
 mwoauth = MWOAuth(
     consumer_key=app.config.get('CONSUMER_KEY'),
     consumer_secret=app.config.get('CONSUMER_SECRET'),
@@ -138,6 +143,20 @@ def isadmin():
 def index():
     return render_template('index.html')
 
+@app.route('/s/store', methods=['POST'])
+def store():
+    s = StoredMap(payload=request.form.get('payload', '{}'))
+    db.session.add(s)
+    db.session.commit()
+    return str(s.id)
+
+@app.route('/s/<path>')
+def short(path):
+    return render_template('index.html',
+                           payload=StoredMap.query.get(int(path)).payload,
+                           disable_form=True
+                           )
+
 @app.route('/change_language', methods=['GET', 'POST'])
 def change_language():
     if request.method == 'GET':
@@ -198,7 +217,7 @@ def map():
                 article is None or project is None or
                 article == '' or project == ''
             ):
-                    return make_error("missing-article")
+                return make_error("missing-article")
 
             r = requests.get('https://www.wikidata.org/w/api.php', params={
                 "action": "wbgetentities",

@@ -2,6 +2,7 @@
 
 {% block content %}
 <!-- Forms -->
+{% if not disable_form %}
 <div class="container">
     <form>
       <div class="row">
@@ -103,7 +104,8 @@
         </div>
     </form>
   </div>
-
+{% endif %}
+<span class="hidden" id="payload">{{ payload }}</span>
   <div class="container">
       <div class="row">
           <h1 id="processing" class="hidden">{{_("processing")}}</h1>
@@ -118,4 +120,9 @@
 
 <script src="{{config.STATIC_URL}}formlogic.js"></script>
 <script src="{{config.STATIC_URL}}map.js"></script>
+{% if disable_form %}
+<script>
+	GetValues();
+</script>
+{% endif %}
 {% endblock %}

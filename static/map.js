@@ -3,74 +3,82 @@ L.Map.addInitHook(function () {
     mapsPlaceholder.push(this);
 });
 function GetValues() {
-    $('#mapcontainer').html("");
-    $('#error').addClass("hidden");
-    $('#processing').removeClass("hidden");
-    if(mapsPlaceholder.length == 1) {mapsPlaceholder[0].remove()}
-    var type = $('input[name="optradio"]:checked').val();
+	$('#mapcontainer').html("");
+	$('#error').addClass("hidden");
+	$('#processing').removeClass("hidden");
+	if($('#payload').text() == '') {
+		if(mapsPlaceholder.length == 1) {mapsPlaceholder[0].remove()}
+		var type = $('input[name="optradio"]:checked').val();
 
-    var subtype = "unphotographed";
-    if ($('#nafocene')[0].checked && $('#nenafocene')[0].checked) subtype = "all";
-    else if ($('#nafocene')[0].checked && !$('#nenafocene')[0].checked) subtype = "photographed";
-    else if (!$('#nafocene')[0].checked && $('#nenafocene')[0].checked) subtype = "unphotographed";
+		var subtype = "unphotographed";
+		if ($('#nafocene')[0].checked && $('#nenafocene')[0].checked) subtype = "all";
+		else if ($('#nafocene')[0].checked && !$('#nenafocene')[0].checked) subtype = "photographed";
+		else if (!$('#nafocene')[0].checked && $('#nenafocene')[0].checked) subtype = "unphotographed";
 
-    var payload = {
-        type: type,
-        subtype: subtype,
-        radius: $('#radius').val(),
-    };
+		var payload = {
+			type: type,
+			subtype: subtype,
+			radius: $('#radius').val(),
+		};
 
-    if (type == "article") {
-        payload["article"] = $('input[name="wikiSearchPole"]').val();
-        payload["project"] = $('#project-language').val() + $('#project-project').val();
+		if (type == "article") {
+			payload["article"] = $('input[name="wikiSearchPole"]').val();
+			payload["project"] = $('#project-language').val() + $('#project-project').val();
 
-        if (payload["article"] == "" || payload["project"] == "") {
-            payload["article"] = "Praha";
-            payload["project"] = "cswiki";
-        }
-    } else if (type == "item") {
-        payload["item"] = $('input[name="cislo"]').val();
+			if (payload["article"] == "" || payload["project"] == "") {
+				payload["article"] = "Praha";
+				payload["project"] = "cswiki";
+			}
+		} else if (type == "item") {
+			payload["item"] = $('input[name="cislo"]').val();
 
-        if(payload["item"] == "") {
-            payload["item"] = "Q1085";
-        }
-    } else if (type == "coordinate") {
-        if($("#degdec").hasClass("in")) {
-            var lat = $('input[name="lat-degdec"]').val();
-            var lon = $('input[name="lon-degdec"]').val();
+			if(payload["item"] == "") {
+				payload["item"] = "Q1085";
+			}
+		} else if (type == "coordinate") {
+			if($("#degdec").hasClass("in")) {
+				var lat = $('input[name="lat-degdec"]').val();
+				var lon = $('input[name="lon-degdec"]').val();
 
-            if(lat === "" || lon === "") {
-                lat = 50.088611;
-                lon = 14.421389;
-            }
+				if(lat === "" || lon === "") {
+					lat = 50.088611;
+					lon = 14.421389;
+				}
 
-            payload["lat"] = lat;
-            payload["lon"] = lon;
-        } else {
-            var lat = {};
-            var lon = {};
+				payload["lat"] = lat;
+				payload["lon"] = lon;
+			} else {
+				var lat = {};
+				var lon = {};
 
-            components = ["deg", "min", "sec"];
+				components = ["deg", "min", "sec"];
 
-            for(component of components) {
-                lat[component] = $(`input[name="lat-${component}"]`).val();
-                lon[component] = $(`input[name="lon-${component}"]`).val();
-            }
+				for(component of components) {
+					lat[component] = $(`input[name="lat-${component}"]`).val();
+					lon[component] = $(`input[name="lon-${component}"]`).val();
+				}
 
-            var latInDegrees = dmsToDegrees(lat);
-            var lonInDegrees = dmsToDegrees(lon);
+				var latInDegrees = dmsToDegrees(lat);
+				var lonInDegrees = dmsToDegrees(lon);
 
-            if(isNaN(latInDegrees) || isNaN(lonInDegrees)) {
-                latInDegrees = 50.088611;
-                lonInDegrees = 14.421389;
-            }
+				if(isNaN(latInDegrees) || isNaN(lonInDegrees)) {
+					latInDegrees = 50.088611;
+					lonInDegrees = 14.421389;
+				}
 
-            payload["lat"] = latInDegrees;
-            payload["lon"] = lonInDegrees;
-        }
-    }
+				payload["lat"] = latInDegrees;
+				payload["lon"] = lonInDegrees;
+			}
+		}
+	} else {
+		payload = JSON.parse($('#payload').text());
+	}
+	$.post($('#root').text() + 's/store', payload, function(data) {
+		var url = window.location.origin + $('#root').text() + 's/' + data;
+		$('#shortUrl').html('<a href="' + url + '">' + url + '</a>');
+	});
 
-    $.get('map', payload, function(data) {
+	$.get($('#root').text() + 'map', payload, function(data) {
         $('#mapcontainer').html('<div class="bigmap" id="map"></div>');
         $('#processing').addClass("hidden");
         var style = 'osm-intl';
@@ -119,7 +127,7 @@ function GetValues() {
         }
         L.control.layers(null, overlays, { collapsed: false }).addTo(map);
 
-        $.get("stats", function (data, status) { $('#statnum').text(data) })
+        $.get($('#root').text() + "stats", function (data, status) { $('#statnum').text(data) })
     }).fail(function(data) {
         $('#processing').addClass("hidden");
         $('#error').removeClass("hidden");

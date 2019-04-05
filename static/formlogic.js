@@ -1,6 +1,6 @@
 $( document ).ready(function() {
 
-    $.get("stats", function (data, status) { $('#statnum').text(data) })
+    $.get($('#root').text() + "stats", function (data, status) { $('#statnum').text(data) })
 
     $("#wikiSearch").collapse('show');
     $( "#hledej" ).click(function() {
