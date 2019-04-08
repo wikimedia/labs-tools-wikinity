@@ -64,8 +64,6 @@
 	"missing-article": "您沒有指定任何條目",
 	"nonexistent-article": "您所指定的條目不存在，或是沒有相對應的維基數據項目",
 	"unknown-error": "發生未知錯誤",
-	"coor-lat": "緯度座標",
-	"coor-lon": "經度座標",
 	"degree-decimal": "度-十進位",
 	"dms": "度-分-秒",
 	"deg": "度",

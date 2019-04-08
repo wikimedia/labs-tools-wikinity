@@ -67,8 +67,6 @@
 	"missing-article": "您没有指定任何条目",
 	"nonexistent-article": "您指定的条目不存在或没有维基数据项目附加",
 	"unknown-error": "发生了未知错误",
-	"coor-lat": "拉特坐标",
-	"coor-lon": "龙坐标",
 	"degree-decimal": "度——十进制",
 	"dms": "度——分——秒",
 	"deg": "度",

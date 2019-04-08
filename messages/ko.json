@@ -55,8 +55,6 @@
 	"missing-article": "문서를 지정하지 않았습니다",
 	"nonexistent-article": "지정한 문서가 존재하지 않거나 위키데이터 항목이 첨부되어 있지 않습니다",
 	"unknown-error": "알 수 없는 오류가 발생했습니다",
-	"coor-lat": "위도 좌표",
-	"coor-lon": "경도 좌표",
 	"dms": "도-분-초",
 	"deg": "도",
 	"min": "분",

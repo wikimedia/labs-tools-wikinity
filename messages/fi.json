@@ -60,8 +60,6 @@
 	"missing-article": "Et määrittänyt mitään artikkelia",
 	"nonexistent-article": "Määrittämääsi artikkelia ei ole olemassa tai siihen ei ole liitetty Wikidata-kohdetta",
 	"unknown-error": "Tapahtui tuntematon virhe",
-	"coor-lat": "Lat-koordinaatit",
-	"coor-lon": "Lon-koordinaatit",
 	"degree-decimal": "Aste-Desimaali",
 	"dms": "Asteet-Minuutit-Sekunnit",
 	"deg": "Asteet",

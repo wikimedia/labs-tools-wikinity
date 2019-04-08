@@ -64,8 +64,6 @@
 	"missing-article": "Non g'è specificate nisciuna vôsce",
 	"nonexistent-article": "'A vôsce ca è specificate non g'esiste o non ge tène 'na vôsce Uicchidate 'nzeccate",
 	"unknown-error": "Errore scanusciute assute",
-	"coor-lat": "Coordinate d'a latitudine",
-	"coor-lon": "Coordinate d'a longitudine",
 	"degree-decimal": "Grade-decimale",
 	"dms": "Grade-minute-seconde",
 	"deg": "Grade",

@@ -62,8 +62,6 @@
 	"missing-article": "Herhangi bir makale belirtmediniz",
 	"nonexistent-article": "Belirttiğiniz madde mevcut değil veya Vikiveri ögesi eklenmedi",
 	"unknown-error": "Bilinmeyen hata oluştu",
-	"coor-lat": "Enlem koordinatı",
-	"coor-lon": "Boylam koordinatı",
 	"degree-decimal": "Derece-Ondalık",
 	"dms": "Derece-Dakika-Saniye",
 	"deg": "Derece",

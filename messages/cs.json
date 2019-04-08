@@ -56,5 +56,13 @@
 	"admin-layer-name": "Jméno",
 	"admin-layer-color": "Barva",
 	"admin-layer-definition": "Definice",
-	"processing": "Zpracovává se..."
+	"processing": "Zpracovává se...",
+	"unknown-error": "Nastala neznámá chyba",
+	"degree-decimal": "Desetinné stupně",
+	"dms": "Stupně-Minuty-Vteřiny",
+	"deg": "Stupně",
+	"min": "Minuty",
+	"sec": "Vteřiny",
+	"lat": "Zeměpisná šířka",
+	"lon": "Zeměpisná délka"
 }

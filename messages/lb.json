@@ -38,8 +38,6 @@
 	"missing-article": "Dir hutt keen Artikel uginn",
 	"nonexistent-article": "Den Artikel deen Dir uginn hutt gëtt et net oder ass net mat engem Wikidata-Element verbonnen",
 	"unknown-error": "Et ass en onbekannte Feeler geschitt",
-	"coor-lat": "Breedegrad-Koordinaten",
-	"coor-lon": "Längegrad-Koordinaten",
 	"degree-decimal": "Grad-Dezimal",
 	"dms": "Grad-Minutten-Sekonnen",
 	"deg": "Graden",

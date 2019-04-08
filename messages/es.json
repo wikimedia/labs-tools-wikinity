@@ -67,8 +67,6 @@
 	"missing-article": "No especificaste ningún articulo",
 	"nonexistent-article": "El articulo que especificaste no existe o no tiene un ítem de Wikidata asociado",
 	"unknown-error": "Sucedió un error desconocido",
-	"coor-lat": "Coordenada de latitud",
-	"coor-lon": "Coordenada de longitud",
 	"degree-decimal": "Grado-Decimal",
 	"dms": "Grados-Minutos-Segundos",
 	"deg": "Grados",
