@@ -58,5 +58,17 @@
 	"admin-layer-name": "Nome",
 	"admin-layer-color": "Color",
 	"admin-layer-definition": "Definición",
-	"processing": "Procesando..."
+	"processing": "Procesando...",
+	"missing-coordinates": "Nun especificasti les coordenaes al buscar por coordenaes",
+	"invalid-coordinates": "Apurristi les coordenaes nun formatu invalidu. Usa'l formatu decimal.",
+	"missing-article": "Nun especificasti nengún articulu",
+	"nonexistent-article": "L'articulu qu'apurristi nun esiste o nun tien un elementu de Wikidata asociáu",
+	"unknown-error": "Asocedió un error desconocíu",
+	"degree-decimal": "Grau-Decimal",
+	"dms": "Graos-Minutos-Segundos",
+	"deg": "Graos",
+	"min": "Minutos",
+	"sec": "Segundos",
+	"lat": "Llatitú",
+	"lon": "Llonxitú"
 }

@@ -3,7 +3,8 @@
 		"authors": [
 			"Ommmmid",
 			"Amirsara",
-			"Reza1615"
+			"Reza1615",
+			"FarsiNevis"
 		]
 	},
 	"prague": "پراگ",
@@ -13,10 +14,18 @@
 	"source-code": "کد منبع",
 	"your-email": "ایمیل شما",
 	"submit": "ارسال",
+	"change-language": "تغییر زبان",
 	"admin-link": "مدیر",
+	"admin-variables": "فهرست متغیرها",
 	"and": "و",
+	"admin-edit-layers": "ویرایش لایه‌ها",
+	"admin-edit-layer": "ویرایش لایه",
+	"admin-add-layer": "افزودن لایه",
 	"admin-layers": "لایه‌ها",
+	"admin-edit-users": "ویرایش کاربران",
+	"admin-edit-user": "ویرایش کاربر",
 	"admin-users": "کاربران",
+	"administrator": "مدیر",
 	"inactive": "غیرفعال",
 	"admin-user-isactive": "آیا فعال است؟",
 	"admin-user-isadmin": "مدیر است؟",
@@ -28,6 +37,7 @@
 	"admin-layer-color": "رنگ",
 	"admin-layer-definition": "تعریف",
 	"processing": "درحال پردازش...",
+	"unknown-error": "خطای ناشناخته رخ داد",
 	"degree-decimal": "درجه-دسیمال",
 	"dms": "درجه-دقیقه-ثانیه",
 	"deg": "درجه",
