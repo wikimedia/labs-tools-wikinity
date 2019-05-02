@@ -30,6 +30,7 @@
 	"admin-description": "Scegli un'azione:",
 	"admin-variables": "Elenco di variabili",
 	"and": "e",
+	"admin-description-latlon": "Contiene coordinate, utilizzato solo durante la ricerca tramite le coordinate",
 	"admin-edit-layers": "Modifica livelli",
 	"admin-edit-layer": "Modifica livello",
 	"admin-add-layer": "Aggiungi livello",
