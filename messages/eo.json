@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mirin"
+		]
+	},
+	"prague": "Prago",
+	"search": "Serĉi",
+	"source-code": "Fontkodo",
+	"your-email": "Via retpoŝta adreso",
+	"problem-summary": "Resumo de la problemo",
+	"submit": "Sendi",
+	"change-language": "Ŝanĝi lingvon",
+	"admin-link": "Administrejo",
+	"admin-interface": "Administra fasado",
+	"admin-variables": "Listo de variabloj",
+	"and": "kaj",
+	"admin-users": "Uzantoj",
+	"administrator": "administranto",
+	"inactive": "ne aktiva",
+	"admin-user-isactive": "Ĉu aktiva?",
+	"admin-user-isadmin": "Ĉu administranto?",
+	"welcome": "Bonvenon",
+	"login": "Ensaluti",
+	"logout": "Elsaluti",
+	"new": "nova",
+	"admin-layer-name": "Nomo",
+	"admin-layer-color": "Koloro",
+	"admin-layer-definition": "Difino",
+	"deg": "Gradoj",
+	"min": "Minutoj",
+	"sec": "Sekundoj",
+	"lat": "Latitudo",
+	"lon": "Longitudo"
+}
