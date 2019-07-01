@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fitoschido"
+		]
+	},
+	"default-value": "valor per defecte",
+	"source-code": "Codi font",
+	"your-email": "La vostra adreça electrònica",
+	"problem-summary": "Resum del problema",
+	"admin-interface": "Interfície administrativa",
+	"welcome": "Us donem la benvinguda",
+	"new": "nou",
+	"admin-layer-name": "Nom",
+	"admin-layer-color": "Color",
+	"admin-layer-definition": "Definició",
+	"processing": "S’està processant…",
+	"missing-article": "No heu especificat cap article",
+	"unknown-error": "S’ha produït un error desconegut",
+	"deg": "Graus",
+	"min": "Minuts",
+	"sec": "Segons",
+	"lat": "Latitud",
+	"lon": "Longitud"
+}
