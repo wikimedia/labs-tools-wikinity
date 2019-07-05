@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Quintino Lopes Castro Tavares"
+			"Quintino Lopes Castro Tavares",
+			"Waldyrious"
 		]
 	},
 	"prague": "Praga",
@@ -16,10 +17,10 @@
 	"unphotographed": "Ka foi fotografadu",
 	"report-problem": "Informa un problema",
 	"source-code": "Kódigu-fonti",
-	"your-email": "Informa bu Email",
-	"problem-summary": "Rizumu di problema",
-	"problem-body": "Kontanu más ditalhis di bu problema",
+	"your-email": "Bu email",
+	"problem-summary": "Rizumu di prublema",
+	"problem-body": "Kontanu más ditalhis di bu prublema",
 	"submit": "Manda",
-	"stats-before": "Es feramenta cria",
+	"stats-before": "Es feramenta kria",
 	"stats-after": "mapas ti gósi"
 }
