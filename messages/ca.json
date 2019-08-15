@@ -4,11 +4,17 @@
 			"Fitoschido"
 		]
 	},
+	"prague": "Praga",
 	"default-value": "valor per defecte",
+	"search": "Cerca",
 	"source-code": "Codi font",
 	"your-email": "La vostra adreça electrònica",
 	"problem-summary": "Resum del problema",
+	"submit": "Envia",
 	"admin-interface": "Interfície administrativa",
+	"admin-variables": "Llista de variables",
+	"and": "i",
+	"admin-layers": "Capes",
 	"welcome": "Us donem la benvinguda",
 	"new": "nou",
 	"admin-layer-name": "Nom",
