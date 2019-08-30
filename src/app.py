@@ -268,6 +268,7 @@ def map():
         return query
 
     sparql = SPARQLWrapper("https://query.wikidata.org/sparql")
+    sparql.agent = 'Wikinity (https://tools.wmflabs.org/wikinity; urbanecm@tools.wmflabs.org; User:Martin_Urbanec at wikis)'
     sparql.setQuery(query)
     sparql.setReturnFormat(JSON)
     wd_res = sparql.query().convert()
