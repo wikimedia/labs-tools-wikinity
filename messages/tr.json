@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Incelemeelemani",
-			"Hedda"
+			"Hedda",
+			"BaRaN6161 TURK"
 		]
 	},
 	"prague": "Prag",
@@ -47,6 +48,9 @@
 	"admin-user-isadmin": "Hizmetli mi?",
 	"admin-coordinate": "Koordinata göre arama yaparken bu sorguyu başlat",
 	"admin-item": "Ögeye göre arama yaparken bu sorguyu başlat",
+	"admin-unphotographed": "Fotoğrafı çekilmemiş nesneleri ararken bu noktaya ekleyin",
+	"admin-photographed": "Fotoğrafı çekilmemiş nesneleri ararken bu noktaya ekleyin",
+	"admin-all": "Bunu tüm nesneleri ararken nereye ekleyin",
 	"admin-end": "Bu sorguyu sonlandır",
 	"welcome": "Hoş geldiniz",
 	"login": "Giriş",
