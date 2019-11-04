@@ -67,7 +67,7 @@
 	"missing-article": "Vous n’avez spécifié aucun article",
 	"nonexistent-article": "L’article que vous avez spécifié n’existe pas ou n’a pas d’élément Wikidata attaché",
 	"unknown-error": "Une erreur inconnue est survenue",
-	"degree-decimal": "Degré-décimal",
+	"degree-decimal": "Degrés-Décimales",
 	"dms": "Degrés-Minutes-Secondes",
 	"deg": "Degrés",
 	"min": "Minutes",
