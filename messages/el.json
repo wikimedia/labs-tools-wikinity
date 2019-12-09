@@ -1,19 +1,20 @@
 {
 	"@metadata": {
 		"authors": [
-			"Nikosgranturismogt"
+			"Nikosgranturismogt",
+			"Geraki"
 		]
 	},
 	"prague": "Πράγα",
-	"default-value": "Προεπιλεγμένη Τιμή",
-	"enter-number-of-item": "Αριθμός αντικειμένου του Wikidata. Αντικείμενα γύρω από αυτό το αντικείμενο θα αναζητηθούν.",
+	"default-value": "προεπιλεγμένη τιμή",
+	"enter-number-of-item": "Αριθμός αντικειμένου Wikidata. Αντικείμενα γύρω από αυτό το αντικείμενο θα αναζητηθούν.",
 	"enter-coordinates": "Αναζήτηση για αντικείμενα με συντεταγμένες",
 	"enter-name-of-article": "Αναζήτηση για αντικείμενα γύρω από συντεταγμένες αυτού του λήμματος",
 	"enter-radius": "Ορίστε μια ακτίνα για αναζήτηση (σε χλμ)",
 	"select-displayed": "Επιλέξτε αντικείμενα που θα έπρεπε να εμφανιστούν στο χάρτη",
 	"search": "Αναζήτηση",
 	"photographed": "Φωτογραφημένα",
-	"unphotographed": "Αφωτογράφητο",
+	"unphotographed": "Αφωτογράφητα",
 	"report-problem": "Αναφορά προβλήματος",
 	"source-code": "Πηγαίος κώδικας",
 	"your-email": "Η διεύθυνση ηλεκτρονικού ταχυδρομείου σας",
