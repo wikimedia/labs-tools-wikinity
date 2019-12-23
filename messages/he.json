@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"YaronSh",
-			"Drorsnir"
+			"Drorsnir",
+			"Amire80"
 		]
 	},
 	"prague": "פראג",
@@ -64,7 +65,7 @@
 	"invalid-coordinates": "ציינת נקודות ציון בצורה שגויה. נא להשתמש בתצורה עשרונית.",
 	"missing-article": "לא ציינת אף ערך",
 	"nonexistent-article": "הערך שציינת לא קיים או שאין פריט ויקינתונים שמקושר אליו",
-	"unknown-error": "אירעה שגיאה בלתי ידועה",
+	"unknown-error": "אירעה שגיאה בלתי־ידועה",
 	"degree-decimal": "מעלות-עשרוני",
 	"dms": "מעלות-דקות-שניות",
 	"deg": "מעלות",
