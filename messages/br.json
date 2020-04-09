@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Dishual",
+			"Fulup",
 			"Gwenn-Ael"
 		]
 	},
@@ -10,6 +11,7 @@
 	"enter-number-of-item": "Niverenn elfenn Wikidata. Ne vo ket klasket an traoù tro-dro d'an elfenn-se.",
 	"enter-coordinates": "Klaskit traoù dre o daveennoù",
 	"enter-name-of-article": "Klaskit traoù tro-dro da zaveennoù ar pennad-se.",
+	"enter-radius": "Termeniñ ur skinad klask (km)",
 	"select-displayed": "Dibab an traezoù a rank bezañ diskwelet war ur gartenn",
 	"search": "Klask",
 	"photographed": "Luc'hskeudennet",
@@ -29,6 +31,9 @@
 	"admin-description": "Dibabit un ober mar plij",
 	"admin-variables": "Roll an argemmennoù",
 	"and": "ha",
+	"admin-description-latlon": "Ennañ daveennoù, implijet hepken pa vez klasket dre an daveennoù",
+	"admin-description-item": "Ennañ un anouder elfenn (Q e-barzh) pa vez klasket dre un anv pennad pe niverenn un elfenn",
+	"admin-description-radius": "Ennad ar skinad, implijet dalc'hmat",
 	"admin-success": "Graet mat eo bet  ho koulenn evit kemmañ ar rekedoù.",
 	"admin-edit-layers": "Kemmañ ar gwiskadoù",
 	"admin-edit-layer": "Kemmañ ar gwiskad",
