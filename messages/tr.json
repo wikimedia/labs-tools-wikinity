@@ -64,7 +64,7 @@
 	"processing": "İşleniyor...",
 	"missing-coordinates": "Koordinatlarla arama yapmak için gerekli koordinatları belirtmediniz",
 	"invalid-coordinates": "Koordinatları geçersiz biçimde belirttiniz. Lütfen ondalık formatı kullanın.",
-	"missing-article": "Herhangi bir makale belirtmediniz",
+	"missing-article": "Herhangi bir madde belirtmediniz",
 	"nonexistent-article": "Belirttiğiniz madde mevcut değil veya Vikiveri ögesi eklenmedi",
 	"unknown-error": "Bilinmeyen hata oluştu",
 	"degree-decimal": "Derece-Ondalık",
