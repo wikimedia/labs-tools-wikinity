@@ -33,7 +33,7 @@
 	"admin-variables": "Değişkenler listesi",
 	"and": "ve",
 	"admin-description-latlon": "Koordinatları içerir, sadece koordinatlar ile arama yaparken kullanılır",
-	"admin-description-item": "Öge kimliğini (Q dahil) içerir, yalnızca makale adı veya öge numarası ile arama yaparken kullanılır",
+	"admin-description-item": "Öge kimliğini (Q dahil) içerir, yalnızca madde adı veya öge numarası ile arama yaparken kullanılır",
 	"admin-description-radius": "Her zaman kullanılan yarıçapı içerir",
 	"admin-success": "Sorguları değiştirme isteğiniz başarıyla tamamlandı.",
 	"admin-edit-layers": "Katmanları düzenle",
