@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Bengtsson96",
+			"Sabelöga",
 			"WikiPhoenix"
 		]
 	},
@@ -21,7 +22,7 @@
 	"problem-summary": "Sammanfattning av problemet",
 	"problem-body": "Berätta mer om problemet",
 	"submit": "Skicka",
-	"stats-before": "Detta verktyg har skapat",
+	"stats-before": "Detta verktyg har skapats",
 	"stats-after": "kartor",
 	"no-coordinates": "Vi kunde inte hitta koordinater från informationen du skickade.",
 	"change-language": "Byt språk",
@@ -42,7 +43,7 @@
 	"admin-edit-user": "Redigera användare",
 	"admin-users": "Användare",
 	"administrator": "administratör",
-	"inactive": "Inaktiv",
+	"inactive": "inaktiv",
 	"admin-user-isactive": "Är aktiv?",
 	"admin-user-isadmin": "Är administratör?",
 	"admin-coordinate": "Inled frågan med detta vid koordinatsökning",
