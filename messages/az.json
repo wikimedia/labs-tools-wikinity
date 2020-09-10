@@ -2,17 +2,35 @@
 	"@metadata": {
 		"authors": [
 			"AZISS",
-			"Neriman2003"
+			"Neriman2003",
+			"Şeyx Şamil"
 		]
 	},
-	"prague": "Praq",
-	"default-value": "Cari dəyər",
+	"prague": "Praqa",
+	"default-value": "cari dəyər",
 	"search": "Axtar",
 	"photographed": "Fotolanıb",
 	"unphotographed": "Fotolanmayıb",
 	"report-problem": "Xətanı bildir",
-	"source-code": "mənbə kodu",
+	"source-code": "Mənbə kodu",
 	"your-email": "Sizin emailiniz:",
 	"problem-summary": "Problemin şərhi",
-	"submit": "Təsdiq et"
+	"submit": "Təsdiq et",
+	"change-language": "Dili dəyiş",
+	"admin-link": "İdarəçi",
+	"admin-interface": "İdarəçi interfeysi",
+	"and": "və",
+	"admin-users": "İstifadəçilər",
+	"administrator": "idarəçi",
+	"inactive": "qeyri-aktiv",
+	"welcome": "Xoş gəlmisiniz",
+	"login": "Daxil ol",
+	"logout": "Çıxış",
+	"new": "yeni",
+	"admin-layer-name": "Ad",
+	"admin-layer-color": "Rəng",
+	"min": "Dəqiqələr",
+	"sec": "Saniyələr",
+	"lat": "En dairəsi",
+	"lon": "Uzunluq dairəsi"
 }
