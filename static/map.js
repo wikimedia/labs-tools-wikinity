@@ -73,7 +73,7 @@ function GetValues() {
 	} else {
 		payload = JSON.parse($('#payload').text());
 	}
-	$.post($('#root').text() + 's/store', payload, function(data) {
+	$.post($('#root').text() + 's/store', { payload: JSON.stringify(payload) }, function(data) {
 		var url = window.location.origin + $('#root').text() + 's/' + data;
 		$('#shortUrl').html('<a href="' + url + '">' + url + '</a>');
 	});
