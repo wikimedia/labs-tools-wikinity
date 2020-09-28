@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Armeniki"
+			"Armeniki",
+			"Kareyac"
 		]
 	},
 	"prague": "Փրակայ",
@@ -23,5 +24,6 @@
 	"stats-before": "Այս գործիքը արտադրած է",
 	"stats-after": "kարտէս արդէն",
 	"no-coordinates": "Չե՛նք կրնալ գտնել համակարգեր ձեր տուած տեղեկութիւններէն:",
-	"change-language": "Փոխել լեզուն"
+	"change-language": "Փոխել լեզուն",
+	"lat": "Լայնութիւն"
 }
