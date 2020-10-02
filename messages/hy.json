@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kareyac"
+		]
+	},
+	"prague": "Պրահա",
+	"search": "Որոնել",
+	"change-language": "Փոխել լեզուն",
+	"admin-link": "Ադմին",
+	"and": "և",
+	"admin-layers": "Շերտեր",
+	"admin-users": "Մասնակիցներ",
+	"welcome": "Բարի գալուստ",
+	"login": "Մտնել",
+	"new": "նոր",
+	"admin-layer-name": "Անվանում",
+	"admin-layer-color": "Գույն",
+	"admin-layer-definition": "Բացատրություն",
+	"min": "րոպեներ",
+	"sec": "Վայրկյաններ",
+	"lat": "Լայնություն",
+	"lon": "Երկայնություն"
+}
