@@ -143,12 +143,6 @@ def isadmin():
 def index():
     return render_template('index.html')
 
-@app.route('/index')
-def index_redir():
-    # FIXME: This is an awful workaround for upstream bug,
-    # see https://github.com/valhallasw/flask-mwoauth/pull/25
-    return redirect(url_for('index'))
-
 @app.route('/s/store', methods=['POST'])
 def store():
     s = StoredMap(payload=request.form.get('payload', '{}'))
