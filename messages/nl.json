@@ -1,15 +1,18 @@
 {
 	"@metadata": {
 		"authors": [
-			"Mainframe98"
+			"Mainframe98",
+			"Optilete"
 		]
 	},
 	"prague": "Praag",
 	"default-value": "Standaardwaarde",
 	"search": "Zoeken",
+	"photographed": "Gefotografeerd",
 	"report-problem": "Probleem melden",
-	"source-code": "broncode",
+	"source-code": "Broncode",
 	"your-email": "Uw e-mailadres",
 	"problem-summary": "Samenvatting van het probleem",
-	"submit": "Verzenden"
+	"submit": "Verzenden",
+	"change-language": "Taal wijzigen"
 }
