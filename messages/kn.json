@@ -1,0 +1,30 @@
+{
+	"@metadata": {
+		"authors": [
+			"AVSmalnad77"
+		]
+	},
+	"prague": "ಪ್ರಾಗ್",
+	"search": "ಹುಡುಕು",
+	"source-code": "ಮೂಲ ಕೋಡ್",
+	"your-email": "ನಿಮ್ಮ ಇ-ಅಂಚೆ",
+	"submit": "ಸಲ್ಲಿಸಿ",
+	"change-language": "ಭಾಷೆ ಬದಲಾಯಿಸಿ",
+	"admin-link": "ನಿರ್ವಾಹಕ",
+	"and": "ಮತ್ತು",
+	"admin-users": "ಬಳಕೆದಾರರು",
+	"administrator": "ನಿರ್ವಾಹಕರು",
+	"inactive": "ನಿಷ್ಕ್ರಿಯ",
+	"admin-user-isactive": "ಸಕ್ರಿಯರೇ?",
+	"admin-user-isadmin": "ನಿರ್ವಾಹಕರೇ?",
+	"welcome": "ಸುಸ್ವಾಗತ",
+	"login": "ಲಾಗ್ ಇನ್",
+	"logout": "ಲಾಗ್ ಔಟ್",
+	"new": "ಹೊಸ",
+	"admin-layer-name": "ಹೆಸರು",
+	"admin-layer-color": "ಬಣ್ಣ",
+	"admin-layer-definition": "ವ್ಯಾಖ್ಯಾನ",
+	"processing": "ಸಂಸ್ಕರಿಸಲಾಗುತ್ತಿದೆ...",
+	"lat": "ಅಕ್ಷಾಂಶ",
+	"lon": "ರೇಖಾಂಶ"
+}
