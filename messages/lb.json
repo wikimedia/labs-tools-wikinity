@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Robby"
+			"Robby",
+			"Soued031"
 		]
 	},
 	"prague": "Prag",
@@ -14,11 +15,11 @@
 	"search": "Sichen",
 	"photographed": "Fotograféiert",
 	"unphotographed": "Net fotograféiert",
-	"report-problem": "Problem mellen",
+	"report-problem": "Probleem mellen",
 	"source-code": "Quellcode",
 	"your-email": "Är E-Mail-Adress",
-	"problem-summary": "Resumé vum Problem",
-	"problem-body": "Gitt eis méi Eenzelheeten iwwer Äre Problem",
+	"problem-summary": "Resumé vum Probleem",
+	"problem-body": "Gitt eis méi Eenzelheeten iwwer Äre Probleem",
 	"submit": "Späicheren",
 	"stats-before": "Dësen Tool huet schonn",
 	"stats-after": "Kaarte generéiert",
