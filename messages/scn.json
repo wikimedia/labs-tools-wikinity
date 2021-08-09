@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ajeje Brazorf"
+		]
+	},
+	"prague": "Praga",
+	"your-email": "La tò email",
+	"admin-link": "Amministraturi",
+	"and": "e",
+	"admin-users": "Utenti",
+	"administrator": "amministraturi",
+	"welcome": "Bimminutu",
+	"login": "Trasi",
+	"logout": "Nesci",
+	"new": "novu",
+	"admin-layer-name": "Nomu",
+	"admin-layer-color": "Culuri",
+	"admin-layer-definition": "Difinizzioni",
+	"min": "Minuti",
+	"sec": "Sicunni",
+	"lat": "Latitùdini",
+	"lon": "Loncitùdini"
+}
