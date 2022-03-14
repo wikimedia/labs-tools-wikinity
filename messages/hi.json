@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"AnupamM",
 			"Bhatakati aatma",
 			"Shypoetess"
 		]
@@ -22,5 +23,7 @@
 	"problem-body": "अपनी समस्या के बारे में हमें और अधिक जानकारी दें",
 	"submit": "जमा करें",
 	"stats-before": "इस उपकरण ने उत्पन्न किया है",
-	"stats-after": "मानचित्र उपस्थित है"
+	"stats-after": "मानचित्र उपस्थित है",
+	"change-language": "भाषा बदलें",
+	"admin-link": "प्रबन्धक"
 }
