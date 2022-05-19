@@ -3,6 +3,7 @@
 		"authors": [
 			"AZISS",
 			"Neriman2003",
+			"Serkanland",
 			"Şeyx Şamil"
 		]
 	},
@@ -17,11 +18,11 @@
 	"problem-summary": "Problemin şərhi",
 	"submit": "Təsdiq et",
 	"change-language": "Dili dəyiş",
-	"admin-link": "İdarəçi",
-	"admin-interface": "İdarəçi interfeysi",
+	"admin-link": "İnzibatçı",
+	"admin-interface": "İnzibatçı interfeysi",
 	"and": "və",
 	"admin-users": "İstifadəçilər",
-	"administrator": "idarəçi",
+	"administrator": "inzibatçı",
 	"inactive": "qeyri-aktiv",
 	"welcome": "Xoş gəlmisiniz",
 	"login": "Daxil ol",
