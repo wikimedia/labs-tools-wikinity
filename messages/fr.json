@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Gomoko",
+			"McDutchie",
 			"Verdy p",
 			"Wladek92",
 			"Zarisi"
@@ -23,8 +24,8 @@
 	"problem-summary": "Résumé du problème",
 	"problem-body": "Donnez nous plus de détails sur votre problème",
 	"submit": "Envoyer",
-	"stats-before": "Cet outil a généré",
-	"stats-after": "cartes déjà générées",
+	"stats-before": "Cet outil a déjà généré",
+	"stats-after": "cartes déjà",
 	"no-coordinates": "Nous ne sommes pas capables de trouver les coordonnées à partir des informations entrées.",
 	"change-language": "Changer de langue",
 	"admin-link": "Administration",
