@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"GinawaSaHapon"
+			"GinawaSaHapon",
+			"Jojit fb"
 		]
 	},
 	"prague": "Prague",
@@ -33,12 +34,12 @@
 	"admin-description-item": "Naglalaman ng item ID (kasama ang Q), gagamitin lang kung maghahanap gamit ang pangalan ng artikulo o bilang ng item",
 	"admin-description-radius": "Naglalaman ng radius, palaging ginagamit",
 	"admin-success": "Nakumpleto na ang hiling mo na mabago ang mga query",
-	"admin-edit-layers": "I-edit ang mga layer",
-	"admin-edit-layer": "I-edit",
+	"admin-edit-layers": "Baguhin ang mga layer",
+	"admin-edit-layer": "Baguhin ang layer",
 	"admin-add-layer": "Magdagdag",
 	"admin-layers": "Mga layer",
-	"admin-edit-users": "I-edit ang mga tagagamit",
-	"admin-edit-user": "I-edit ang tagagamit",
+	"admin-edit-users": "Baguhin ang mga tagagamit",
+	"admin-edit-user": "Baguhin ang tagagamit",
 	"admin-users": "Mga tagagamit",
 	"administrator": "admin",
 	"inactive": "di-aktibo",
