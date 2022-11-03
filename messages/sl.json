@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Eleassar",
 			"P̲̳l̳eo"
 		]
 	},
@@ -15,7 +16,7 @@
 	"photographed": "Fotografirano",
 	"unphotographed": "Nefotografirano",
 	"report-problem": "Poročaj o težavi",
-	"source-code": "Izvirna koda",
+	"source-code": "Izvorna koda",
 	"your-email": "Vaš e-poštni naslov",
 	"problem-summary": "Povzetek problema",
 	"problem-body": "Povejte nam več podrobnosti o svoji težavi",
