@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Kly"
+			"Kly",
+			"列维劳德"
 		]
 	},
 	"prague": "布拉格",
@@ -21,7 +22,7 @@
 	"problem-body": "告訴我們更多有關您的問題細節",
 	"submit": "提交",
 	"stats-before": "此工具已產生",
-	"stats-after": "個地圖",
+	"stats-after": "個地圖已產生",
 	"no-coordinates": "我們無法從您所提交的資訊裡找出座標。",
 	"change-language": "變更語言",
 	"admin-link": "管理",
