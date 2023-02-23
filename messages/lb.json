@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Robby",
-			"Soued031"
+			"Soued031",
+			"Volvox"
 		]
 	},
 	"prague": "Prag",
@@ -24,6 +25,7 @@
 	"stats-before": "Dësen Tool huet schonn",
 	"stats-after": "Kaarte generéiert",
 	"change-language": "Sprooch wiesselen",
+	"admin-variables": "Lëscht vu Variabelen",
 	"and": "a(n)",
 	"admin-edit-users": "Benotzer änneren",
 	"admin-users": "Benotzer",
