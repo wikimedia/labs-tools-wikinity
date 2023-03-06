@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Nike",
 			"Pyscowicz"
 		]
 	},
@@ -30,6 +31,7 @@
 	"admin-variables": "Luettelo muuttujista",
 	"and": "ja",
 	"admin-description-latlon": "Sisältää koordinaatit, käytetään vain haettaessa koordinaattien kautta",
+	"admin-description-item": "Sisältää kohteen tunnisteen (Q sisältyy). Käytetään vain haettaessa artikkelin nimen tai kohdenumeron perusteella",
 	"admin-description-radius": "Sisältää säteen, aina käytössä",
 	"admin-success": "Pyyntösi muuttaa kyselyjä suoritettiin onnistuneesti.",
 	"admin-edit-layers": "Muokkaa tasoja",
@@ -45,6 +47,9 @@
 	"admin-user-isadmin": "On ylläpitäjä?",
 	"admin-coordinate": "Aloita kysely tämän kanssa, kun haet koordinaattien avulla",
 	"admin-item": "Aloita kysely tämän kanssa, kun haet kohteen avulla",
+	"admin-unphotographed": "Lisää tämä WHERE-ehtoon, kun etsit valokuvaamattomia kohteita",
+	"admin-photographed": "Lisää tämä WHERE-ehtoon, kun etsit valokuvattuja kohteita",
+	"admin-all": "Lisää tämä WHERE-ehtoon, kun etsit kaikkia kohteita",
 	"admin-end": "Päätä kysely tällä",
 	"welcome": "Tervetuloa",
 	"login": "Kirjaudu",
