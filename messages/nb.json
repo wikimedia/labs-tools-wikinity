@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"EdoAug",
 			"Jon Harald Søby"
 		]
 	},
@@ -15,11 +16,32 @@
 	"photographed": "Med fotografi",
 	"unphotographed": "Uten fotografi",
 	"report-problem": "Rapporter et problem",
-	"source-code": "kildekode",
+	"source-code": "Kildekode",
 	"your-email": "E-postadressen din",
 	"problem-summary": "Sammendrag av problemet",
 	"problem-body": "Fortell oss mer detaljert om problemet",
 	"submit": "Send",
 	"stats-before": "Dette verktøyet har generert",
-	"stats-after": "kart ellerede"
+	"stats-after": "kart ellerede",
+	"no-coordinates": "Vi kunne ikke finne koordinatene fra informasjonen du sendte inn.",
+	"change-language": "Endre språk",
+	"admin-link": "Administrator",
+	"admin-interface": "Administratorgrensesnitt",
+	"admin-description": "Velg en handling:",
+	"admin-variables": "Liste over variabler",
+	"and": "og",
+	"admin-description-latlon": "Inneholder koordinater, kun brukt når en søker via koordinater",
+	"admin-description-item": "Inneholder element-ID (inkludert Q), kun brukt når en søker via artikkelnavn eller elementnummer",
+	"admin-description-radius": "Inneholder radius, alltid brukt",
+	"admin-edit-layers": "Rediger lag",
+	"admin-edit-layer": "Rediger lag",
+	"admin-add-layer": "Legg til lag",
+	"admin-layers": "Lag",
+	"admin-edit-users": "Rediger brukere",
+	"admin-edit-user": "Rediger bruker",
+	"admin-users": "Brukere",
+	"administrator": "administrator",
+	"inactive": "inaktiv",
+	"admin-user-isactive": "Er aktiv?",
+	"admin-user-isadmin": "Er administrator?"
 }
