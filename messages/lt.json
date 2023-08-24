@@ -31,6 +31,10 @@
 	"admin-description": "Prašome pasirinkti veiksmą:",
 	"admin-variables": "Kintamųjų sąrašas",
 	"and": "ir",
+	"admin-description-latlon": "Turi koordinates, naudojama tik, kai ieškoma per koordinates",
+	"admin-description-item": "Turi elemento ID (įskaitant Q), naudojama tik, kai ieškoma per straipsnio pavadinimą ar elemento numerį",
+	"admin-description-radius": "Turi spindulį, naudojama visada",
+	"admin-success": "Jūsų prašymas pakeisti užklausas buvo sėkmingai įvykdytas.",
 	"admin-edit-layers": "Keisti sluoksnius",
 	"admin-edit-layer": "Keisti sluoksnį",
 	"admin-add-layer": "Pridėti sluoksnį",
@@ -59,6 +63,10 @@
 	"missing-article": "Nenurodėte jokio straipsnio",
 	"nonexistent-article": "Straipsnis, kurį nurodėte, neegzistuoja arba neturi susieto Vikiduomenų elemento",
 	"unknown-error": "Įvyko nežinoma klaida",
+	"dms": "Laipsniai-Minutės-Sekundės",
+	"deg": "Laipsniai",
+	"min": "Minutės",
+	"sec": "Sekundės",
 	"lat": "Platuma",
 	"lon": "Ilguma"
 }
