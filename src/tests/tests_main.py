@@ -1,11 +1,8 @@
 from unittest import TestCase
-import os
 import re
 
 from src.app import app, db
 from sqlalchemy_utils.functions import database_exists, create_database
-
-__dir__ = os.path.dirname(__file__)
 
 def remove_whitespace(s):
     return re.sub(r"\s", "", s)
@@ -15,7 +12,8 @@ class BasicTests(TestCase):
         self.app = app.test_client()
         if not database_exists(app.config['SQLALCHEMY_DATABASE_URI']):
             create_database(app.config['SQLALCHEMY_DATABASE_URI'])
-        db.create_all()
+        with app.app_context():
+            db.create_all()
 
     def test_map(self):
         types = {
@@ -48,5 +46,6 @@ class BasicTests(TestCase):
                         self.assertEqual(response.status_code, 200)
 
     def tearDown(self):
-        db.session.remove()
-        db.drop_all()
+        with app.app_context():
+            db.session.remove()
+            db.drop_all()

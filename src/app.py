@@ -29,6 +29,9 @@ app = Flask(__name__, static_folder='../static')
 
 # Load configuration from YAML file
 __dir__ = os.path.dirname(__file__)
+if 'CI' in os.environ and 'FLASK_CONFIG_FILE' not in os.environ:
+    os.environ.update({'FLASK_CONFIG_FILE': 'wikimedia_config.yaml'})
+
 app.config.update(
     yaml.safe_load(open(os.path.join(__dir__, os.environ.get(
         'FLASK_CONFIG_FILE', 'config.yaml')))))

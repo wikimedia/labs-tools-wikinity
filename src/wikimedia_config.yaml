@@ -1,3 +1,7 @@
+# Configuration for Wikimedia CI
+#
+# Loaded when CI environment variable is set and FLASK_CONFIG_FILE is not set.
+#
 STATS_COUNTER_FILE: /tmp/wikinity-stats.txt
 SECRET_KEY: something
 MESSAGES_DIR: ../messages
