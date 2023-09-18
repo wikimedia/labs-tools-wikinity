@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Martin Urbanec",
+			"Mormegil",
 			"Patriccck",
 			"Patrik L."
 		]
@@ -31,6 +32,9 @@
 	"admin-description": "Prosím, zvolte akci:",
 	"admin-variables": "Seznam proměnných",
 	"and": "a",
+	"admin-description-latlon": "Obsahuje souřadnice, používá se pouze při hledání podle souřadnic",
+	"admin-description-item": "Obsahuje ID položky (včetně Q), používá se pouze při hledání podle názvu článku nebo čísla položky",
+	"admin-description-radius": "Obsahuje poloměr, vždy použito",
 	"admin-success": "Váš požadavek na změnu dotazů byl úspěšně dokončen.",
 	"admin-edit-layers": "Editovat vrstvy",
 	"admin-edit-layer": "Editovat vrstvu",
@@ -58,6 +62,10 @@
 	"admin-layer-color": "Barva",
 	"admin-layer-definition": "Definice",
 	"processing": "Zpracovává se...",
+	"missing-coordinates": "Při hledání podle souřadnic jste nezadali souřadnice",
+	"invalid-coordinates": "Zadali jste souřadnice v neplatném formátu. Použijte prosím desetinný formát.",
+	"missing-article": "Nezadali jste článek",
+	"nonexistent-article": "Článek, který jste zadali, neexistuje nebo k němu není připojena položka Wikidat",
 	"unknown-error": "Nastala neznámá chyba",
 	"degree-decimal": "Desetinné stupně",
 	"dms": "Stupně-Minuty-Vteřiny",
