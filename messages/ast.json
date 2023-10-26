@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Xuacu"
+			"Xuacu",
+			"YoaR"
 		]
 	},
 	"prague": "Praga",
@@ -31,7 +32,7 @@
 	"and": "y",
 	"admin-description-latlon": "Contien coordenaes, úsase sólo cuando se busca por coordenaes",
 	"admin-description-item": "Contien ID del elementu (Q ta incluíu), úsase sólo al buscar por nome d'artículu o númberu d'elementu",
-	"admin-description-radius": "Contien el radiu, úsase siempres",
+	"admin-description-radius": "Contién el radiu, úsase siempres",
 	"admin-success": "La solicitú pa cambiar consultes completóse correutamente.",
 	"admin-edit-layers": "Editar capes",
 	"admin-edit-layer": "Editar capa",
