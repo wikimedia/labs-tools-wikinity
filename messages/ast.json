@@ -30,7 +30,7 @@
 	"admin-description": "Escueyi una aición:",
 	"admin-variables": "Llista de variables",
 	"and": "y",
-	"admin-description-latlon": "Contien coordenaes, úsase sólo cuando se busca por coordenaes",
+	"admin-description-latlon": "Contién coordenaes, úsase sólo cuando se busca por coordenaes",
 	"admin-description-item": "Contien ID del elementu (Q ta incluíu), úsase sólo al buscar por nome d'artículu o númberu d'elementu",
 	"admin-description-radius": "Contién el radiu, úsase siempres",
 	"admin-success": "La solicitú pa cambiar consultes completóse correutamente.",
