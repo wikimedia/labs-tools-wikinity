@@ -54,7 +54,7 @@
 	"welcome": "Pozdravljeni",
 	"login": "Prijava",
 	"logout": "Odjava",
-	"permission-denied": "Dostop zavrnjen. Če menite, da se je to zgodilo z napako, se obrnite na skrbnika.",
+	"permission-denied": "Dovoljenje zavrnjeno. Če menite, da se je to zgodilo po pomoti, se obrnite na administratorja.",
 	"new": "novo",
 	"admin-layer-name": "Ime",
 	"admin-layer-color": "Barva",
