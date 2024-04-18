@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Aue Nai",
-			"Htawmonzel"
+			"Htawmonzel",
+			"咽頭べさ"
 		]
 	},
 	"prague": "ဍုင်ဇၞော်ပရက်",
@@ -36,5 +37,6 @@
 	"new": "တၟိ",
 	"admin-layer-name": "ယၟု",
 	"admin-layer-color": "သာ်",
-	"admin-layer-definition": "အဓိပ္ပါယ်"
+	"admin-layer-definition": "အဓိပ္ပါယ်",
+	"sec": "သိတ်ကိန်"
 }
