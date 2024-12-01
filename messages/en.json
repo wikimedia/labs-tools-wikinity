@@ -30,7 +30,7 @@
 	"admin-variables": "List of variables",
 	"and": "and",
 	"admin-description-latlon": "Contains coordinates, only used when searching via coordinates",
-	"admin-description-item": "Contains item ID (Q is included), only used when searching via article name or item number",
+	"admin-description-item": "Contains item ID (Q is included), only used when searching via article name or item ID",
 	"admin-description-radius": "Contains radius, always used",
 	"admin-success": "Your request to change queries was successfully completed.",
 	"admin-edit-layers": "Edit layers",
