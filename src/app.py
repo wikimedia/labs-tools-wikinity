@@ -29,12 +29,13 @@ app = Flask(__name__, static_folder='../static')
 
 # Load configuration from YAML file
 __dir__ = os.path.dirname(__file__)
-if 'CI' in os.environ and 'FLASK_CONFIG_FILE' not in os.environ:
-    os.environ.update({'FLASK_CONFIG_FILE': 'wikimedia_config.yaml'})
+config_path = os.environ.get('FLASK_CONFIG_FILE', 'config.yaml')
+if 'FLASK_CONFIG_FILE' not in os.environ and not os.path.exists(os.path.join(__dir__, config_path)):
+    config_path = 'wikimedia_config.yaml'
 
-app.config.update(
-    yaml.safe_load(open(os.path.join(__dir__, os.environ.get(
-        'FLASK_CONFIG_FILE', 'config.yaml')))))
+app.config.update(yaml.safe_load(open(os.path.join(__dir__, config_path))))
+del config_path
+
 locales = Locales(app)
 _ = locales.get_message
 
