@@ -32,7 +32,7 @@
 	"admin-variables": "רשימת משתנים",
 	"and": "וגם",
 	"admin-description-latlon": "מכיל נקודות ציון, בשימוש רק בעת חיפוש אחר נקודות ציון",
-	"admin-description-item": "מכיל מזהה פריט (לרבות Q), מועיל רק בעת חיפוש אחר שם ערך או מספר פריט",
+	"admin-description-item": "מכיל מזהה פריט (לרבות Q), מועיל רק בעת חיפוש אחר שם ערך או מזהה פריט",
 	"admin-description-radius": "מכיל רדיוס, תמיד בשימוש",
 	"admin-success": "בקשתך לשנות שאילתות הושלמה בהצלחה.",
 	"admin-edit-layers": "עריכת שכבות",
