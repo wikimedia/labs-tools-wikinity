@@ -1,13 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
+			"GolyatGeri",
 			"Mirzali",
 			"Orbot707"
 		]
 	},
 	"prague": "Prag",
 	"default-value": "vayeyo hesabiyaye",
-	"enter-number-of-item": "Numrey obceyê Wikidata. Newey ena obce dorme dı cı geyriyo",
+	"enter-number-of-item": "Numrey obceyê Wikidayıt. Newey ena obce dorme dı cı geyriyo",
 	"enter-coordinates": "Nesneya pê Koordinatana bıvinê",
 	"enter-name-of-article": "Nezdi Koordinatanê naê\n meqaley dorme ra bıvinê",
 	"enter-radius": "Seba cıgeyrayışi yew nimkılor (km) belı kerê",
@@ -31,7 +32,7 @@
 	"admin-variables": "Lista varyasyonan",
 	"and": "û",
 	"admin-description-latlon": "Koordinata muhtewa keno, teyna koordinatana cıgeyrayışi de karıyeno",
-	"admin-description-item": "Kamiya obcey (Q daxıl) miyan, namey meqaley u numrey obceya cıgeyrayışi dê karnena.",
+	"admin-description-item": "Kamiya obcey (Q daxıl) miyan, namey meqaley u kamiya obceya cıgeyrayışi dê karnena.",
 	"admin-description-radius": "Tım karıyaye nimkılori muhtewa kena",
 	"admin-success": "Waştışê persa vurnayışi biyo temam",
 	"admin-edit-layers": "Qatan bıvurne",
