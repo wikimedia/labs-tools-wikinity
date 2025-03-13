@@ -1,12 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ajeje Brazorf"
+			"Ajeje Brazorf",
+			"GianAntonucci"
 		]
 	},
 	"prague": "Praga",
 	"source-code": "Còdici surgenti",
-	"your-email": "La tò email",
+	"your-email": "La to e-mail",
 	"submit": "Manna",
 	"change-language": "Cancia lingua",
 	"admin-link": "Amministraturi",
