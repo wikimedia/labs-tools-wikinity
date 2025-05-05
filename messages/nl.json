@@ -32,7 +32,7 @@
 	"admin-variables": "Lijst met variabelen",
 	"and": "en",
 	"admin-description-latlon": "Bevat coördinaten, wordt alleen gebruikt bij zoeken via coördinaten",
-	"admin-description-item": "Bevat item-ID (inclusief Q), wordt alleen gebruikt bij zoeken op paginanaam of itemnummer",
+	"admin-description-item": "Bevat item-ID (inclusief Q), wordt alleen gebruikt bij zoeken op paginanaam of item-ID",
 	"admin-description-radius": "Bevat radius, altijd gebruikt",
 	"admin-success": "Uw verzoek om zoekopdrachten te wijzigen is afgerond.",
 	"admin-edit-layers": "Lagen bewerken",
