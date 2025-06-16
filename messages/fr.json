@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Derugon",
 			"Gomoko",
 			"McDutchie",
 			"Verdy p",
@@ -34,7 +35,7 @@
 	"admin-variables": "Liste de variables",
 	"and": "et",
 	"admin-description-latlon": "Contient des coordonnées, utilisé uniquement en recherchant via les coordonnées",
-	"admin-description-item": "Contient un identifiant d’élément (Q inclus), utilisé uniquement en recherchant via un nom d’article ou un numéro d’élément",
+	"admin-description-item": "Contient un identifiant d’élément (Q inclus), utilisé uniquement en recherchant via un nom d’article ou un identifiant d’élément",
 	"admin-description-radius": "Contient le rayon, toujours utilisé",
 	"admin-success": "Votre demande pour modifier des requêtes a bien été réalisée.",
 	"admin-edit-layers": "Modifier les calques",
