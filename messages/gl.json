@@ -32,7 +32,7 @@
 	"admin-variables": "Lista de variables",
 	"and": "e",
 	"admin-description-latlon": "Contén coordenadas, só se usa cando se busca mediante coordenadas",
-	"admin-description-item": "Contén o identificador do elemento (Q incluído), só se usa cando se busca mediante o nome do artigo ou o número do elemento",
+	"admin-description-item": "Contén o identificador do elemento (Q incluído), só se usa cando se busca mediante o nome do artigo ou o identificador do elemento",
 	"admin-description-radius": "Contén raio, úsase sempre",
 	"admin-success": "A túa solicitude para cambiar as consultas completouse correctamente.",
 	"admin-edit-layers": "Editar capas",
