@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"GilPe",
 			"Robby",
 			"Soued031",
 			"Volvox"
@@ -19,7 +20,7 @@
 	"report-problem": "Probleem mellen",
 	"source-code": "Quellcode",
 	"your-email": "Är E-Mail-Adress",
-	"problem-summary": "Resumé vum Probleem",
+	"problem-summary": "Resümmee vum Probleem",
 	"problem-body": "Gitt eis méi Eenzelheeten iwwer Äre Probleem",
 	"submit": "Späicheren",
 	"stats-before": "Dësen Tool huet schonn",
