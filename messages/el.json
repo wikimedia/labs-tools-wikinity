@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Geraki",
+			"Jimkats",
 			"NikosLikomitros",
 			"Nikosgranturismogt"
 		]
@@ -51,6 +52,9 @@
 	"admin-layer-color": "Χρώμα",
 	"admin-layer-definition": "Ορισμός",
 	"processing": "Γίνεται επεξεργασία...",
+	"unknown-error": "Παρουσιάστηκε άγνωστο σφάλμα",
+	"degree-decimal": "Μοίρες-Δεκαδικά",
+	"dms": "Μοίρες-Λεπτά-Δευτερόλεπτα",
 	"deg": "Βαθμοί",
 	"min": "λεπτά",
 	"sec": "δευτερόλεπτα",
