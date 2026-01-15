@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Revi",
+			"YeBoy371",
 			"Ykhwong",
 			"그냥기여자"
 		]
@@ -18,7 +19,7 @@
 	"unphotographed": "촬영되지 않음",
 	"report-problem": "문제점 보고",
 	"source-code": "소스 코드",
-	"your-email": "이메일",
+	"your-email": "내 이메일",
 	"problem-summary": "문제점 요약",
 	"problem-body": "문제에 대해 더 자세히 알려주세요",
 	"submit": "제출",
@@ -32,7 +33,7 @@
 	"admin-variables": "변수 목록",
 	"and": "그리고",
 	"admin-description-latlon": "좌표를 포함합니다. 좌표를 통해 검색할 때에만 사용됩니다",
-	"admin-description-item": "항목 ID를 포함합니다. (Q가 포함됨) 문서 이름이나 항목 번호를 통해 검색할 때에만 사용됩니다",
+	"admin-description-item": "항목 ID를 포함합니다. (Q가 포함됨) 문서 이름이나 항목 ID를 통해 검색할 때에만 사용됩니다",
 	"admin-description-radius": "반경 포함, 항상 사용",
 	"admin-success": "쿼리 변경 요청이 성공적으로 완료되었습니다.",
 	"admin-edit-layers": "레이어 편집",
@@ -56,7 +57,7 @@
 	"login": "로그인",
 	"logout": "로그아웃",
 	"permission-denied": "권한이 없습니다. 이것이 오류라고 생각되신다면 관리자에게 문의하십시오.",
-	"new": "새 항목",
+	"new": "새",
 	"admin-layer-name": "이름",
 	"admin-layer-color": "색",
 	"admin-layer-definition": "정의",
