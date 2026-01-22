@@ -31,7 +31,7 @@
 	"admin-variables": "Lista de variabiles",
 	"and": "e",
 	"admin-description-latlon": "Contine coordinatas; usate solmente quando se cerca per medio de coordinatas",
-	"admin-description-item": "Contine un ID de elemento (Q es includite); uste solmente quando se cerca per medio de un nomine de articulo o numero de elemento",
+	"admin-description-item": "Contine un ID de elemento (Q es includite); usate solmente quando se cerca per medio de un nomine de articulo o ID de elemento",
 	"admin-description-radius": "Contine le radio; sempre usate",
 	"admin-success": "Tu requesta de cambiar le consultas ha essite correctemente realisate.",
 	"admin-edit-layers": "Modificar stratas",
