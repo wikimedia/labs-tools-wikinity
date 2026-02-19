@@ -1,26 +1,27 @@
 {
 	"@metadata": {
 		"authors": [
+			"Letra.berdi",
 			"Quintino Lopes Castro Tavares",
 			"Waldyrious"
 		]
 	},
 	"prague": "Praga",
 	"default-value": "Valor padron prédefinidu",
-	"enter-number-of-item": "Númeru di elementu Wikidata. Kes objetus ta ser peskizadu en tornu des elementu.",
-	"enter-coordinates": "Buska otos objetus ku kordenadas",
-	"enter-name-of-article": "Buska objetus en tornu di kordenadas des artigu",
-	"enter-radius": "Defini un raiu pa buska (km)",
-	"select-displayed": "Skodji objetus ki debi ser mostradu na mapa",
-	"search": "Buska",
+	"enter-number-of-item": "Nunbru di ilimentu Uikidata. Obujétus ta ser piskizadu na rudói di es ilimentu.",
+	"enter-coordinates": "Piskiza pa otu obujétus ku kordenadas",
+	"enter-name-of-article": "Piskiza pa obujétus na rudói di kordenadas di es artigu",
+	"enter-radius": "Difini un raiu di piskiza (km)",
+	"select-displayed": "Skodji obujétus ki debi ser izibidu na un mapa",
+	"search": "Piskiza",
 	"photographed": "Fotografadu",
 	"unphotographed": "Ka foi fotografadu",
-	"report-problem": "Informa un problema",
+	"report-problem": "Nfurma un prabuléma",
 	"source-code": "Kódigu-fonti",
 	"your-email": "Bu email",
-	"problem-summary": "Rizumu di prublema",
-	"problem-body": "Kontanu más ditalhis di bu prublema",
+	"problem-summary": "Razumu di prabuléma",
+	"problem-body": "Konta-nu más ditalis di bu prabuléma",
 	"submit": "Manda",
-	"stats-before": "Es feramenta kria",
+	"stats-before": "Es faraménta kiria",
 	"stats-after": "mapas ti gósi"
 }
