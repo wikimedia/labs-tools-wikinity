@@ -1,0 +1,30 @@
+{
+	"@metadata": {
+		"authors": [
+			"Oujon"
+		]
+	},
+	"prague": "Прага",
+	"search": "Глядати",
+	"your-email": "Ваш імейл",
+	"submit": "Одослати",
+	"stats-after": "Мапы уж",
+	"change-language": "Змінити язык",
+	"admin-link": "Адміністратор",
+	"and": "И",
+	"admin-users": "Хоснователї",
+	"administrator": "Адміністратор",
+	"inactive": "неактивный",
+	"welcome": "Вітайте",
+	"login": "Приголосити ся",
+	"logout": "Одголосити ся",
+	"new": "нове",
+	"admin-layer-name": "Мено",
+	"admin-layer-color": "Цвіт",
+	"admin-layer-definition": "Дефініція",
+	"deg": "Градусы",
+	"min": "Мінуты",
+	"sec": "Секунды",
+	"lat": "Вышка",
+	"lon": "Довжка"
+}
