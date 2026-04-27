@@ -32,7 +32,7 @@
 	"admin-variables": "Lista över variabler",
 	"and": "och",
 	"admin-description-latlon": "Innehåller koordinater, används endast vid koordinatsökning",
-	"admin-description-item": "Innehåller objekt-ID (inklusive Q), används endast vid sökning efter artikelnamns- eller objektnummer",
+	"admin-description-item": "Innehåller objekt-ID (inklusive Q), används endast vid sökning efter artikelnamn eller objekt-ID",
 	"admin-description-radius": "Innehåller radie, används alltid",
 	"admin-success": "Din begäran att ändra frågor slutfördes.",
 	"admin-edit-layers": "Redigera lager",
