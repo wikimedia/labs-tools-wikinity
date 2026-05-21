@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Revi",
+			"Tensama0415",
 			"YeBoy371",
 			"Ykhwong",
 			"그냥기여자"
@@ -29,7 +30,7 @@
 	"change-language": "언어 바꾸기",
 	"admin-link": "관리",
 	"admin-interface": "관리자 인터페이스",
-	"admin-description": "동작을 선택해 주십시오:",
+	"admin-description": "작업을 선택해 주십시오:",
 	"admin-variables": "변수 목록",
 	"and": "그리고",
 	"admin-description-latlon": "좌표를 포함합니다. 좌표를 통해 검색할 때에만 사용됩니다",
