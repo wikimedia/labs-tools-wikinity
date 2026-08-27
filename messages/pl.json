@@ -3,7 +3,8 @@
 		"authors": [
 			"Aktron",
 			"Chrumps",
-			"DeRudySoulStorm"
+			"DeRudySoulStorm",
+			"PanWor"
 		]
 	},
 	"prague": "Praga",
@@ -20,7 +21,7 @@
 	"source-code": "Kod źródłowy",
 	"your-email": "Twój adres e-mail",
 	"problem-summary": "Podsumowanie problemu",
-	"problem-body": "Powiedz nam więcej szczegółów na temat twojego problemu",
+	"problem-body": "Powiedz nam więcej szczegółów na temat Twojego problemu",
 	"submit": "Wyślij",
 	"stats-before": "To narzędzie wygenerowało",
 	"stats-after": "Gotowe mapy",
